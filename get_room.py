@@ -1,34 +1,21 @@
-import datetime
-from models import Database, rooms_validator, sensors_validator, visitors_validator
+from db.database import Database
+from db.models.room import Room
 
-# Connect to database
+# Initialize database connection
 db = Database()
 
-# Example: Insert a room
-room = db.rooms.insert_one({
-    "name": "Conference Room",
-    "type": "MEETING",
-    "crowdFactor": 0.8,
-    "area": 45.5
-})
+# Create and save a new room
+room = Room(
+    name="please my god",
+    type="LOBBY",
+    crowd_factor=0.3,
+    area=120.0,
+    longitude=100,
+    latitude=100
+).save()
 
-# Example: Query rooms
-all_rooms = list(db.rooms.find())
-
-print(all_rooms)
-# Example: Insert a sensor for the room
-sensor = db.sensors.insert_one({
-    "name": "Sensor-LOL",
-    "movements": [[5, 3], [1, 2]],
-    "roomId": room.inserted_id
-})
-
-# Example: Insert a visitor
-visitor = db.visitors.insert_one({
-    "name": "John Doe",
-    "visitedRooms": [room.inserted_id],
-    "visitDate": datetime.datetime.now()
-})
-
-# Don't forget to close the connection when done
-db.close()
+# Verify data was persisted
+all_rooms = Room.objects()
+# Print rooms with their details
+for room in all_rooms:
+    print(f"Room: {room.name} (Type: {room.type}, Area: {room.area}m², Crowd Factor: {room.crowd_factor})")
