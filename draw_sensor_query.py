@@ -50,15 +50,14 @@ for room_info in room_to_sensors.values():
                 # Create a new edge with the room's crowd factor as the weight.
                 G.add_edge(sensor1.id, sensor2.id, weight=weight)
 
-# --- Visualize the Graph ---
-def visualize_graph(G):
+# --- Visualization Function with Fastest Path Highlight ---
+def visualize_graph(G, path=None):
     # Create a layout for the nodes.
     pos = nx.spring_layout(G, seed=42)
     
     plt.figure(figsize=(8, 6))
-    # Draw the nodes.
+    # Draw the base graph: nodes and edges.
     nx.draw_networkx_nodes(G, pos, node_color='skyblue', node_size=500)
-    # Draw the edges.
     nx.draw_networkx_edges(G, pos, width=1.5, edge_color='gray')
     
     # Build custom labels: combine the names of the rooms for each sensor.
@@ -67,8 +66,6 @@ def visualize_graph(G):
         # Assuming each room has a 'name' attribute.
         combined_name = "-".join([room.name for room in sensor.rooms])
         labels[sensor.id] = combined_name
-    
-    # Draw node labels using the custom labels.
     nx.draw_networkx_labels(G, pos, labels=labels, font_size=10)
     
     # Prepare edge labels. For edges with multiple weights, display them as comma-separated values.
@@ -82,9 +79,59 @@ def visualize_graph(G):
 
     nx.draw_networkx_edge_labels(G, pos, edge_labels=edge_labels, font_color='red', font_size=8)
     
-    plt.title("Graph of Sensors Connected by Shared Rooms")
+    # If a fastest path is provided, highlight it.
+    if path is not None:
+        # Compute the list of edges from the path.
+        path_edges = list(zip(path, path[1:]))
+        # Draw the path edges with a thicker red line.
+        nx.draw_networkx_edges(G, pos, edgelist=path_edges, width=3, edge_color='red')
+        # Highlight the nodes along the path.
+        nx.draw_networkx_nodes(G, pos, nodelist=path, node_color='orange', node_size=600)
+        # Optionally, highlight the source and target nodes in distinct colors.
+        nx.draw_networkx_nodes(G, pos, nodelist=[path[0]], node_color='green', node_size=700)
+        nx.draw_networkx_nodes(G, pos, nodelist=[path[-1]], node_color='purple', node_size=700)
+    
+    plt.title("Graph of Sensors with Fastest Path Highlighted")
     plt.axis('off')
     plt.show()
 
-# Call the function to display the graph.
-visualize_graph(G)
+# --- Dijkstra's Algorithm Implementation ---
+def find_fastest_path(G, source, target):
+    """
+    Finds the fastest path from source to target using Dijkstra's algorithm.
+    
+    Parameters:
+        G (networkx.Graph): The graph containing sensor nodes.
+        source: The source node identifier.
+        target: The target node identifier.
+    
+    Returns:
+        path (list): The list of nodes representing the fastest path.
+        distance (float): The total effective weight (sum of crowd factors) along that path.
+    """
+    # Define a custom weight function:
+    # If an edge has multiple weights, use the sum of weights; otherwise, use the single weight.
+    weight_func = lambda u, v, d: sum(d['weights']) if 'weights' in d else d['weight']
+    
+    try:
+        path = nx.dijkstra_path(G, source, target, weight=weight_func)
+        distance = nx.dijkstra_path_length(G, source, target, weight=weight_func)
+        return path, distance
+    except nx.NetworkXNoPath:
+        print(f"No path exists between {source} and {target}.")
+        return None, None
+
+# --- Example Usage ---
+# Define source and target sensors.
+# (Ensure these sensors exist in your sensors list.)
+source_sensor = sensors[0].id   # Example: using the first sensor as source.
+target_sensor = sensors[-1].id   # Example: using the last sensor as target.
+
+fastest_path, fastest_distance = find_fastest_path(G, source_sensor, target_sensor)
+
+print("Fastest path from sensor {} to sensor {}:".format(source_sensor, target_sensor))
+print(fastest_path)
+print("Total effective weight (sum of crowd factors):", fastest_distance)
+
+# Visualize the graph with the fastest path highlighted.
+visualize_graph(G, path=fastest_path)
