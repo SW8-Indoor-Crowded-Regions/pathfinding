@@ -5,6 +5,20 @@ import matplotlib.pyplot as plt
 from db.models.sensor import Sensor  # Your Sensor class
 from db.models.room import Room      # Your Room class
 
+
+'''
+
+To not make a tight coupling between DB and this
+ALL communication with DB is now through
+sensorsim/dataprocessing repo
+
+refer to endpoint file.
+
+'''
+
+
+
+
 # Initialize database connection
 db = Database()
 
@@ -15,7 +29,7 @@ sensors = list(Sensor.objects())
 # Create an empty graph.
 G = nx.Graph()
 
-# Add each sensor as a node.
+# Add each sensor as a node with the sensor object attached.
 for sensor in sensors:
     G.add_node(sensor.id, sensor=sensor)
 
@@ -63,7 +77,6 @@ def visualize_graph(G, path=None):
     # Build custom labels: combine the names of the rooms for each sensor.
     labels = {}
     for sensor in sensors:
-        # Assuming each room has a 'name' attribute.
         combined_name = "-".join([room.name for room in sensor.rooms])
         labels[sensor.id] = combined_name
     nx.draw_networkx_labels(G, pos, labels=labels, font_size=10)
@@ -81,13 +94,9 @@ def visualize_graph(G, path=None):
     
     # If a fastest path is provided, highlight it.
     if path is not None:
-        # Compute the list of edges from the path.
         path_edges = list(zip(path, path[1:]))
-        # Draw the path edges with a thicker red line.
         nx.draw_networkx_edges(G, pos, edgelist=path_edges, width=3, edge_color='red')
-        # Highlight the nodes along the path.
         nx.draw_networkx_nodes(G, pos, nodelist=path, node_color='orange', node_size=600)
-        # Optionally, highlight the source and target nodes in distinct colors.
         nx.draw_networkx_nodes(G, pos, nodelist=[path[0]], node_color='green', node_size=700)
         nx.draw_networkx_nodes(G, pos, nodelist=[path[-1]], node_color='purple', node_size=700)
     
@@ -99,15 +108,7 @@ def visualize_graph(G, path=None):
 def find_fastest_path(G, source, target):
     """
     Finds the fastest path from source to target using Dijkstra's algorithm.
-    
-    Parameters:
-        G (networkx.Graph): The graph containing sensor nodes.
-        source: The source node identifier.
-        target: The target node identifier.
-    
-    Returns:
-        path (list): The list of nodes representing the fastest path.
-        distance (float): The total effective weight (sum of crowd factors) along that path.
+    Returns the path as a list of sensor nodes and the total effective weight.
     """
     # Define a custom weight function:
     # If an edge has multiple weights, use the sum of weights; otherwise, use the single weight.
@@ -123,15 +124,34 @@ def find_fastest_path(G, source, target):
 
 # --- Example Usage ---
 # Define source and target sensors.
-# (Ensure these sensors exist in your sensors list.)
-source_sensor = sensors[0].id   # Example: using the first sensor as source.
-target_sensor = sensors[-1].id   # Example: using the last sensor as target.
+source_sensor = sensors[15].id   # Example: using the sensor at index 15 as source.
+target_sensor = sensors[40].id   # Example: using the sensor at index 40 as target.
 
 fastest_path, fastest_distance = find_fastest_path(G, source_sensor, target_sensor)
 
-print("Fastest path from sensor {} to sensor {}:".format(source_sensor, target_sensor))
-print(fastest_path)
-print("Total effective weight (sum of crowd factors):", fastest_distance)
+if fastest_path is not None:
+    # Build a list of room names for the fastest path by checking the common room(s)
+    # between each pair of consecutive sensors.
+    room_path = []
+    for u, v in zip(fastest_path, fastest_path[1:]):
+        sensor_u = G.nodes[u]['sensor']
+        sensor_v = G.nodes[v]['sensor']
+        # Gather room names from both sensors.
+        rooms_u = {room.name for room in sensor_u.rooms}
+        rooms_v = {room.name for room in sensor_v.rooms}
+        # Find the common room(s).
+        common_rooms = rooms_u.intersection(rooms_v)
+        if common_rooms:
+            # If multiple common rooms exist, join them with a comma.
+            room_path.append(", ".join(common_rooms))
+        else:
+            room_path.append("No common room")
+    
+    print("Fastest path (room names along each transition):")
+    print(room_path)
+    print("Total effective weight (sum of crowd factors):", fastest_distance)
+else:
+    print("No fastest path found.")
 
 # Visualize the graph with the fastest path highlighted.
 visualize_graph(G, path=fastest_path)
