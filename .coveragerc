@@ -2,7 +2,9 @@
 omit =
     app/__init__.py
     app/classes/__init__.py
-    test/*
+    app/test/classes/*
+    app/main.py
+    app/config.py
 [report]
 show_missing = true
 precision = 2
