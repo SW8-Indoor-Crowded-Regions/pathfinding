@@ -6,14 +6,15 @@ import itertools
 class SensorGraph:
     def __init__(self, sensors: list):
         self.sensors = sensors
-        # Use MultiGraph to allow multiple edges between the same pair of sensors.
-        self.graph = nx.MultiGraph()
+        # Use a simple Graph to ensure a single edge per sensor pair.
+        self.graph = nx.Graph()
 
     def build_graph(self):
         """
-        Builds a MultiGraph where each sensor is a node. For each room,
-        an edge is added between every pair of sensors in that room.
+        Builds a Graph where each sensor is a node.
+        For each room, an edge is added between every pair of sensors in that room.
         Each edge is assigned a weight equal to the room's crowd_factor.
+        If two sensors share more than one room, only the first added edge is kept.
         """
         # Add each sensor as a node.
         for sensor in self.sensors:
@@ -31,9 +32,9 @@ class SensorGraph:
         for room_id, sensor_list in room_to_sensors.items():
             room = room_info[room_id]
             for sensor1, sensor2 in itertools.combinations(sensor_list, 2):
-                # Add an edge representing the pathway in this room.
-                self.graph.add_edge(sensor1.id, sensor2.id, weight=room.crowd_factor, room_id=room_id)
-
+                # If an edge already exists between these sensors, ignore the new one.
+                if not self.graph.has_edge(sensor1.id, sensor2.id):
+                    self.graph.add_edge(sensor1.id, sensor2.id, weight=room.crowd_factor, room_id=room_id)
         return self.graph
 
     def save_graph(self, filename: str):
@@ -53,22 +54,12 @@ class SensorGraph:
 
     def find_fastest_path(self, source, target):
         """
-        Uses Dijkstra's algorithm to find the fastest path between two sensors.
-        Because the graph is a MultiGraph (possibly multiple edges between a pair),
-        we first collapse it to a simple graph where, for each sensor pair, the edge weight
-        is the minimum crowd_factor among the parallel edges.
+        Uses Dijkstra's algorithm to find the fastest path between two sensors
+        based solely on the crowd_factor (edge weight) of the room connecting them.
         """
-        simple_graph = nx.Graph()
-        # For each edge in the MultiGraph, add the minimum weight edge to the simple graph.
-        for u, v, data in self.graph.edges(data=True):
-            w = data.get('weight', 1)  # default weight is 1 if not provided
-            if simple_graph.has_edge(u, v):
-                simple_graph[u][v]['weight'] = min(simple_graph[u][v]['weight'], w)
-            else:
-                simple_graph.add_edge(u, v, weight=w)
         try:
-            path = nx.dijkstra_path(simple_graph, source, target, weight='weight')
-            distance = nx.dijkstra_path_length(simple_graph, source, target, weight='weight')
+            path = nx.dijkstra_path(self.graph, source, target, weight='weight')
+            distance = nx.dijkstra_path_length(self.graph, source, target, weight='weight')
             return path, distance
         except nx.NetworkXNoPath:
             return None, None
