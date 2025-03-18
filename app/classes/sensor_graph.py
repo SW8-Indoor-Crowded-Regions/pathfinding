@@ -1,63 +1,74 @@
 import networkx as nx
+import pickle
+from collections import defaultdict
+import itertools
 
 class SensorGraph:
     def __init__(self, sensors: list):
         self.sensors = sensors
-        self.graph = nx.Graph()
+        # Use MultiGraph to allow multiple edges between the same pair of sensors.
+        self.graph = nx.MultiGraph()
 
     def build_graph(self):
         """
-        Builds a graph where each sensor is a node and an edge is added between
-        sensors sharing a common room. The room’s crowd_factor is used as the weight.
+        Builds a MultiGraph where each sensor is a node. For each room,
+        an edge is added between every pair of sensors in that room.
+        Each edge is assigned a weight equal to the room's crowd_factor.
         """
         # Add each sensor as a node.
         for sensor in self.sensors:
             self.graph.add_node(sensor.id, sensor=sensor)
 
-        # Group sensors by the rooms they belong to.
-        room_to_sensors = {}
+        # Group sensors by room.
+        room_to_sensors = defaultdict(list)
+        room_info = {}
         for sensor in self.sensors:
             for room in sensor.rooms:
-                room_id = str(room.id)
-                if room_id not in room_to_sensors:
-                    room_to_sensors[room_id] = {'room': room, 'sensors': []}
-                room_to_sensors[room_id]['sensors'].append(sensor)
+                room_to_sensors[room.id].append(sensor)
+                room_info[room.id] = room  # store room info for crowd_factor
 
-        # Create edges between sensors that share the same room.
-        for room_info in room_to_sensors.values():
-            room = room_info['room']
-            sensors_in_room = room_info['sensors']
-            weight = room.crowd_factor  # Use room's crowd_factor as edge weight.
-            for i in range(len(sensors_in_room)):
-                for j in range(i + 1, len(sensors_in_room)):
-                    sensor1 = sensors_in_room[i]
-                    sensor2 = sensors_in_room[j]
-                    if self.graph.has_edge(sensor1.id, sensor2.id):
-                        if 'weights' in self.graph[sensor1.id][sensor2.id]:
-                            self.graph[sensor1.id][sensor2.id]['weights'].append(weight)
-                        else:
-                            # Convert existing weight to a list of weights.
-                            existing_weight = self.graph[sensor1.id][sensor2.id].pop('weight')
-                            self.graph[sensor1.id][sensor2.id]['weights'] = [existing_weight, weight]
-                    else:
-                        self.graph.add_edge(sensor1.id, sensor2.id, weight=weight)
+        # For each room, add an edge between every pair of sensors in that room.
+        for room_id, sensor_list in room_to_sensors.items():
+            room = room_info[room_id]
+            for sensor1, sensor2 in itertools.combinations(sensor_list, 2):
+                # Add an edge representing the pathway in this room.
+                self.graph.add_edge(sensor1.id, sensor2.id, weight=room.crowd_factor, room_id=room_id)
+
+        return self.graph
+
+    def save_graph(self, filename: str):
+        """
+        Saves the current graph to a file using pickle.
+        """
+        with open(filename, "wb") as f:
+            pickle.dump(self.graph, f)
+
+    def load_graph(self, filename: str):
+        """
+        Loads a graph from a file using pickle.
+        """
+        with open(filename, "rb") as f:
+            self.graph = pickle.load(f)
         return self.graph
 
     def find_fastest_path(self, source, target):
         """
         Uses Dijkstra's algorithm to find the fastest path between two sensors.
-        The weight for each edge is taken from the destination room's 'crowdfactor' attribute.
-        If a room does not have a 'crowdfactor', a default value of 1 is used.
+        Because the graph is a MultiGraph (possibly multiple edges between a pair),
+        we first collapse it to a simple graph where, for each sensor pair, the edge weight
+        is the minimum crowd_factor among the parallel edges.
         """
-        def weight_func(u, v, d):
-            if 'weights' in d:
-                return sum(d['weights'])
+        simple_graph = nx.Graph()
+        # For each edge in the MultiGraph, add the minimum weight edge to the simple graph.
+        for u, v, data in self.graph.edges(data=True):
+            w = data.get('weight', 1)  # default weight is 1 if not provided
+            if simple_graph.has_edge(u, v):
+                simple_graph[u][v]['weight'] = min(simple_graph[u][v]['weight'], w)
             else:
-                return d['weight']
-
+                simple_graph.add_edge(u, v, weight=w)
         try:
-            path = nx.dijkstra_path(self.graph, source, target, weight=weight_func)
-            distance = nx.dijkstra_path_length(self.graph, source, target, weight=weight_func)
+            path = nx.dijkstra_path(simple_graph, source, target, weight='weight')
+            distance = nx.dijkstra_path_length(simple_graph, source, target, weight='weight')
             return path, distance
         except nx.NetworkXNoPath:
             return None, None

@@ -1,10 +1,10 @@
+import os
 from fastapi import FastAPI
 from routes.routing import router
 from config import CORS_SETTINGS
 from fastapi.middleware.cors import CORSMiddleware
 from classes.data_fetcher import DataFetcher
 from classes.sensor_graph import SensorGraph
-
 
 app = FastAPI(title="Routing")
 
@@ -30,16 +30,23 @@ def main():
     for sensor in sensors:
         sensor.attach_rooms(room_mapping)
 
-    # Build the sensor graph.
+    # Build or load the sensor graph.
+    graph_filename = "sensor_graph.pickle"
     graph_obj = SensorGraph(sensors)
-    graph_obj.build_graph()
+
+    if os.path.exists(graph_filename):
+        graph_obj.load_graph(graph_filename)
+        print("Loaded persisted graph.")
+    else:
+        graph_obj.build_graph()
+        graph_obj.save_graph(graph_filename)
+        print("Built new graph and saved it.")
 
     # Define source and target sensor IDs for the example.
     if len(sensors) > 1:
-        # Use specific indices if available; otherwise, default to the first and last sensors.
         try:
-            source_sensor_id = sensors[15].id
-            target_sensor_id = sensors[40].id
+            source_sensor_id = sensors[10].id
+            target_sensor_id = sensors[50].id
         except IndexError:
             source_sensor_id = sensors[0].id
             target_sensor_id = sensors[-1].id
@@ -65,15 +72,8 @@ def main():
     else:
         print("Not enough sensors to determine a path.")
 
-
 # ROUTING ROUTER
 app.include_router(router)
 
 if __name__ == "__main__":
     main()
-
-# In production use Gunicorn to run Uvicorn with workers
-# Below is an example with -w 4 meaning 4 workers processes assigned
-#
-# pip install gunicorn
-# gunicorn -k uvicorn.workers.UvicornWorker -w 4 app.main:app
