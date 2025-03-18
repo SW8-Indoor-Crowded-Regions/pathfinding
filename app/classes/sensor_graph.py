@@ -46,9 +46,15 @@ class SensorGraph:
     def find_fastest_path(self, source, target):
         """
         Uses Dijkstra's algorithm to find the fastest path between two sensors.
-        For edges with multiple weights, the sum of the weights is used.
+        The weight for each edge is taken from the destination room's 'crowdfactor' attribute.
+        If a room does not have a 'crowdfactor', a default value of 1 is used.
         """
-        weight_func = lambda u, v, d: sum(d['weights']) if 'weights' in d else d['weight']
+        def weight_func(u, v, d):
+            if 'weights' in d:
+                return sum(d['weights'])
+            else:
+                return d['weight']
+
         try:
             path = nx.dijkstra_path(self.graph, source, target, weight=weight_func)
             distance = nx.dijkstra_path_length(self.graph, source, target, weight=weight_func)

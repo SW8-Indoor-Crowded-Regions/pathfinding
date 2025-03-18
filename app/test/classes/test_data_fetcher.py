@@ -1,8 +1,5 @@
-import pytest
 import requests
 from app.classes.data_fetcher import DataFetcher
-from app.classes.sensor import Sensor
-from app.classes.room import Room
 
 class FakeResponse:
     def __init__(self, json_data, status_code=200):
