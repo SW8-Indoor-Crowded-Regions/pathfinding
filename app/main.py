@@ -1,10 +1,10 @@
 import os
 from fastapi import FastAPI
-from routes.routing import router
-from config import CORS_SETTINGS
+from .routes.routing import router
+from .config import CORS_SETTINGS
 from fastapi.middleware.cors import CORSMiddleware
-from classes.data_fetcher import DataFetcher
-from classes.sensor_graph import SensorGraph
+from .classes.data_fetcher import DataFetcher
+from .classes.sensor_graph import SensorGraph
 
 app = FastAPI(title="Routing")
 
