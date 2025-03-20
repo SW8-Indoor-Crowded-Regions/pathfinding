@@ -69,7 +69,7 @@ nix develop
 
 ### 🔹 **For Development**
 ```bash
-uvicorn app.main:app --reload
+uvicorn app.main:app --reload --port 8001
 ```
 
 ### 🔹 **For Production (4 Workers)**
