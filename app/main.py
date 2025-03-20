@@ -1,7 +1,6 @@
 import os
 from fastapi import FastAPI
-from .routes.routing import router as routing_router
-from .routes.path import router as pathfinding_router
+from .routes import routers
 from .config import CORS_SETTINGS
 from fastapi.middleware.cors import CORSMiddleware
 from .classes.data_fetcher import DataFetcher
@@ -18,8 +17,8 @@ app.add_middleware(
     allow_headers=CORS_SETTINGS["allow_headers"],
 )
 
-app.include_router(routing_router)
-app.include_router(pathfinding_router)
+for router in routers:
+    app.include_router(router)
 
 def main():
     # Initialize the data fetcher and retrieve sensors and rooms.
