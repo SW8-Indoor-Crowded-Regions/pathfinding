@@ -68,12 +68,6 @@ nix develop
 ## 🚀 Running the Application
 
 ### 🔹 **For Development**
-### Unix girls
-```bash
-uvicorn app:app --reload
-```
-
-### Windows
 ```bash
 uvicorn app.main:app --reload
 ```
