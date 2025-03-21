@@ -1,10 +1,6 @@
-import os
-from fastapi import APIRouter
+from fastapi import APIRouter, HTTPException
 from ..services.route_service import create_fastest_path
 from ..schemas.path import FastestPathRequest
-from ..classes.room import Room
-from ..classes.sensor import Sensor
-from ..classes.sensor_graph import SensorGraph
 
 router = APIRouter(prefix="/pathfinding")
 
@@ -29,42 +25,9 @@ async def get_fastest_path(request_body: FastestPathRequest):
       "target_sensor": "sensor2"
     }
     """
-
     try:
-        rooms = Room.create_room_mapping_from_schemas(request_body.rooms or [])
-        sensors = Sensor.create_sensors_from_schemas(request_body.sensors or [], rooms)
-
-        source_sensor = request_body.source_sensor
-        target_sensor = request_body.target_sensor
-
-        graph_filename = r"C:\Github\SW8\pathfinding\app\sensor_graph.pickle"
-
-        sensor_graph = SensorGraph(sensors)
-        if os.path.exists(graph_filename):
-            try:
-                print(f"load graph")
-                sensor_graph.load_graph(graph_filename)
-            except Exception as e:
-                print(f"build graph")
-                sensor_graph.build_graph()
-                sensor_graph.save_graph(graph_filename)
-        else:
-            print(f"build graph without loading")
-            sensor_graph.build_graph()
-            sensor_graph.save_graph(graph_filename)
-
-        path, distance = sensor_graph.find_fastest_path(source_sensor, target_sensor)
-
-        if not path or not distance:
-            return {
-                "error": "No path found."
-            }
-        return {
-            "fastest_path": path,
-            "distance": distance
-        }
-
+        return create_fastest_path(request_body)
+    except ValueError as e:
+        raise HTTPException(status_code=400, detail=str(e))
     except Exception as e:
-        return {
-            "error": str(e)
-        }
+        raise HTTPException(status_code=500, detail="Internal server error: " + str(e))
