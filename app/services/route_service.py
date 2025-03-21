@@ -16,12 +16,7 @@ def create_fastest_path(request_body: FastestPathRequest):
     source_sensor = request_body.source_sensor
     target_sensor = request_body.target_sensor
 
-    if source_sensor not in [s.id for s in sensors]:
-        raise ValueError(f"Source sensor '{source_sensor}' not found in sensor list.")
-    if target_sensor not in [s.id for s in sensors]:
-        raise ValueError(f"Target sensor '{target_sensor}' not found in sensor list.")
-
-    graph_filename = r"C:\\Github\\SW8\\pathfinding\\app\\sensor_graph.pickle"
+    graph_filename = r"C:\\Github\\SW8\\pathfinding\\app\\test\\mock_data\\sensor_graph.pickle"
 
     sensor_graph = SensorGraph(sensors)
     if os.path.exists(graph_filename):
@@ -33,6 +28,12 @@ def create_fastest_path(request_body: FastestPathRequest):
     else:
         sensor_graph.build_graph()
         sensor_graph.save_graph(graph_filename)
+    
+    if not sensor_graph.graph.has_node(source_sensor):
+        raise ValueError(f"Source sensor '{source_sensor}' not found in the sensor graph.")
+    if not sensor_graph.graph.has_node(target_sensor):
+        raise ValueError(f"Target sensor '{target_sensor}' not found in the sensor graph.")
+
 
     path, distance = sensor_graph.find_fastest_path(source_sensor, target_sensor)
 
