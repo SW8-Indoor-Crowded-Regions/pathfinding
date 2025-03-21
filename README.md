@@ -79,3 +79,6 @@ gunicorn -k uvicorn.workers.UvicornWorker -w 4 -b 0.0.0.0:8080 app.main:app
 
 ---
 
+## Notes
+### Errors
+- If you get this error "No path found." try deleting the .pickle file and try again.

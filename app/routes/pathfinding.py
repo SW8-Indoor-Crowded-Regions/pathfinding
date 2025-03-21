@@ -55,6 +55,10 @@ async def get_fastest_path(request_body: FastestPathRequest):
 
         path, distance = sensor_graph.find_fastest_path(source_sensor, target_sensor)
 
+        if not path or not distance:
+            return {
+                "error": "No path found."
+            }
         return {
             "fastest_path": path,
             "distance": distance
