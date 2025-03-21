@@ -17,13 +17,13 @@ async def get_fastest_path(request_body: FastestPathRequest):
     Example of request_body:
     {
       "rooms": [
-         { "id": "roomA", "name": "Lobby", "crowd_factor": 2 },
-         { "id": "roomB", "name": "Hallway", "crowd_factor": 1 },
-         { "id": "roomC", "name": "Meeting Room", "crowd_factor": 3 }
+         { "id": "UUID1", "name": "Lobby", "crowd_factor": 2 },
+         { "id": "UUID2", "name": "Hallway", "crowd_factor": 1 },
+         { "id": "UUID3", "name": "Meeting Room", "crowd_factor": 3 }
       ],
       "sensors": [
-         { "id": "sensor1", "rooms": ["roomA", "roomB"] },
-         { "id": "sensor2", "rooms": ["roomB", "roomC"] }
+         { "id": "sensor1", "rooms": ["UUID1", "UUID2"] },
+         { "id": "sensor2", "rooms": ["UUID2", "UUID3"] }
       ],
       "source_sensor": "sensor1",
       "target_sensor": "sensor2"
