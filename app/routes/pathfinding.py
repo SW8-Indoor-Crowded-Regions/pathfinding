@@ -31,8 +31,8 @@ async def get_fastest_path(request_body: FastestPathRequest):
     """
 
     try:
-        rooms = Room.create_room_mapping_from_schemas(request_body.rooms)
-        sensors = Sensor.create_sensors_from_schemas(request_body.sensors, rooms)
+        rooms = Room.create_room_mapping_from_schemas(request_body.rooms or [])
+        sensors = Sensor.create_sensors_from_schemas(request_body.sensors or [], rooms)
 
         source_sensor = request_body.source_sensor
         target_sensor = request_body.target_sensor
