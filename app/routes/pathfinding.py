@@ -11,10 +11,10 @@ router = APIRouter(prefix="/pathfinding")
 @router.post("/fastest-path")
 async def get_fastest_path(request_body: FastestPathRequest):
     """
-    Accepterer en JSON-payload, der indeholder lister over Rooms og Sensors,
-    samt evt. kilde- og mål-sensorer for pathfinding.
+    Accepts a JSON payload that contains optional lists of Rooms and Sensors,
+    as well as source and target sensors for pathfinding.
 
-    Eksempel på request_body:
+    Example of request_body:
     {
       "rooms": [
          { "id": "roomA", "name": "Lobby", "crowd_factor": 2 },
