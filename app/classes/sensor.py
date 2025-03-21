@@ -6,10 +6,7 @@ class Sensor:
 
     @classmethod
     def from_dict(cls, data: dict):
-        return cls(
-            id=data.get("id"),
-            room_ids=data.get("rooms", [])
-        )
+        return cls(id=data.get('id'), room_ids=data.get('rooms', []))
 
     @classmethod
     def from_schema(cls, schema):
@@ -17,10 +14,7 @@ class Sensor:
         Factory that creates a Sensor from a Pydantic schema instance
         (for example, SensorSchema).
         """
-        return cls(
-            id=schema.id,
-            room_ids=schema.rooms
-        )
+        return cls(id=schema.id, room_ids=schema.rooms)
 
     @classmethod
     def create_sensors_from_schemas(cls, sensor_schemas: list, room_mapping: dict):
@@ -39,8 +33,4 @@ class Sensor:
         """
         Replace room_ids with full Room objects using a room mapping.
         """
-        self.rooms = [
-            room_mapping[room_id]
-            for room_id in self.room_ids
-            if room_id in room_mapping
-        ]
+        self.rooms = [room_mapping[room_id] for room_id in self.room_ids if room_id in room_mapping]

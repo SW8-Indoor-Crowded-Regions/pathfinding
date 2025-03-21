@@ -6,19 +6,20 @@ from fastapi.middleware.cors import CORSMiddleware
 from .classes.data_fetcher import DataFetcher
 from .classes.sensor_graph import SensorGraph
 
-app = FastAPI(title="Routing")
+app = FastAPI(title='Routing')
 
 # CORS
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=CORS_SETTINGS["allow_origins"],
-    allow_credentials=CORS_SETTINGS["allow_credentials"],
-    allow_methods=CORS_SETTINGS["allow_methods"],
-    allow_headers=CORS_SETTINGS["allow_headers"],
+    allow_origins=CORS_SETTINGS['allow_origins'],
+    allow_credentials=CORS_SETTINGS['allow_credentials'],
+    allow_methods=CORS_SETTINGS['allow_methods'],
+    allow_headers=CORS_SETTINGS['allow_headers'],
 )
 
 for router in routers:
     app.include_router(router)
+
 
 def main():
     # Initialize the data fetcher and retrieve sensors and rooms.
@@ -34,16 +35,16 @@ def main():
         sensor.attach_rooms(room_mapping)
 
     # Build or load the sensor graph.
-    graph_filename = "sensor_graph.pickle"
+    graph_filename = 'sensor_graph.pickle'
     graph_obj = SensorGraph(sensors)
 
     if os.path.exists(graph_filename):
         graph_obj.load_graph(graph_filename)
-        print("Loaded persisted graph.")
+        print('Loaded persisted graph.')
     else:
         graph_obj.build_graph()
         graph_obj.save_graph(graph_filename)
-        print("Built new graph and saved it.")
+        print('Built new graph and saved it.')
 
     # Define source and target sensor IDs for the example.
     if len(sensors) > 1:
@@ -65,15 +66,16 @@ def main():
                 rooms_u = {room.name for room in sensor_u.rooms}
                 rooms_v = {room.name for room in sensor_v.rooms}
                 common_rooms = rooms_u.intersection(rooms_v)
-                room_path.append(", ".join(common_rooms) if common_rooms else "No common room")
+                room_path.append(', '.join(common_rooms) if common_rooms else 'No common room')
 
-            print("Fastest path (room names along each transition):")
+            print('Fastest path (room names along each transition):')
             print(room_path)
-            print("Total effective weight (sum of crowd factors):", total_weight)
+            print('Total effective weight (sum of crowd factors):', total_weight)
         else:
-            print("No path found between the selected sensors.")
+            print('No path found between the selected sensors.')
     else:
-        print("Not enough sensors to determine a path.")
+        print('Not enough sensors to determine a path.')
 
-if __name__ == "__main__":
+
+if __name__ == '__main__':
     main()

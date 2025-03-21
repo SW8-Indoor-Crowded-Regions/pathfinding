@@ -6,11 +6,7 @@ class Room:
 
     @classmethod
     def from_dict(cls, data: dict):
-        return cls(
-            id=data.get("id"),
-            name=data.get("name"),
-            crowd_factor=data.get("crowd_factor")
-        )
+        return cls(id=data.get('id'), name=data.get('name'), crowd_factor=data.get('crowd_factor'))
 
     @classmethod
     def from_schema(cls, schema):
@@ -18,11 +14,7 @@ class Room:
         Factory that creates a Room from a Pydantic schema instance
         (for example, RoomSchema).
         """
-        return cls(
-            id=schema.id,
-            name=schema.name,
-            crowd_factor=schema.crowd_factor
-        )
+        return cls(id=schema.id, name=schema.name, crowd_factor=schema.crowd_factor)
 
     @classmethod
     def create_room_mapping_from_schemas(cls, room_schemas: list):

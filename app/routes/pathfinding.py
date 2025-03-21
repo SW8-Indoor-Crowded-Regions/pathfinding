@@ -2,9 +2,10 @@ from fastapi import APIRouter, HTTPException
 from ..services.route_service import create_fastest_path
 from ..schemas.path import FastestPathRequest
 
-router = APIRouter(prefix="/pathfinding")
+router = APIRouter(prefix='/pathfinding')
 
-@router.post("/fastest-path")
+
+@router.post('/fastest-path')
 async def get_fastest_path(request_body: FastestPathRequest):
     """
     Accepts a JSON payload that contains optional lists of Rooms and Sensors,
@@ -30,4 +31,4 @@ async def get_fastest_path(request_body: FastestPathRequest):
     except ValueError as e:
         raise HTTPException(status_code=400, detail=str(e))
     except Exception as e:
-        raise HTTPException(status_code=500, detail="Internal server error: " + str(e))
+        raise HTTPException(status_code=500, detail='Internal server error: ' + str(e))

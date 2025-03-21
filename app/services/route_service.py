@@ -4,7 +4,8 @@ from ..classes.sensor import Sensor
 from ..classes.sensor_graph import SensorGraph
 from ..schemas.path import FastestPathRequest
 
-DEFAULT_GRAPH_PATH = "app/sensor_graph.pickle"
+DEFAULT_GRAPH_PATH = 'app/sensor_graph.pickle'
+
 
 def create_fastest_path(request_body: FastestPathRequest, graph_path: str = DEFAULT_GRAPH_PATH):
     """
@@ -30,19 +31,15 @@ def create_fastest_path(request_body: FastestPathRequest, graph_path: str = DEFA
     else:
         sensor_graph.build_graph()
         sensor_graph.save_graph(graph_filename)
-    
+
     if not sensor_graph.graph.has_node(source_sensor):
         raise ValueError(f"Source sensor '{source_sensor}' not found in the sensor graph.")
     if not sensor_graph.graph.has_node(target_sensor):
         raise ValueError(f"Target sensor '{target_sensor}' not found in the sensor graph.")
 
-
     path, distance = sensor_graph.find_fastest_path(source_sensor, target_sensor)
 
     if not path or not distance:
-        raise ValueError("No path found between the given sensors.")
+        raise ValueError('No path found between the given sensors.')
 
-    return {
-        "fastest_path": path,
-        "distance": distance
-    }
+    return {'fastest_path': path, 'distance': distance}
