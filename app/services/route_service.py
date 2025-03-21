@@ -4,7 +4,9 @@ from ..classes.sensor import Sensor
 from ..classes.sensor_graph import SensorGraph
 from ..schemas.path import FastestPathRequest
 
-def create_fastest_path(request_body: FastestPathRequest):
+DEFAULT_GRAPH_PATH = "app/sensor_graph.pickle"
+
+def create_fastest_path(request_body: FastestPathRequest, graph_path: str = DEFAULT_GRAPH_PATH):
     """
     Processes a FastestPathRequest to compute the fastest path using a sensor graph.
     Raises:
@@ -16,7 +18,7 @@ def create_fastest_path(request_body: FastestPathRequest):
     source_sensor = request_body.source_sensor
     target_sensor = request_body.target_sensor
 
-    graph_filename = r"C:\\Github\\SW8\\pathfinding\\app\\test\\mock_data\\sensor_graph.pickle"
+    graph_filename = graph_path
 
     sensor_graph = SensorGraph(sensors)
     if os.path.exists(graph_filename):

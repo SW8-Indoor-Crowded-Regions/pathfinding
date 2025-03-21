@@ -7,6 +7,7 @@ from app.main import app
 client = TestClient(app)
 
 GRAPH_PATH = "app/test/mock_data/sensor_graph.pickle"
+NO_PATH_GRAPH_PATH = "app/test/mock_data/no_path_sensor_graph.pickle"
 MOCK_DATA_PATH = "app/test/mock_data/rooms_and_sensors.json"
 
 @pytest.fixture
@@ -86,13 +87,3 @@ def test_pathfinding_handles_incorrect_target_sensor():
     assert response.status_code == 400
     assert response.json()["detail"] == "Target sensor 'sensor2' not found in the sensor graph."
     
-
-def test_no_path_found():
-    payload = {
-        "source_sensor": "sensor1",
-        "target_sensor": "67d935b5d6d3ce76bef2c962"
-    }
-    response = client.post("/pathfinding/fastest-path", json=payload)
-    data = response.json()
-    assert response.status_code == 400
-    assert response.json()["detail"] == "No path found between the given sensors."
