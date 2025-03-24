@@ -69,7 +69,11 @@ nix develop
 
 ### 🔹 **For Development**
 ```bash
-uvicorn app.main:app --reload --port 8001
+uvicorn app.main:app --reload
+```
+or
+```bash
+python -m app.main
 ```
 
 ### 🔹 **For Production (4 Workers)**
