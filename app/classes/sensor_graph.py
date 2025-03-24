@@ -3,6 +3,7 @@ import pickle
 from collections import defaultdict
 import itertools
 
+
 class SensorGraph:
     def __init__(self, sensors: list):
         self.sensors = sensors
@@ -34,21 +35,23 @@ class SensorGraph:
             for sensor1, sensor2 in itertools.combinations(sensor_list, 2):
                 # If an edge already exists between these sensors, ignore the new one.
                 if not self.graph.has_edge(sensor1.id, sensor2.id):
-                    self.graph.add_edge(sensor1.id, sensor2.id, weight=room.crowd_factor, room_id=room_id)
+                    self.graph.add_edge(
+                        sensor1.id, sensor2.id, weight=room.crowd_factor, room_id=room_id
+                    )
         return self.graph
 
     def save_graph(self, filename: str):
         """
         Saves the current graph to a file using pickle.
         """
-        with open(filename, "wb") as f:
+        with open(filename, 'wb') as f:
             pickle.dump(self.graph, f)
 
     def load_graph(self, filename: str):
         """
         Loads a graph from a file using pickle.
         """
-        with open(filename, "rb") as f:
+        with open(filename, 'rb') as f:
             self.graph = pickle.load(f)
         return self.graph
 
