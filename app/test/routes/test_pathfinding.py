@@ -61,7 +61,7 @@ def test_pathfinding_handles_incorrect_source_sensor():
     response = client.post(
         '/pathfinding/fastest-path',
         json={
-            'rooms': [{'id': '67d935b5d6d3ce76bef2c962', 'name': 'Lobby', 'crowd_factor': 2}],
+            'rooms': [{'id': '67d935b5d6d3ce76bef2c962', 'name': 'Lobby', 'crowd_factor': 2, 'occupants': 3, 'area': 10}],
             'sensors': [],
             'source_sensor': 'sensor1',
             'target_sensor': 'sensor2',
