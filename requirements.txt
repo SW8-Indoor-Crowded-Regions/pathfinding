@@ -2,6 +2,7 @@ annotated-types==0.7.0
 anyio==4.9.0
 certifi==2025.1.31
 charset-normalizer==3.4.1
+click==8.1.8
 colorama==0.4.6
 contourpy==1.3.1
 coverage==7.7.0
@@ -9,8 +10,9 @@ cycler==0.12.1
 dnspython==2.7.0
 fastapi==0.115.11
 fonttools==4.56.0
+h11==0.14.0
 idna==3.10
-indoor_crowded_region_detection_database @ git+https://github.com/SW8-Indoor-Crowded-Regions/database@e8c2a7b3bdc4f497584cceae741260e4c4d40a42
+indoor_crowded_region_detection_database @ git+https://github.com/SW8-Indoor-Crowded-Regions/database@ac4a6c0f8edcdc4cd3b62a324508f4d035271b5a
 iniconfig==2.0.0
 kiwisolver==1.4.8
 matplotlib==3.10.1
@@ -33,5 +35,8 @@ ruff==0.11.0
 six==1.17.0
 sniffio==1.3.1
 starlette==0.46.1
+style==1.1.0
 typing_extensions==4.12.2
+update==0.0.1
 urllib3==2.3.0
+uvicorn==0.34.0
