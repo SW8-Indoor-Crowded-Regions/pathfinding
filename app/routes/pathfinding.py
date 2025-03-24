@@ -8,23 +8,12 @@ router = APIRouter(prefix='/pathfinding')
 @router.post('/fastest-path')
 async def get_fastest_path(request_body: FastestPathRequest):
     """
-    Accepts a JSON payload that contains optional lists of Rooms and Sensors,
-    as well as source and target sensors for pathfinding.
+    Calculate the fastest path based on the provided rooms and sensors.
 
-    Example of request_body:
-    {
-      "rooms": [
-         { "id": "UUID1", "name": "Lobby", "crowd_factor": 2 },
-         { "id": "UUID2", "name": "Hallway", "crowd_factor": 1 },
-         { "id": "UUID3", "name": "Meeting Room", "crowd_factor": 3 }
-      ],
-      "sensors": [
-         { "id": "sensor1", "rooms": ["UUID1", "UUID2"] },
-         { "id": "sensor2", "rooms": ["UUID2", "UUID3"] }
-      ],
-      "source_sensor": "sensor1",
-      "target_sensor": "sensor2"
-    }
+    - **rooms**: List of rooms with their unique IDs, names, and crowd factors.
+    - **sensors**: List of sensors with their unique IDs and associated room IDs.
+    - **source_sensor**: ID of the source sensor.
+    - **target_sensor**: ID of the target sensor.
     """
     try:
         return create_fastest_path(request_body)

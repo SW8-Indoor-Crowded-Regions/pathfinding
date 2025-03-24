@@ -1,8 +1,9 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 from typing import Optional
+from uuid import UUID
 
 
 class RoomSchema(BaseModel):
-    id: str
-    name: Optional[str] = None
-    crowd_factor: float
+    id: UUID = Field(..., description="Unique identifier for the room.")
+    name: Optional[str] = Field(..., description="Name of the room.")
+    crowd_factor: int = Field(..., description="Crowd factor of the room.")

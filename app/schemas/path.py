@@ -1,11 +1,32 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 from typing import List, Optional
 from .room import RoomSchema
 from .sensor import SensorSchema
 
 
 class FastestPathRequest(BaseModel):
-    rooms: Optional[List[RoomSchema]] = None
-    sensors: Optional[List[SensorSchema]] = None
-    source_sensor: str
-    target_sensor: str
+    rooms: Optional[List[RoomSchema]] = Field(
+        default=None, description="List of rooms involved in pathfinding."
+    )
+    sensors: Optional[List[SensorSchema]] = Field(
+        default=None, description="List of sensors involved in pathfinding."
+    )
+    source_sensor: str = Field(..., description="ID of the source sensor.")
+    target_sensor: str = Field(..., description="ID of the target sensor.")
+
+    class Config:
+        json_schema_extra = {
+            "example": {
+                "rooms": [
+                    {"id": "123e4567-e89b-12d3-a456-426614174000", "name": "Lobby", "crowd_factor": 2},
+                    {"id": "123e4567-e89b-12d3-a456-426614174001", "name": "Hallway", "crowd_factor": 1},
+                    {"id": "123e4567-e89b-12d3-a456-426614174002", "name": "Meeting Room", "crowd_factor": 3}
+                ],
+                "sensors": [
+                    {"id": "sensor1", "rooms": ["123e4567-e89b-12d3-a456-426614174000", "123e4567-e89b-12d3-a456-426614174001"]},
+                    {"id": "sensor2", "rooms": ["123e4567-e89b-12d3-a456-426614174001", "123e4567-e89b-12d3-a456-426614174002"]}
+                ],
+                "source_sensor": "sensor1",
+                "target_sensor": "sensor2"
+            }
+        }
