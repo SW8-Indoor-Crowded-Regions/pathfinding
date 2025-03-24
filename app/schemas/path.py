@@ -14,7 +14,7 @@ class FastestPathRequest(BaseModel):
     source_sensor: str = Field(..., description="ID of the source sensor.")
     target_sensor: str = Field(..., description="ID of the target sensor.")
 
-    class Config:
+    class ConfigDict:
         json_schema_extra = {
             "example": {
                 "rooms": [
