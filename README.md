@@ -69,7 +69,11 @@ nix develop
 
 ### 🔹 **For Development**
 ```bash
-uvicorn app:app --reload
+uvicorn app.main:app --reload
+```
+or
+```bash
+python -m app.main
 ```
 
 ### 🔹 **For Production (4 Workers)**
@@ -79,3 +83,12 @@ gunicorn -k uvicorn.workers.UvicornWorker -w 4 -b 0.0.0.0:8080 app.main:app
 
 ---
 
+## Testing
+### Debug tests
+- Outcomment the entire "addopts" line in "root/pytest.ini"
+
+---
+
+## Notes
+### Errors
+- If you get this error "No path found." try deleting the .pickle file and try again.
