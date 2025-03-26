@@ -1,5 +1,4 @@
 import networkx as nx
-import pickle
 from collections import defaultdict
 import itertools
 

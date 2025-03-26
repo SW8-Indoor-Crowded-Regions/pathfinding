@@ -1,4 +1,3 @@
-import time
 from ..classes.room import Room
 from ..classes.sensor import Sensor
 from ..classes.sensor_graph import SensorGraph
