@@ -1,11 +1,16 @@
 import matplotlib.pyplot as plt
 import networkx as nx
+import json
 
 from app.classes.sensor import Sensor
 from app.classes.sensor_graph import SensorGraph
+from app.classes.room import Room
 
-import matplotlib.pyplot as plt
-import networkx as nx
+MOCK_DATA_PATH = 'app/test/mock_data/rooms_and_sensors.json'
+
+def load_mock_payload():
+    with open(MOCK_DATA_PATH, 'r') as f:
+        return json.load(f)
 
 def visualize_graph(G, path=None):
     # Create a layout for the nodes.
@@ -30,10 +35,7 @@ def visualize_graph(G, path=None):
     # Prepare edge labels. For edges with multiple weights, display them as comma-separated values.
     edge_labels = {}
     for (u, v, data) in G.edges(data=True):
-        if 'weights' in data:
-            label = ", ".join(f"{w:.2f}" for w in data['weights'])
-        else:
-            label = f"{data.get('weight', 0):.2f}"
+        label = f"{data.get('weight', 0):.2f}"
         edge_labels[(u, v)] = label
     nx.draw_networkx_edge_labels(G, pos, edge_labels=edge_labels, font_color='red', font_size=8)
     
@@ -50,8 +52,16 @@ def visualize_graph(G, path=None):
     plt.show()
     
 if __name__ == '__main__':
-    # Create a graph with some nodes and edges.
-    sensors = Sensor.create_sensors_from_schemas([], [])
+    payload = load_mock_payload()
+    
+    rooms = [Room.from_dict(room_data) for room_data in payload['rooms']]
+    room_mapping = {room.id: room for room in rooms}
+    
+    sensors = []
+    for sensor_data in payload['sensors']:
+        sensor = Sensor.from_dict(sensor_data)
+        sensor.attach_rooms(room_mapping)
+        sensors.append(sensor)
 
     G = SensorGraph(sensors)
     G.build_graph()
