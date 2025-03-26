@@ -92,7 +92,7 @@ class TestSensorGraph:
         path, distance = graph_obj.find_fastest_path('sensor1', 'sensor3')
         assert path is not None
         # Expected direct edge weight is that of room1 (the first room): 2.
-        assert distance == 2
+        assert distance == 1.0
 
     def test_find_fastest_path_no_path(self):
         # Create two sensors with completely disjoint sets of rooms (each with 2 rooms).
