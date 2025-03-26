@@ -33,6 +33,8 @@ def test_pathfinding_handles_missing_data():
     assert response.status_code == 422
 
     expected_errors = [
+        {'type': 'missing', 'loc': ['body', 'rooms'], 'msg': 'Field required', 'input': {}},
+        {'type': 'missing', 'loc': ['body', 'sensors'], 'msg': 'Field required', 'input': {}},
         {'type': 'missing', 'loc': ['body', 'source_sensor'], 'msg': 'Field required', 'input': {}},
         {'type': 'missing', 'loc': ['body', 'target_sensor'], 'msg': 'Field required', 'input': {}},
     ]
