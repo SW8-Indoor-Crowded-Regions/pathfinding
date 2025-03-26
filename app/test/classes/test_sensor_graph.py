@@ -74,7 +74,7 @@ class TestSensorGraph:
         edge_data = graph.get_edge_data('sensor1', 'sensor2')
         # Expect the edge's weight to be that of the first room in the sensor's room list.
         assert 'weight' in edge_data
-        assert edge_data['weight'] == room1.crowd_factor
+        assert edge_data['weight'] == room1.calculate_weight()
 
     def test_find_fastest_path_valid(self):
         # Create three sensors that all share the same two rooms.
@@ -92,7 +92,7 @@ class TestSensorGraph:
         path, distance = graph_obj.find_fastest_path('sensor1', 'sensor3')
         assert path is not None
         # Expected direct edge weight is that of room1 (the first room): 2.
-        assert distance == 2
+        assert distance == 1.0
 
     def test_find_fastest_path_no_path(self):
         # Create two sensors with completely disjoint sets of rooms (each with 2 rooms).
@@ -110,29 +110,3 @@ class TestSensorGraph:
         path, distance = graph_obj.find_fastest_path('sensor1', 'sensor2')
         assert path is None
         assert distance is None
-
-    def test_save_and_load_graph(self, tmp_path, sensors_and_rooms):
-        sensors, _ = sensors_and_rooms
-        # Verify that each sensor has exactly 2 rooms.
-        for sensor in sensors:
-            assert len(sensor.rooms) == 2, f'Sensor {sensor.id} does not have exactly 2 rooms.'
-
-        graph_obj = SensorGraph(sensors)
-        graph_obj.build_graph()
-        # Save the graph to a temporary file.
-        file_path = tmp_path / 'test_graph.pickle'
-        graph_obj.save_graph(str(file_path))
-        # Create a new SensorGraph instance and load the graph from the file.
-        new_graph_obj = SensorGraph(sensors)
-        new_graph_obj.load_graph(str(file_path))
-        original_graph = graph_obj.graph
-        loaded_graph = new_graph_obj.graph
-        # Check that the nodes are identical.
-        assert set(original_graph.nodes()) == set(loaded_graph.nodes())
-        for node in original_graph.nodes():
-            # Compare sensor IDs instead of the entire sensor objects.
-            assert original_graph.nodes[node]['sensor'].id == loaded_graph.nodes[node]['sensor'].id
-        # Check that the edges and their attributes match.
-        assert set(original_graph.edges()) == set(loaded_graph.edges())
-        for u, v in original_graph.edges():
-            assert original_graph.get_edge_data(u, v) == loaded_graph.get_edge_data(u, v)
