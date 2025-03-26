@@ -1,5 +1,5 @@
 from fastapi import APIRouter, HTTPException
-from ..services.route_service import create_fastest_path
+from ..controllers.route_service import create_fastest_path
 from ..schemas.path import FastestPathRequest
 
 router = APIRouter(prefix='/pathfinding')

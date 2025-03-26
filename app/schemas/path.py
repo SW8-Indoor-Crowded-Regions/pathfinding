@@ -18,9 +18,9 @@ class FastestPathRequest(BaseModel):
         json_schema_extra = {
             "example": {
                 "rooms": [
-                    {"id": "123e4567-e89b-12d3-a456-426614174000", "name": "Lobby", "crowd_factor": 2},
-                    {"id": "123e4567-e89b-12d3-a456-426614174001", "name": "Hallway", "crowd_factor": 1},
-                    {"id": "123e4567-e89b-12d3-a456-426614174002", "name": "Meeting Room", "crowd_factor": 3}
+                    {"id": "123e4567-e89b-12d3-a456-426614174000", "name": "Lobby", "crowd_factor": 2, "occupants": 10, "area": 100},
+                    {"id": "123e4567-e89b-12d3-a456-426614174001", "name": "Hallway", "crowd_factor": 1, "occupants": 5, "area": 50},
+                    {"id": "123e4567-e89b-12d3-a456-426614174002", "name": "Meeting Room", "crowd_factor": 3, "occupants": 20, "area": 200}
                 ],
                 "sensors": [
                     {"id": "sensor1", "rooms": ["123e4567-e89b-12d3-a456-426614174000", "123e4567-e89b-12d3-a456-426614174001"]},

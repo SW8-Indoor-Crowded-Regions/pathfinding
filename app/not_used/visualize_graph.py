@@ -54,7 +54,7 @@ if __name__ == '__main__':
     sensors = Sensor.create_sensors_from_schemas([], [])
 
     G = SensorGraph(sensors)
-    G.load_graph('app/sensor_graph.pickle')
+    G.build_graph()
     
     # Visualize the graph without highlighting a path.
     visualize_graph(G.graph)

@@ -36,29 +36,14 @@ class SensorGraph:
                 # If an edge already exists between these sensors, ignore the new one.
                 if not self.graph.has_edge(sensor1.id, sensor2.id):
                     self.graph.add_edge(
-                        sensor1.id, sensor2.id, weight=room.crowd_factor, room_id=room_id
+                        sensor1.id, sensor2.id, weight=room.calculate_weight(), room_id=room_id
                     )
-        return self.graph
-
-    def save_graph(self, filename: str):
-        """
-        Saves the current graph to a file using pickle.
-        """
-        with open(filename, 'wb') as f:
-            pickle.dump(self.graph, f)
-
-    def load_graph(self, filename: str):
-        """
-        Loads a graph from a file using pickle.
-        """
-        with open(filename, 'rb') as f:
-            self.graph = pickle.load(f)
         return self.graph
 
     def find_fastest_path(self, source, target):
         """
         Uses Dijkstra's algorithm to find the fastest path between two sensors
-        based solely on the crowd_factor (edge weight) of the room connecting them.
+        based solely on the edge weight of the room connecting them.
         """
         try:
             path = nx.dijkstra_path(self.graph, source, target, weight='weight')

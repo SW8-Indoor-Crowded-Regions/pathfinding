@@ -1,6 +1,6 @@
 import json
 import pytest
-from app.services.route_service import create_fastest_path
+from app.controllers.route_service import create_fastest_path
 from app.schemas.path import FastestPathRequest
 
 GRAPH_PATH = 'app/test/mock_data/sensor_graph.pickle'

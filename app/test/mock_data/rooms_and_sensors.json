@@ -4,35 +4,35 @@
         "id": "67d935add6d3ce76bef2c881",
         "name": "RW1",
         "crowd_factor": 0.3,
-        "occupants": 0,
+        "occupants": 2,
         "area": 50.0
       },
       {
         "id": "67d935add6d3ce76bef2c882",
         "name": "KAFETERIA",
         "crowd_factor": 0.3,
-        "occupants": 0,
+        "occupants": 6,
         "area": 50.0
       },
       {
         "id": "67d935add6d3ce76bef2c883",
         "name": "107",
         "crowd_factor": 0.3,
-        "occupants": 0,
+        "occupants": 12,
         "area": 50.0
       },
       {
         "id": "67d935add6d3ce76bef2c884",
         "name": "106",
         "crowd_factor": 0.3,
-        "occupants": 0,
+        "occupants": 15,
         "area": 50.0
       },
       {
         "id": "67d935add6d3ce76bef2c885",
         "name": "105",
         "crowd_factor": 0.3,
-        "occupants": 0,
+        "occupants": 3,
         "area": 50.0
       },
       {
@@ -46,161 +46,161 @@
         "id": "67d935add6d3ce76bef2c887",
         "name": "103",
         "crowd_factor": 0.3,
-        "occupants": 0,
+        "occupants": 4,
         "area": 50.0
       },
       {
         "id": "67d935add6d3ce76bef2c888",
         "name": "102",
         "crowd_factor": 0.3,
-        "occupants": 0,
+        "occupants": 50,
         "area": 50.0
       },
       {
         "id": "67d935add6d3ce76bef2c889",
         "name": "101",
         "crowd_factor": 0.3,
-        "occupants": 0,
+        "occupants": 75,
         "area": 50.0
       },
       {
         "id": "67d935add6d3ce76bef2c88a",
         "name": "HALL",
         "crowd_factor": 0.3,
-        "occupants": 0,
+        "occupants": 3,
         "area": 50.0
       },
       {
         "id": "67d935add6d3ce76bef2c88b",
         "name": "109",
         "crowd_factor": 0.3,
-        "occupants": 0,
+        "occupants": 5,
         "area": 50.0
       },
       {
         "id": "67d935aed6d3ce76bef2c88c",
         "name": "108",
         "crowd_factor": 0.3,
-        "occupants": 0,
+        "occupants": 12,
         "area": 50.0
       },
       {
         "id": "67d935aed6d3ce76bef2c88d",
         "name": "SHOP",
         "crowd_factor": 0.3,
-        "occupants": 0,
+        "occupants": 25,
         "area": 50.0
       },
       {
         "id": "67d935aed6d3ce76bef2c88e",
         "name": "LW1",
         "crowd_factor": 0.3,
-        "occupants": 0,
+        "occupants": 73,
         "area": 50.0
       },
       {
         "id": "67d935aed6d3ce76bef2c88f",
         "name": "114",
         "crowd_factor": 0.3,
-        "occupants": 0,
+        "occupants": 37,
         "area": 50.0
       },
       {
         "id": "67d935aed6d3ce76bef2c890",
         "name": "115",
         "crowd_factor": 0.3,
-        "occupants": 0,
+        "occupants": 45,
         "area": 50.0
       },
       {
         "id": "67d935aed6d3ce76bef2c891",
         "name": "117",
         "crowd_factor": 0.3,
-        "occupants": 0,
+        "occupants": 4,
         "area": 50.0
       },
       {
         "id": "67d935aed6d3ce76bef2c892",
         "name": "STAGE",
         "crowd_factor": 0.3,
-        "occupants": 0,
+        "occupants": 32,
         "area": 50.0
       },
       {
         "id": "67d935aed6d3ce76bef2c893",
         "name": "113",
         "crowd_factor": 0.3,
-        "occupants": 0,
+        "occupants": 45,
         "area": 50.0
       },
       {
         "id": "67d935aed6d3ce76bef2c894",
         "name": "AUDITORIUM",
         "crowd_factor": 0.3,
-        "occupants": 0,
+        "occupants": 2,
         "area": 50.0
       },
       {
         "id": "67d935aed6d3ce76bef2c895",
         "name": "STUDYROOM",
         "crowd_factor": 0.3,
-        "occupants": 0,
+        "occupants": 5,
         "area": 50.0
       },
       {
         "id": "67d935aed6d3ce76bef2c896",
         "name": "201A",
         "crowd_factor": 0.3,
-        "occupants": 0,
+        "occupants": 7,
         "area": 50.0
       },
       {
         "id": "67d935aed6d3ce76bef2c897",
         "name": "201B",
         "crowd_factor": 0.3,
-        "occupants": 0,
+        "occupants": 12,
         "area": 50.0
       },
       {
         "id": "67d935aed6d3ce76bef2c898",
         "name": "201C",
         "crowd_factor": 0.3,
-        "occupants": 0,
+        "occupants": 45,
         "area": 50.0
       },
       {
         "id": "67d935aed6d3ce76bef2c899",
         "name": "201D",
         "crowd_factor": 0.3,
-        "occupants": 0,
+        "occupants": 87,
         "area": 50.0
       },
       {
         "id": "67d935aed6d3ce76bef2c89a",
         "name": "201E",
         "crowd_factor": 0.3,
-        "occupants": 0,
+        "occupants": 45,
         "area": 50.0
       },
       {
         "id": "67d935aed6d3ce76bef2c89b",
         "name": "202",
         "crowd_factor": 0.3,
-        "occupants": 0,
+        "occupants": 23,
         "area": 50.0
       },
       {
         "id": "67d935aed6d3ce76bef2c89c",
         "name": "203",
         "crowd_factor": 0.3,
-        "occupants": 0,
+        "occupants": 32,
         "area": 50.0
       },
       {
         "id": "67d935aed6d3ce76bef2c89d",
         "name": "204",
         "crowd_factor": 0.3,
-        "occupants": 0,
+        "occupants": 7,
         "area": 50.0
       },
       {
@@ -214,21 +214,21 @@
         "id": "67d935aed6d3ce76bef2c89f",
         "name": "211A",
         "crowd_factor": 0.3,
-        "occupants": 0,
+        "occupants": 9,
         "area": 50.0
       },
       {
         "id": "67d935aed6d3ce76bef2c8a0",
         "name": "210B",
         "crowd_factor": 0.3,
-        "occupants": 0,
+        "occupants": 8,
         "area": 50.0
       },
       {
         "id": "67d935aed6d3ce76bef2c8a1",
         "name": "210A",
         "crowd_factor": 0.3,
-        "occupants": 0,
+        "occupants": 5,
         "area": 50.0
       },
       {
@@ -242,133 +242,133 @@
         "id": "67d935aed6d3ce76bef2c8a3",
         "name": "209",
         "crowd_factor": 0.3,
-        "occupants": 0,
+        "occupants": 3,
         "area": 50.0
       },
       {
         "id": "67d935aed6d3ce76bef2c8a4",
         "name": "208A",
         "crowd_factor": 0.3,
-        "occupants": 0,
+        "occupants": 5,
         "area": 50.0
       },
       {
         "id": "67d935aed6d3ce76bef2c8a5",
         "name": "207",
         "crowd_factor": 0.3,
-        "occupants": 0,
+        "occupants": 6,
         "area": 50.0
       },
       {
         "id": "67d935aed6d3ce76bef2c8a6",
         "name": "206",
         "crowd_factor": 0.3,
-        "occupants": 0,
+        "occupants": 2,
         "area": 50.0
       },
       {
         "id": "67d935aed6d3ce76bef2c8a7",
         "name": "205",
         "crowd_factor": 0.3,
-        "occupants": 0,
+        "occupants": 7,
         "area": 50.0
       },
       {
         "id": "67d935afd6d3ce76bef2c8a8",
         "name": "T2",
         "crowd_factor": 0.3,
-        "occupants": 0,
+        "occupants": 5,
         "area": 50.0
       },
       {
         "id": "67d935afd6d3ce76bef2c8a9",
         "name": "T3",
         "crowd_factor": 0.3,
-        "occupants": 0,
+        "occupants": 9,
         "area": 50.0
       },
       {
         "id": "67d935afd6d3ce76bef2c8aa",
         "name": "P1",
         "crowd_factor": 0.3,
-        "occupants": 0,
+        "occupants": 12,
         "area": 50.0
       },
       {
         "id": "67d935afd6d3ce76bef2c8ab",
         "name": "P2",
         "crowd_factor": 0.3,
-        "occupants": 0,
+        "occupants": 74,
         "area": 50.0
       },
       {
         "id": "67d935afd6d3ce76bef2c8ac",
         "name": "P3",
         "crowd_factor": 0.3,
-        "occupants": 0,
+        "occupants": 3,
         "area": 50.0
       },
       {
         "id": "67d935afd6d3ce76bef2c8ad",
         "name": "P4",
         "crowd_factor": 0.3,
-        "occupants": 0,
+        "occupants": 23,
         "area": 50.0
       },
       {
         "id": "67d935afd6d3ce76bef2c8ae",
         "name": "212",
         "crowd_factor": 0.3,
-        "occupants": 0,
+        "occupants": 12,
         "area": 50.0
       },
       {
         "id": "67d935afd6d3ce76bef2c8af",
         "name": "213",
         "crowd_factor": 0.3,
-        "occupants": 0,
+        "occupants": 17,
         "area": 50.0
       },
       {
         "id": "67d935afd6d3ce76bef2c8b0",
         "name": "214",
         "crowd_factor": 0.3,
-        "occupants": 0,
+        "occupants": 15,
         "area": 50.0
       },
       {
         "id": "67d935afd6d3ce76bef2c8b1",
         "name": "215",
         "crowd_factor": 0.3,
-        "occupants": 0,
+        "occupants": 32,
         "area": 50.0
       },
       {
         "id": "67d935afd6d3ce76bef2c8b2",
         "name": "216",
         "crowd_factor": 0.3,
-        "occupants": 0,
+        "occupants": 19,
         "area": 50.0
       },
       {
         "id": "67d935afd6d3ce76bef2c8b3",
         "name": "T1",
         "crowd_factor": 0.3,
-        "occupants": 0,
+        "occupants": 9,
         "area": 50.0
       },
       {
         "id": "67d935afd6d3ce76bef2c8b4",
         "name": "217A",
         "crowd_factor": 0.3,
-        "occupants": 0,
+        "occupants": 3,
         "area": 50.0
       },
       {
         "id": "67d935afd6d3ce76bef2c8b5",
         "name": "229",
         "crowd_factor": 0.3,
-        "occupants": 0,
+        "occupants": 4,
         "area": 50.0
       },
       {
@@ -382,161 +382,161 @@
         "id": "67d935afd6d3ce76bef2c8b7",
         "name": "227",
         "crowd_factor": 0.3,
-        "occupants": 0,
+        "occupants": 1,
         "area": 50.0
       },
       {
         "id": "67d935afd6d3ce76bef2c8b8",
         "name": "217F",
         "crowd_factor": 0.3,
-        "occupants": 0,
+        "occupants": 2,
         "area": 50.0
       },
       {
         "id": "67d935afd6d3ce76bef2c8b9",
         "name": "217E",
         "crowd_factor": 0.3,
-        "occupants": 0,
+        "occupants": 17,
         "area": 50.0
       },
       {
         "id": "67d935afd6d3ce76bef2c8ba",
         "name": "217D",
         "crowd_factor": 0.3,
-        "occupants": 0,
+        "occupants": 28,
         "area": 50.0
       },
       {
         "id": "67d935afd6d3ce76bef2c8bb",
         "name": "217C",
         "crowd_factor": 0.3,
-        "occupants": 0,
+        "occupants": 24,
         "area": 50.0
       },
       {
         "id": "67d935afd6d3ce76bef2c8bc",
         "name": "217B",
         "crowd_factor": 0.3,
-        "occupants": 0,
+        "occupants": 39,
         "area": 50.0
       },
       {
         "id": "67d935afd6d3ce76bef2c8bd",
         "name": "218A",
         "crowd_factor": 0.3,
-        "occupants": 0,
+        "occupants": 34,
         "area": 50.0
       },
       {
         "id": "67d935afd6d3ce76bef2c8be",
         "name": "218B",
         "crowd_factor": 0.3,
-        "occupants": 0,
+        "occupants": 29,
         "area": 50.0
       },
       {
         "id": "67d935afd6d3ce76bef2c8bf",
         "name": "219",
         "crowd_factor": 0.3,
-        "occupants": 0,
+        "occupants": 44,
         "area": 50.0
       },
       {
         "id": "67d935afd6d3ce76bef2c8c0",
         "name": "220",
         "crowd_factor": 0.3,
-        "occupants": 0,
+        "occupants": 74,
         "area": 50.0
       },
       {
         "id": "67d935afd6d3ce76bef2c8c1",
         "name": "P7",
         "crowd_factor": 0.3,
-        "occupants": 0,
+        "occupants": 96,
         "area": 50.0
       },
       {
         "id": "67d935afd6d3ce76bef2c8c2",
         "name": "222",
         "crowd_factor": 0.3,
-        "occupants": 0,
+        "occupants": 4,
         "area": 50.0
       },
       {
         "id": "67d935afd6d3ce76bef2c8c3",
         "name": "223",
         "crowd_factor": 0.3,
-        "occupants": 0,
+        "occupants": 14,
         "area": 50.0
       },
       {
         "id": "67d935afd6d3ce76bef2c8c4",
         "name": "224",
         "crowd_factor": 0.3,
-        "occupants": 0,
+        "occupants": 16,
         "area": 50.0
       },
       {
         "id": "67d935b0d6d3ce76bef2c8c5",
         "name": "225",
         "crowd_factor": 0.3,
-        "occupants": 0,
+        "occupants": 19,
         "area": 50.0
       },
       {
         "id": "67d935b0d6d3ce76bef2c8c6",
         "name": "221",
         "crowd_factor": 0.3,
-        "occupants": 0,
+        "occupants": 22,
         "area": 50.0
       },
       {
         "id": "67d935b0d6d3ce76bef2c8c7",
         "name": "226",
         "crowd_factor": 0.3,
-        "occupants": 0,
+        "occupants": 4,
         "area": 50.0
       },
       {
         "id": "67d935b0d6d3ce76bef2c8c8",
         "name": "P5",
         "crowd_factor": 0.3,
-        "occupants": 0,
+        "occupants": 17,
         "area": 50.0
       },
       {
         "id": "67d935b0d6d3ce76bef2c8c9",
         "name": "P8",
         "crowd_factor": 0.3,
-        "occupants": 0,
+        "occupants": 29,
         "area": 50.0
       },
       {
         "id": "67d935b0d6d3ce76bef2c8ca",
         "name": "T7",
         "crowd_factor": 0.3,
-        "occupants": 0,
+        "occupants": 16,
         "area": 50.0
       },
       {
         "id": "67d935b0d6d3ce76bef2c8cb",
         "name": "T6",
         "crowd_factor": 0.3,
-        "occupants": 0,
+        "occupants": 2,
         "area": 50.0
       },
       {
         "id": "67d935b0d6d3ce76bef2c8cc",
         "name": "270B",
         "crowd_factor": 0.3,
-        "occupants": 0,
+        "occupants": 3,
         "area": 50.0
       },
       {
         "id": "67d935b0d6d3ce76bef2c8cd",
         "name": "270A",
         "crowd_factor": 0.3,
-        "occupants": 0,
+        "occupants": 4,
         "area": 50.0
       },
       {
@@ -550,140 +550,140 @@
         "id": "67d935b0d6d3ce76bef2c8cf",
         "name": "261",
         "crowd_factor": 0.3,
-        "occupants": 0,
+        "occupants": 1,
         "area": 50.0
       },
       {
         "id": "67d935b0d6d3ce76bef2c8d0",
         "name": "272",
         "crowd_factor": 0.3,
-        "occupants": 0,
+        "occupants": 2,
         "area": 50.0
       },
       {
         "id": "67d935b0d6d3ce76bef2c8d1",
         "name": "260",
         "crowd_factor": 0.3,
-        "occupants": 0,
+        "occupants": 3,
         "area": 50.0
       },
       {
         "id": "67d935b0d6d3ce76bef2c8d2",
         "name": "P9",
         "crowd_factor": 0.3,
-        "occupants": 0,
+        "occupants": 4,
         "area": 50.0
       },
       {
         "id": "67d935b0d6d3ce76bef2c8d3",
         "name": "269A",
         "crowd_factor": 0.3,
-        "occupants": 0,
+        "occupants": 5,
         "area": 50.0
       },
       {
         "id": "67d935b0d6d3ce76bef2c8d4",
         "name": "269B",
         "crowd_factor": 0.3,
-        "occupants": 0,
+        "occupants": 6,
         "area": 50.0
       },
       {
         "id": "67d935b0d6d3ce76bef2c8d5",
         "name": "263B",
         "crowd_factor": 0.3,
-        "occupants": 0,
+        "occupants": 7,
         "area": 50.0
       },
       {
         "id": "67d935b0d6d3ce76bef2c8d6",
         "name": "263C",
         "crowd_factor": 0.3,
-        "occupants": 0,
+        "occupants": 12,
         "area": 50.0
       },
       {
         "id": "67d935b0d6d3ce76bef2c8d7",
         "name": "263A",
         "crowd_factor": 0.3,
-        "occupants": 0,
+        "occupants": 32,
         "area": 50.0
       },
       {
         "id": "67d935b0d6d3ce76bef2c8d8",
         "name": "P6",
         "crowd_factor": 0.3,
-        "occupants": 0,
+        "occupants": 27,
         "area": 50.0
       },
       {
         "id": "67d935b0d6d3ce76bef2c8d9",
         "name": "P10",
         "crowd_factor": 0.3,
-        "occupants": 0,
+        "occupants": 55,
         "area": 50.0
       },
       {
         "id": "67d935b0d6d3ce76bef2c8da",
         "name": "T5",
         "crowd_factor": 0.3,
-        "occupants": 0,
+        "occupants": 6,
         "area": 50.0
       },
       {
         "id": "67d935b0d6d3ce76bef2c8db",
         "name": "T4",
         "crowd_factor": 0.3,
-        "occupants": 0,
+        "occupants": 4,
         "area": 50.0
       },
       {
         "id": "67d935b0d6d3ce76bef2c8dc",
         "name": "268A",
         "crowd_factor": 0.3,
-        "occupants": 0,
+        "occupants": 3,
         "area": 50.0
       },
       {
         "id": "67d935b0d6d3ce76bef2c8dd",
         "name": "268B",
         "crowd_factor": 0.3,
-        "occupants": 0,
+        "occupants": 8,
         "area": 50.0
       },
       {
         "id": "67d935b0d6d3ce76bef2c8de",
         "name": "264",
         "crowd_factor": 0.3,
-        "occupants": 0,
+        "occupants": 2,
         "area": 50.0
       },
       {
         "id": "67d935b0d6d3ce76bef2c8df",
         "name": "264A",
         "crowd_factor": 0.3,
-        "occupants": 0,
+        "occupants": 3,
         "area": 50.0
       },
       {
         "id": "67d935b0d6d3ce76bef2c8e0",
         "name": "267",
         "crowd_factor": 0.3,
-        "occupants": 0,
+        "occupants": 4,
         "area": 50.0
       },
       {
         "id": "67d935b0d6d3ce76bef2c8e1",
         "name": "265",
         "crowd_factor": 0.3,
-        "occupants": 0,
+        "occupants": 12,
         "area": 50.0
       },
       {
         "id": "67d935b1d6d3ce76bef2c8e2",
         "name": "266",
         "crowd_factor": 0.3,
-        "occupants": 0,
+        "occupants": 32,
         "area": 50.0
       }
     ],
