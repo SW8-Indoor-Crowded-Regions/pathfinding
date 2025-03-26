@@ -69,10 +69,6 @@ nix develop
 
 ### 🔹 **For Development**
 ```bash
-uvicorn app.main:app --reload
-```
-or
-```bash
 python -m app.main
 ```
 
