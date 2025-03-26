@@ -5,12 +5,8 @@ from .sensor import SensorSchema
 
 
 class FastestPathRequest(BaseModel):
-    rooms: Optional[List[RoomSchema]] = Field(
-        default=None, description="List of rooms involved in pathfinding."
-    )
-    sensors: Optional[List[SensorSchema]] = Field(
-        default=None, description="List of sensors involved in pathfinding."
-    )
+    rooms: List[RoomSchema] = Field(description="List of rooms involved in pathfinding.")
+    sensors: List[SensorSchema] = Field(description="List of sensors involved in pathfinding.")
     source_sensor: str = Field(..., description="ID of the source sensor.")
     target_sensor: str = Field(..., description="ID of the target sensor.")
 
