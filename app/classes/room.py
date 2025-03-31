@@ -6,6 +6,15 @@ class Room:
         self.occupants = occupants
         self.area = area
 
+    def calculate_weight(self):
+        """
+        Calculates the weight of a room based on area, occupants, and crowd_factor.
+        """
+        if self.occupants == 0:
+            return 0.01
+
+        return self.occupants / self.area * self.crowd_factor
+    
     @classmethod
     def from_dict(cls, data: dict):
         return cls(
