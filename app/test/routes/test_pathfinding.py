@@ -24,7 +24,7 @@ def test_pathfinding_returns_correct_path(load_mock_payload):
 
     assert response.status_code == 200
     data = response.json()
-    assert data['fastest_path'] == [{'id': '67d935b5d6d3ce76bef2c960', 'longitude': 10.857185147851341, 'latitude': 11.032101366333102}, {'id': '67d935b5d6d3ce76bef2c95a', 'longitude': 47.31982729135278, 'latitude': 42.8210378030866}, {'id': '67d935b5d6d3ce76bef2c961', 'longitude': 64.81348685573096, 'latitude': 20.355786846137036}]
+    assert data['fastest_path'] == [{'id': '67d935b5d6d3ce76bef2c960', 'longitude': 18.93777352124124, 'latitude': 37.538782960601026}, {'id': '67d935b5d6d3ce76bef2c95a', 'longitude': 25.297401708592176, 'latitude': 67.80276018830894}, {'id': '67d935b5d6d3ce76bef2c961', 'longitude': 62.51497781591165, 'latitude': 10.404483061758405}]
     assert data['distance'] == 0.342
 
 
