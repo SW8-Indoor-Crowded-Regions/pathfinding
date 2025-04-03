@@ -1,8 +1,10 @@
 class Sensor:
     def __init__(self, id: str, room_ids: list):
         self.id = id
-        self.room_ids = room_ids  # List of room IDs (as provided by the API)
-        self.rooms = []  # This will later hold full Room objects
+        self.room_ids = room_ids
+        self.rooms = []
+        self.longtitude = 0.0
+        self.latitude = 0.0
 
     @classmethod
     def from_dict(cls, data: dict):
