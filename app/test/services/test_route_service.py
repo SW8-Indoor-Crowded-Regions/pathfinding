@@ -53,5 +53,5 @@ def test_fastest_path_success(load_mock_payload):
     assert 'distance' in result
     assert isinstance(result['fastest_path'], list)
     assert isinstance(result['distance'], (int, float))
-    assert result['fastest_path'] == ['67d935b5d6d3ce76bef2c960', '67d935b5d6d3ce76bef2c95a', '67d935b5d6d3ce76bef2c961']
+    assert result['fastest_path'] == [{'id': '67d935b5d6d3ce76bef2c960', 'longtitude': 0.0, 'latitude': 0.0}, {'id': '67d935b5d6d3ce76bef2c95a', 'longtitude': 0.0, 'latitude': 0.0}, {'id': '67d935b5d6d3ce76bef2c961', 'longtitude': 0.0, 'latitude': 0.0}]
     assert pytest.approx(result['distance']) == 0.342
