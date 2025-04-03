@@ -51,7 +51,7 @@ class SensorGraph:
                 path_with_coordinates.append(
                     {
                         "id": sensor,
-                        "longtitude": self.graph.nodes[sensor]["sensor"].longtitude,
+                        "longitude": self.graph.nodes[sensor]["sensor"].longitude,
                         "latitude": self.graph.nodes[sensor]["sensor"].latitude,
                     }
                 )

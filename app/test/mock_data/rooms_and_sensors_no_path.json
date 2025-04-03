@@ -1,55 +1,62 @@
 {
   "rooms": [
       {
-        "id": "67d935add6d3ce76bef2c881",
-        "name": "RW1",
-        "crowd_factor": 0.3,
-        "occupants": 2,
-        "area": 50.0
+          "id": "67d935add6d3ce76bef2c881",
+          "name": "RW1",
+          "crowd_factor": 0.3,
+          "occupants": 2,
+          "area": 50.0
       },
       {
-        "id": "67d935afd6d3ce76bef2c8a8",
-        "name": "RW2",
-        "crowd_factor": 0.5,
-        "occupants": 3,
-        "area": 70.0
+          "id": "67d935afd6d3ce76bef2c8a8",
+          "name": "RW2",
+          "crowd_factor": 0.5,
+          "occupants": 3,
+          "area": 70.0
       },
       {
-        "id": "room1",
-        "name": "NoPath",
-        "crowd_factor": 0.5,
-        "occupants": 2,
-        "area": 50.0
+          "id": "room1",
+          "name": "NoPath",
+          "crowd_factor": 0.5,
+          "occupants": 2,
+          "area": 50.0
       }
-    ],
-    "sensors": [
+  ],
+  "sensors": [
       {
-        "id": "67d935b1d6d3ce76bef2c8e3",
-        "rooms": [
-          "67d935add6d3ce76bef2c881",
-          "67d935afd6d3ce76bef2c8a8"
-        ]
+          "id": "67d935b1d6d3ce76bef2c8e3",
+          "rooms": [
+              "67d935add6d3ce76bef2c881",
+              "67d935afd6d3ce76bef2c8a8"
+          ],
+          "latitude": 67.7779753615802,
+          "longitude": 52.28848795017501
       },
       {
-        "id": "67d935b5d6d3ce76bef2c960",
-        "rooms": [
-          "67d935add6d3ce76bef2c881"
-        ]
+          "id": "67d935b5d6d3ce76bef2c960",
+          "rooms": [
+              "67d935add6d3ce76bef2c881"
+          ],
+          "latitude": 38.72545358053907,
+          "longitude": 53.22798949051648
       },
       {
-        "id": "67d935b5d6d3ce76bef2c961",
-        "rooms": [
-          "67d935add6d3ce76bef2c881"
-        ]
+          "id": "67d935b5d6d3ce76bef2c961",
+          "rooms": [
+              "67d935add6d3ce76bef2c881"
+          ],
+          "latitude": 71.0429035502413,
+          "longitude": 52.7535073735901
       },
       {
-        "id": "no_path_sensor",
-        "rooms": [
-          "room1"
-        ]
+          "id": "no_path_sensor",
+          "rooms": [
+              "room1"
+          ],
+          "latitude": 21.31620526181467,
+          "longitude": 59.15320892560297
       }
-    ],
-    "source_sensor": "no_path_sensor",
-    "target_sensor": "67d935b5d6d3ce76bef2c961"
-  }
-  
+  ],
+  "source_sensor": "no_path_sensor",
+  "target_sensor": "67d935b5d6d3ce76bef2c961"
+}
