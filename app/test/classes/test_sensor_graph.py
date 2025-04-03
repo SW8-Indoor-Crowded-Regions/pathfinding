@@ -8,11 +8,11 @@ class TestSensorGraph:
     @pytest.fixture
     def sensors_and_rooms(self):
         # Create five dummy rooms.
-        room1 = Room('room1', 'Room A', 5, 100, 200)
-        room2 = Room('room2', 'Room B', 3, 50, 150)
-        room3 = Room('room3', 'Room C', 4, 75, 175)
-        room4 = Room('room4', 'Room D', 6, 125, 225)
-        room5 = Room('room5', 'Room E', 7, 150, 250)
+        room1 = Room('room1', 'Room A', 5, 100, 200, 1.2)
+        room2 = Room('room2', 'Room B', 3, 50, 150, 1.3)
+        room3 = Room('room3', 'Room C', 4, 75, 175, 1.1)
+        room4 = Room('room4', 'Room D', 6, 125, 225, 1.8)
+        room5 = Room('room5', 'Room E', 7, 150, 250, 1.4)
 
         # Create sensors with exactly two rooms each.
         # Sensors 1, 2, and 3 share rooms in a way that forms a connected subgraph.
@@ -60,8 +60,8 @@ class TestSensorGraph:
 
     def test_edge_with_multiple_shared_rooms(self):
         # Create two sensors sharing exactly the same two rooms.
-        room1 = Room('room1', 'Room A', 5, 100, 200)
-        room2 = Room('room2', 'Room B', 3, 50, 150)
+        room1 = Room('room1', 'Room A', 5, 100, 200, 1.9)
+        room2 = Room('room2', 'Room B', 3, 50, 150, 0.9)
         sensor1 = Sensor('sensor1', [], 12.34, 56.78)
         sensor1.rooms = [room1, room2]
         sensor2 = Sensor('sensor2', [], 12.34, 56.78)
@@ -78,8 +78,8 @@ class TestSensorGraph:
 
     def test_find_fastest_path_valid(self):
         # Create three sensors that all share the same two rooms.
-        room1 = Room('room1', 'Room A', 2, 50, 100)
-        room2 = Room('room2', 'Room B', 3, 75, 125)
+        room1 = Room('room1', 'Room A', 2, 50, 100, 1.2)
+        room2 = Room('room2', 'Room B', 3, 75, 125, 1.2)
         sensor1 = Sensor('sensor1', [], 12.34, 56.78)
         sensor1.rooms = [room1, room2]
         sensor2 = Sensor('sensor2', [], 12.34, 56.78)
@@ -96,10 +96,10 @@ class TestSensorGraph:
 
     def test_find_fastest_path_no_path(self):
         # Create two sensors with completely disjoint sets of rooms (each with 2 rooms).
-        room1 = Room('room1', 'Room A', 2, 50, 100)
-        room2 = Room('room2', 'Room B', 3, 75, 125)
-        room3 = Room('room3', 'Room C', 4, 100, 150)
-        room4 = Room('room4', 'Room D', 5, 125, 175)
+        room1 = Room('room1', 'Room A', 2, 50, 100, 1.2)
+        room2 = Room('room2', 'Room B', 3, 75, 125, 1.2)
+        room3 = Room('room3', 'Room C', 4, 100, 150, 1.2)
+        room4 = Room('room4', 'Room D', 5, 125, 175, 1.2)
         sensor1 = Sensor('sensor1', [], 12.34, 56.78)
         sensor1.rooms = [room1, room2]
         sensor2 = Sensor('sensor2', [], 12.34, 56.78)

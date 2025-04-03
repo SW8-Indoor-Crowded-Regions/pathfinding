@@ -1,10 +1,12 @@
 class Room:
-    def __init__(self, id: str, name: str, crowd_factor: float, occupants: int, area: float):
+    def __init__(self, id: str, name: str, crowd_factor: float, occupants: int, area: float, popularity_factor: float):
         self.id = id
         self.name = name
         self.crowd_factor = crowd_factor
         self.occupants = occupants
         self.area = area
+        self.popularity_factor = popularity_factor
+
 
     def calculate_weight(self):
         """
@@ -22,7 +24,9 @@ class Room:
             name=data.get('name'),
             crowd_factor=data.get('crowd_factor'),
             occupants=data.get('occupants'),
-            area=data.get('area')
+            area=data.get('area'),
+            popularity_factor=data.get('popularity_factor')
+
         )
 
     @classmethod
@@ -36,7 +40,8 @@ class Room:
             name=schema.name,
             crowd_factor=schema.crowd_factor,
             occupants=schema.occupants,
-            area=schema.area
+            area=schema.area,
+            popularity_factor=schema.popularity_factor
         )
 
     @classmethod
