@@ -31,25 +31,33 @@
             "rooms": [
                 "67d935add6d3ce76bef2c881",
                 "67d935afd6d3ce76bef2c8a8"
-            ]
+            ],
+            "latitude": 49.312392999049514,
+            "longitude": 53.68807434882344
         },
         {
             "id": "67d935b5d6d3ce76bef2c960",
             "rooms": [
                 "67d935add6d3ce76bef2c881"
-            ]
+            ],
+            "latitude": 60.30540443182037,
+            "longitude": 26.612303468186102
         },
         {
             "id": "67d935b5d6d3ce76bef2c961",
             "rooms": [
                 "67d935add6d3ce76bef2c881"
-            ]
+            ],
+            "latitude": 77.95709819790915,
+            "longitude": 30.55809870535711
         },
         {
             "id": "no_path_sensor",
             "rooms": [
                 "room1"
-            ]
+            ],
+            "latitude": 44.515457430535754,
+            "longitude": 14.639179911121865
         }
     ],
     "source_sensor": "no_path_sensor",

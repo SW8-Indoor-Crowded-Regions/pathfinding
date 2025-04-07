@@ -46,7 +46,16 @@ class SensorGraph:
         """
         try:
             path = nx.dijkstra_path(self.graph, source, target, weight='weight')
+            path_with_coordinates = []
+            for sensor in path:
+                path_with_coordinates.append(
+                    {
+                        "id": sensor,
+                        "longitude": self.graph.nodes[sensor]["sensor"].longitude,
+                        "latitude": self.graph.nodes[sensor]["sensor"].latitude,
+                    }
+                )
             distance = nx.dijkstra_path_length(self.graph, source, target, weight='weight')
-            return path, distance
+            return path_with_coordinates, distance
         except nx.NetworkXNoPath:
             return None, None

@@ -16,18 +16,18 @@ class TestSensorGraph:
 
         # Create sensors with exactly two rooms each.
         # Sensors 1, 2, and 3 share rooms in a way that forms a connected subgraph.
-        sensor1 = Sensor('sensor1', [])
+        sensor1 = Sensor('sensor1', [], 12.34, 56.78)
         sensor1.rooms = [room1, room2]  # sensor1: room1 and room2
-        sensor2 = Sensor('sensor2', [])
+        sensor2 = Sensor('sensor2', [], 12.34, 56.78)
         sensor2.rooms = [room1, room3]  # sensor2: room1 and room3 (common with sensor1: room1)
-        sensor3 = Sensor('sensor3', [])
+        sensor3 = Sensor('sensor3', [], 12.34, 56.78)
         sensor3.rooms = [
             room2,
             room3,
         ]  # sensor3: room2 and room3 (common with sensor1: room2, sensor2: room3)
 
         # Sensor4 is isolated by having a pair of rooms that no other sensor uses.
-        sensor4 = Sensor('sensor4', [])
+        sensor4 = Sensor('sensor4', [], 12.34, 56.78)
         sensor4.rooms = [room4, room5]
 
         return [sensor1, sensor2, sensor3, sensor4], (room1, room2, room3, room4, room5)
@@ -62,9 +62,9 @@ class TestSensorGraph:
         # Create two sensors sharing exactly the same two rooms.
         room1 = Room('room1', 'Room A', 5, 100, 200, 1.9)
         room2 = Room('room2', 'Room B', 3, 50, 150, 0.9)
-        sensor1 = Sensor('sensor1', [])
+        sensor1 = Sensor('sensor1', [], 12.34, 56.78)
         sensor1.rooms = [room1, room2]
-        sensor2 = Sensor('sensor2', [])
+        sensor2 = Sensor('sensor2', [], 12.34, 56.78)
         sensor2.rooms = [room1, room2]
         sensors = [sensor1, sensor2]
         graph_obj = SensorGraph(sensors)
@@ -80,11 +80,11 @@ class TestSensorGraph:
         # Create three sensors that all share the same two rooms.
         room1 = Room('room1', 'Room A', 2, 50, 100, 1.2)
         room2 = Room('room2', 'Room B', 3, 75, 125, 1.2)
-        sensor1 = Sensor('sensor1', [])
+        sensor1 = Sensor('sensor1', [], 12.34, 56.78)
         sensor1.rooms = [room1, room2]
-        sensor2 = Sensor('sensor2', [])
+        sensor2 = Sensor('sensor2', [], 12.34, 56.78)
         sensor2.rooms = [room1, room2]
-        sensor3 = Sensor('sensor3', [])
+        sensor3 = Sensor('sensor3', [], 12.34, 56.78)
         sensor3.rooms = [room1, room2]
         sensors = [sensor1, sensor2, sensor3]
         graph_obj = SensorGraph(sensors)
@@ -100,9 +100,9 @@ class TestSensorGraph:
         room2 = Room('room2', 'Room B', 3, 75, 125, 1.2)
         room3 = Room('room3', 'Room C', 4, 100, 150, 1.2)
         room4 = Room('room4', 'Room D', 5, 125, 175, 1.2)
-        sensor1 = Sensor('sensor1', [])
+        sensor1 = Sensor('sensor1', [], 12.34, 56.78)
         sensor1.rooms = [room1, room2]
-        sensor2 = Sensor('sensor2', [])
+        sensor2 = Sensor('sensor2', [], 12.34, 56.78)
         sensor2.rooms = [room3, room4]
         sensors = [sensor1, sensor2]
         graph_obj = SensorGraph(sensors)
