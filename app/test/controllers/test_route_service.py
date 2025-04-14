@@ -18,23 +18,23 @@ def load_no_path_mock_payload():
         return json.load(f)
 
 def test_source_not_in_graph(load_mock_payload):
-    load_mock_payload['source_sensor'] = 'nonexistent_sensor'
-    load_mock_payload['target_sensor'] = '67d935b5d6d3ce76bef2c961'
+    load_mock_payload['source_room'] = 'nonexistent_sensor'
+    load_mock_payload['target_room'] = '67d935b5d6d3ce76bef2c961'
     request = FastestPathRequest.model_validate(load_mock_payload)
 
     with pytest.raises(ValueError) as e:
         create_fastest_path(request)
-    assert 'Source sensor' in str(e.value)
+    assert 'Source room' in str(e.value)
 
 
 def test_target_not_in_graph(load_mock_payload):
-    load_mock_payload['source_sensor'] = '67d935b5d6d3ce76bef2c962'
-    load_mock_payload['target_sensor'] = 'nonexistent_sensor'
+    load_mock_payload['source_room'] = '67d935b5d6d3ce76bef2c962'
+    load_mock_payload['target_room'] = 'nonexistent_room'
     request = FastestPathRequest.model_validate(load_mock_payload)
 
     with pytest.raises(ValueError) as e:
         create_fastest_path(request)
-    assert 'Target sensor' in str(e.value)
+    assert 'Target room' in str(e.value)
 
 
 def test_no_path_found_between_sensors(load_no_path_mock_payload):
@@ -53,5 +53,5 @@ def test_fastest_path_success(load_mock_payload):
     assert 'distance' in result
     assert isinstance(result['fastest_path'], list)
     assert isinstance(result['distance'], (int, float))
-    assert result['fastest_path'] == [{'id': '67d935b5d6d3ce76bef2c960', 'longitude': 18.93777352124124, 'latitude': 37.538782960601026}, {'id': '67d935b5d6d3ce76bef2c95a', 'longitude': 25.297401708592176, 'latitude': 67.80276018830894}, {'id': '67d935b5d6d3ce76bef2c961', 'longitude': 62.51497781591165, 'latitude': 10.404483061758405}]
-    assert pytest.approx(result['distance']) == 0.342
+    assert result['fastest_path'] == [{'id': '67d935b1d6d3ce76bef2c8e9', 'longitude': 16.369509547137667, 'latitude': 23.8621854675587}, {'id': '67d935b1d6d3ce76bef2c8ea', 'longitude': 61.74727469899295, 'latitude': 72.87442522121299}]
+    assert pytest.approx(result['distance']) == 0.09

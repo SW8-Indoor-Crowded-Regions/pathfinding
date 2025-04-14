@@ -1939,6 +1939,6 @@
             "longitude": 22.2430414574675
         }
     ],
-    "source_sensor": "67d935b5d6d3ce76bef2c960",
-    "target_sensor": "67d935b5d6d3ce76bef2c961"
+    "source_room": "67d935add6d3ce76bef2c883",
+    "target_room": "67d935add6d3ce76bef2c885"
 }
