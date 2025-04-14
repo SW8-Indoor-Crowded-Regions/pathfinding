@@ -12,8 +12,8 @@ async def get_fastest_path(request_body: FastestPathRequest):
 
     - **rooms**: List of rooms with their unique IDs, names, and crowd factors.
     - **sensors**: List of sensors with their unique IDs and associated room IDs.
-    - **source_sensor**: ID of the source sensor.
-    - **target_sensor**: ID of the target sensor.
+    - **source_sensor**: ID of the source room.
+    - **target_sensor**: ID of the target room.
     """
     try:
         return create_fastest_path(request_body)

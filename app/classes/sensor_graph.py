@@ -38,16 +38,26 @@ class SensorGraph:
                         sensor1.id, sensor2.id, weight=room.calculate_weight(), room_id=room_id
                     )
         return self.graph
+    
+    def attach_room(self, room_id):
+        """
+        Attaches a room to all its sensors in the graph with weight 0.
+        """
+        for sensor in self.sensors:
+            if room_id in sensor.room_ids:
+                self.graph.add_edge(sensor.id, room_id, weight=0, room_id=room_id)
 
     def find_fastest_path(self, source, target):
         """
-        Uses Dijkstra's algorithm to find the fastest path between two sensors
+        Uses Dijkstra's algorithm to find the fastest path between two rooms
         based solely on the edge weight of the room connecting them.
         """
         try:
             path = nx.dijkstra_path(self.graph, source, target, weight='weight')
             path_with_coordinates = []
             for sensor in path:
+                if sensor == source or sensor == target:
+                    continue
                 path_with_coordinates.append(
                     {
                         "id": sensor,
