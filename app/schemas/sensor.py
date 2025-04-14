@@ -3,7 +3,7 @@ from typing import List
 
 
 class SensorSchema(BaseModel):
-    id: str = Field(..., description="Unique identifier for the sensor.")
-    rooms: List[str] = Field(..., description="List of room UUIDs associated with the sensor.")
-    longitude: float = Field(..., description="Longitude of the sensor's location.")
-    latitude: float = Field(..., description="Latitude of the sensor's location.")
+	id: str = Field(..., description='Unique identifier for the sensor.')
+	rooms: List[str] = Field(..., description='List of room UUIDs associated with the sensor.')
+	longitude: float = Field(..., description="Longitude of the sensor's location.")
+	latitude: float = Field(..., description="Latitude of the sensor's location.")
