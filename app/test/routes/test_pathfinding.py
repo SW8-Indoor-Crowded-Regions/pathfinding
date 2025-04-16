@@ -64,10 +64,7 @@ def test_pathfinding_handles_incorrect_source_room(load_mock_payload):
 		json=payload,
 	)
 	assert response.status_code == 400
-	assert (
-		response.json()['detail']
-		== "Source room 'non_existent_room' not found in the sensor graph."
-	)
+	assert response.json()['detail'] == "Source room 'non_existent_room' is not valid."
 
 
 def test_pathfinding_handles_incorrect_target_room(load_mock_payload):
@@ -75,10 +72,7 @@ def test_pathfinding_handles_incorrect_target_room(load_mock_payload):
 	payload['target_room'] = 'non_existent_sensor'
 	response = client.post('/pathfinding/fastest-path', json=payload)
 	assert response.status_code == 400
-	assert (
-		response.json()['detail']
-		== "Target room 'non_existent_sensor' not found in the sensor graph."
-	)
+	assert response.json()['detail'] == "Target room 'non_existent_sensor' is not valid."
 
 
 def test_pathfinding_handles_no_path(load_no_path_mock_payload):
