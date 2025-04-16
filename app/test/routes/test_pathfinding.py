@@ -66,7 +66,7 @@ def test_pathfinding_handles_incorrect_source_room(load_mock_payload):
 	assert response.status_code == 400
 	assert (
 		response.json()['detail']
-		== "Source room 'non_existent_room' not found in the sensor graph."
+		== "Source room 'non_existent_room' is not valid."
 	)
 
 
@@ -77,7 +77,7 @@ def test_pathfinding_handles_incorrect_target_room(load_mock_payload):
 	assert response.status_code == 400
 	assert (
 		response.json()['detail']
-		== "Target room 'non_existent_sensor' not found in the sensor graph."
+		== "Target room 'non_existent_sensor' is not valid."
 	)
 
 
