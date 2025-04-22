@@ -30,7 +30,7 @@ def test_source_not_in_graph(load_mock_payload):
 
 
 def test_target_not_in_graph(load_mock_payload):
-	load_mock_payload['source_room'] = '67d935b5d6d3ce76bef2c962'
+	load_mock_payload['source_room'] = '67d935afd6d3ce76bef2c8b6'
 	load_mock_payload['target_room'] = 'nonexistent_room'
 	request = FastestPathRequest.model_validate(load_mock_payload)
 
