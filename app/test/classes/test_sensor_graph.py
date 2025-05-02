@@ -1,4 +1,5 @@
 import pytest
+import networkx as nx
 from app.classes.sensor import Sensor
 from app.classes.room import Room
 from app.classes.sensor_graph import SensorGraph
@@ -91,11 +92,9 @@ class TestSensorGraph:
 		graph_obj.build_graph()
 		path, distance = graph_obj.find_fastest_path('sensor1', 'sensor3')
 		assert path is not None
-		# Expected direct edge weight is that of room1 (the first room): 2.
 		assert distance == 1.0
 
 	def test_find_fastest_path_no_path(self):
-		# Create two sensors with completely disjoint sets of rooms (each with 2 rooms).
 		room1 = Room('room1', 'Room A', 2, 50, 100, 1.2)
 		room2 = Room('room2', 'Room B', 3, 75, 125, 1.2)
 		room3 = Room('room3', 'Room C', 4, 100, 150, 1.2)
@@ -107,6 +106,5 @@ class TestSensorGraph:
 		sensors = [sensor1, sensor2]
 		graph_obj = SensorGraph(sensors)
 		graph_obj.build_graph()
-		path, distance = graph_obj.find_fastest_path('sensor1', 'sensor2')
-		assert path is None
-		assert distance is None
+		with pytest.raises(nx.NetworkXNoPath):
+			graph_obj.find_fastest_path('sensor1', 'sensor2')

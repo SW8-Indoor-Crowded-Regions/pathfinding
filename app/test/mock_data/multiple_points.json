@@ -1,0 +1,1944 @@
+{
+    "rooms": [
+        {
+            "id": "67d935add6d3ce76bef2c881",
+            "name": "RW1",
+            "crowd_factor": 0.3,
+            "occupants": 2,
+            "area": 50.0,
+            "popularity_factor": 1.764424593260559
+        },
+        {
+            "id": "67d935add6d3ce76bef2c882",
+            "name": "KAFETERIA",
+            "crowd_factor": 0.3,
+            "occupants": 6,
+            "area": 50.0,
+            "popularity_factor": 0.8823063772317682
+        },
+        {
+            "id": "67d935add6d3ce76bef2c883",
+            "name": "107",
+            "crowd_factor": 0.3,
+            "occupants": 12,
+            "area": 50.0,
+            "popularity_factor": 0.19071676094915843
+        },
+        {
+            "id": "67d935add6d3ce76bef2c884",
+            "name": "106",
+            "crowd_factor": 0.3,
+            "occupants": 15,
+            "area": 50.0,
+            "popularity_factor": 0.6133044537264026
+        },
+        {
+            "id": "67d935add6d3ce76bef2c885",
+            "name": "105",
+            "crowd_factor": 0.3,
+            "occupants": 3,
+            "area": 50.0,
+            "popularity_factor": 0.3210981611492981
+        },
+        {
+            "id": "67d935add6d3ce76bef2c886",
+            "name": "104",
+            "crowd_factor": 0.3,
+            "occupants": 0,
+            "area": 50.0,
+            "popularity_factor": 1.1756049430495064
+        },
+        {
+            "id": "67d935add6d3ce76bef2c887",
+            "name": "103",
+            "crowd_factor": 0.3,
+            "occupants": 4,
+            "area": 50.0,
+            "popularity_factor": 1.1341084802835106
+        },
+        {
+            "id": "67d935add6d3ce76bef2c888",
+            "name": "102",
+            "crowd_factor": 0.3,
+            "occupants": 50,
+            "area": 50.0,
+            "popularity_factor": 0.47939352220041387
+        },
+        {
+            "id": "67d935add6d3ce76bef2c889",
+            "name": "101",
+            "crowd_factor": 0.3,
+            "occupants": 75,
+            "area": 50.0,
+            "popularity_factor": 1.2305301063505738
+        },
+        {
+            "id": "67d935add6d3ce76bef2c88a",
+            "name": "HALL",
+            "crowd_factor": 0.3,
+            "occupants": 3,
+            "area": 50.0,
+            "popularity_factor": 0.3845031816286617
+        },
+        {
+            "id": "67d935add6d3ce76bef2c88b",
+            "name": "109",
+            "crowd_factor": 0.3,
+            "occupants": 5,
+            "area": 50.0,
+            "popularity_factor": 1.2238330680772846
+        },
+        {
+            "id": "67d935aed6d3ce76bef2c88c",
+            "name": "108",
+            "crowd_factor": 0.3,
+            "occupants": 12,
+            "area": 50.0,
+            "popularity_factor": 0.44110327574546593
+        },
+        {
+            "id": "67d935aed6d3ce76bef2c88d",
+            "name": "SHOP",
+            "crowd_factor": 0.3,
+            "occupants": 25,
+            "area": 50.0,
+            "popularity_factor": 1.7278782253610157
+        },
+        {
+            "id": "67d935aed6d3ce76bef2c88e",
+            "name": "LW1",
+            "crowd_factor": 0.3,
+            "occupants": 73,
+            "area": 50.0,
+            "popularity_factor": 1.7700645762348775
+        },
+        {
+            "id": "67d935aed6d3ce76bef2c88f",
+            "name": "114",
+            "crowd_factor": 0.3,
+            "occupants": 37,
+            "area": 50.0,
+            "popularity_factor": 1.99337796148828
+        },
+        {
+            "id": "67d935aed6d3ce76bef2c890",
+            "name": "115",
+            "crowd_factor": 0.3,
+            "occupants": 45,
+            "area": 50.0,
+            "popularity_factor": 1.5829364021170689
+        },
+        {
+            "id": "67d935aed6d3ce76bef2c891",
+            "name": "117",
+            "crowd_factor": 0.3,
+            "occupants": 4,
+            "area": 50.0,
+            "popularity_factor": 1.8783803042916107
+        },
+        {
+            "id": "67d935aed6d3ce76bef2c892",
+            "name": "STAGE",
+            "crowd_factor": 0.3,
+            "occupants": 32,
+            "area": 50.0,
+            "popularity_factor": 0.12642991618826688
+        },
+        {
+            "id": "67d935aed6d3ce76bef2c893",
+            "name": "113",
+            "crowd_factor": 0.3,
+            "occupants": 45,
+            "area": 50.0,
+            "popularity_factor": 1.958847222090299
+        },
+        {
+            "id": "67d935aed6d3ce76bef2c894",
+            "name": "AUDITORIUM",
+            "crowd_factor": 0.3,
+            "occupants": 2,
+            "area": 50.0,
+            "popularity_factor": 0.1039260553221058
+        },
+        {
+            "id": "67d935aed6d3ce76bef2c895",
+            "name": "STUDYROOM",
+            "crowd_factor": 0.3,
+            "occupants": 5,
+            "area": 50.0,
+            "popularity_factor": 0.6395026351719714
+        },
+        {
+            "id": "67d935aed6d3ce76bef2c896",
+            "name": "201A",
+            "crowd_factor": 0.3,
+            "occupants": 7,
+            "area": 50.0,
+            "popularity_factor": 1.5724736631754628
+        },
+        {
+            "id": "67d935aed6d3ce76bef2c897",
+            "name": "201B",
+            "crowd_factor": 0.3,
+            "occupants": 12,
+            "area": 50.0,
+            "popularity_factor": 0.3169794315727935
+        },
+        {
+            "id": "67d935aed6d3ce76bef2c898",
+            "name": "201C",
+            "crowd_factor": 0.3,
+            "occupants": 45,
+            "area": 50.0,
+            "popularity_factor": 1.7594438602982325
+        },
+        {
+            "id": "67d935aed6d3ce76bef2c899",
+            "name": "201D",
+            "crowd_factor": 0.3,
+            "occupants": 87,
+            "area": 50.0,
+            "popularity_factor": 0.48276799032140527
+        },
+        {
+            "id": "67d935aed6d3ce76bef2c89a",
+            "name": "201E",
+            "crowd_factor": 0.3,
+            "occupants": 45,
+            "area": 50.0,
+            "popularity_factor": 1.9537419507986202
+        },
+        {
+            "id": "67d935aed6d3ce76bef2c89b",
+            "name": "202",
+            "crowd_factor": 0.3,
+            "occupants": 23,
+            "area": 50.0,
+            "popularity_factor": 1.4357976330169426
+        },
+        {
+            "id": "67d935aed6d3ce76bef2c89c",
+            "name": "203",
+            "crowd_factor": 0.3,
+            "occupants": 32,
+            "area": 50.0,
+            "popularity_factor": 0.49061892630190207
+        },
+        {
+            "id": "67d935aed6d3ce76bef2c89d",
+            "name": "204",
+            "crowd_factor": 0.3,
+            "occupants": 7,
+            "area": 50.0,
+            "popularity_factor": 0.4875458542604516
+        },
+        {
+            "id": "67d935aed6d3ce76bef2c89e",
+            "name": "211B",
+            "crowd_factor": 0.3,
+            "occupants": 0,
+            "area": 50.0,
+            "popularity_factor": 0.1091963408596982
+        },
+        {
+            "id": "67d935aed6d3ce76bef2c89f",
+            "name": "211A",
+            "crowd_factor": 0.3,
+            "occupants": 9,
+            "area": 50.0,
+            "popularity_factor": 0.5749602705229634
+        },
+        {
+            "id": "67d935aed6d3ce76bef2c8a0",
+            "name": "210B",
+            "crowd_factor": 0.3,
+            "occupants": 8,
+            "area": 50.0,
+            "popularity_factor": 1.579294265538363
+        },
+        {
+            "id": "67d935aed6d3ce76bef2c8a1",
+            "name": "210A",
+            "crowd_factor": 0.3,
+            "occupants": 5,
+            "area": 50.0,
+            "popularity_factor": 0.30499529611177945
+        },
+        {
+            "id": "67d935aed6d3ce76bef2c8a2",
+            "name": "208B",
+            "crowd_factor": 0.3,
+            "occupants": 0,
+            "area": 50.0,
+            "popularity_factor": 1.5068188258273993
+        },
+        {
+            "id": "67d935aed6d3ce76bef2c8a3",
+            "name": "209",
+            "crowd_factor": 0.3,
+            "occupants": 3,
+            "area": 50.0,
+            "popularity_factor": 1.788874828806222
+        },
+        {
+            "id": "67d935aed6d3ce76bef2c8a4",
+            "name": "208A",
+            "crowd_factor": 0.3,
+            "occupants": 5,
+            "area": 50.0,
+            "popularity_factor": 1.685863293110641
+        },
+        {
+            "id": "67d935aed6d3ce76bef2c8a5",
+            "name": "207",
+            "crowd_factor": 0.3,
+            "occupants": 6,
+            "area": 50.0,
+            "popularity_factor": 0.2564752567144507
+        },
+        {
+            "id": "67d935aed6d3ce76bef2c8a6",
+            "name": "206",
+            "crowd_factor": 0.3,
+            "occupants": 2,
+            "area": 50.0,
+            "popularity_factor": 0.6371786751959335
+        },
+        {
+            "id": "67d935aed6d3ce76bef2c8a7",
+            "name": "205",
+            "crowd_factor": 0.3,
+            "occupants": 7,
+            "area": 50.0,
+            "popularity_factor": 0.8836141262621098
+        },
+        {
+            "id": "67d935afd6d3ce76bef2c8a8",
+            "name": "T2",
+            "crowd_factor": 0.3,
+            "occupants": 5,
+            "area": 50.0,
+            "popularity_factor": 1.7351118960625318
+        },
+        {
+            "id": "67d935afd6d3ce76bef2c8a9",
+            "name": "T3",
+            "crowd_factor": 0.3,
+            "occupants": 9,
+            "area": 50.0,
+            "popularity_factor": 0.6972494641792699
+        },
+        {
+            "id": "67d935afd6d3ce76bef2c8aa",
+            "name": "P1",
+            "crowd_factor": 0.3,
+            "occupants": 12,
+            "area": 50.0,
+            "popularity_factor": 1.2323305599727368
+        },
+        {
+            "id": "67d935afd6d3ce76bef2c8ab",
+            "name": "P2",
+            "crowd_factor": 0.3,
+            "occupants": 74,
+            "area": 50.0,
+            "popularity_factor": 1.598342646979127
+        },
+        {
+            "id": "67d935afd6d3ce76bef2c8ac",
+            "name": "P3",
+            "crowd_factor": 0.3,
+            "occupants": 3,
+            "area": 50.0,
+            "popularity_factor": 1.3313440399239511
+        },
+        {
+            "id": "67d935afd6d3ce76bef2c8ad",
+            "name": "P4",
+            "crowd_factor": 0.3,
+            "occupants": 23,
+            "area": 50.0,
+            "popularity_factor": 1.8095191626783567
+        },
+        {
+            "id": "67d935afd6d3ce76bef2c8ae",
+            "name": "212",
+            "crowd_factor": 0.3,
+            "occupants": 12,
+            "area": 50.0,
+            "popularity_factor": 1.3068394566131711
+        },
+        {
+            "id": "67d935afd6d3ce76bef2c8af",
+            "name": "213",
+            "crowd_factor": 0.3,
+            "occupants": 17,
+            "area": 50.0,
+            "popularity_factor": 1.5004907354122086
+        },
+        {
+            "id": "67d935afd6d3ce76bef2c8b0",
+            "name": "214",
+            "crowd_factor": 0.3,
+            "occupants": 15,
+            "area": 50.0,
+            "popularity_factor": 0.23021399788297786
+        },
+        {
+            "id": "67d935afd6d3ce76bef2c8b1",
+            "name": "215",
+            "crowd_factor": 0.3,
+            "occupants": 32,
+            "area": 50.0,
+            "popularity_factor": 1.4209499943782011
+        },
+        {
+            "id": "67d935afd6d3ce76bef2c8b2",
+            "name": "216",
+            "crowd_factor": 0.3,
+            "occupants": 19,
+            "area": 50.0,
+            "popularity_factor": 0.5310835098066164
+        },
+        {
+            "id": "67d935afd6d3ce76bef2c8b3",
+            "name": "T1",
+            "crowd_factor": 0.3,
+            "occupants": 9,
+            "area": 50.0,
+            "popularity_factor": 1.5390470749069771
+        },
+        {
+            "id": "67d935afd6d3ce76bef2c8b4",
+            "name": "217A",
+            "crowd_factor": 0.3,
+            "occupants": 3,
+            "area": 50.0,
+            "popularity_factor": 1.1666666137404695
+        },
+        {
+            "id": "67d935afd6d3ce76bef2c8b5",
+            "name": "229",
+            "crowd_factor": 0.3,
+            "occupants": 4,
+            "area": 50.0,
+            "popularity_factor": 1.5672728056787348
+        },
+        {
+            "id": "67d935afd6d3ce76bef2c8b6",
+            "name": "228",
+            "crowd_factor": 0.3,
+            "occupants": 0,
+            "area": 50.0,
+            "popularity_factor": 0.7599604934073039
+        },
+        {
+            "id": "67d935afd6d3ce76bef2c8b7",
+            "name": "227",
+            "crowd_factor": 0.3,
+            "occupants": 1,
+            "area": 50.0,
+            "popularity_factor": 0.62257170768135
+        },
+        {
+            "id": "67d935afd6d3ce76bef2c8b8",
+            "name": "217F",
+            "crowd_factor": 0.3,
+            "occupants": 2,
+            "area": 50.0,
+            "popularity_factor": 1.424577699637273
+        },
+        {
+            "id": "67d935afd6d3ce76bef2c8b9",
+            "name": "217E",
+            "crowd_factor": 0.3,
+            "occupants": 17,
+            "area": 50.0,
+            "popularity_factor": 0.18570521916394267
+        },
+        {
+            "id": "67d935afd6d3ce76bef2c8ba",
+            "name": "217D",
+            "crowd_factor": 0.3,
+            "occupants": 28,
+            "area": 50.0,
+            "popularity_factor": 1.8412222238049492
+        },
+        {
+            "id": "67d935afd6d3ce76bef2c8bb",
+            "name": "217C",
+            "crowd_factor": 0.3,
+            "occupants": 24,
+            "area": 50.0,
+            "popularity_factor": 0.497613511355127
+        },
+        {
+            "id": "67d935afd6d3ce76bef2c8bc",
+            "name": "217B",
+            "crowd_factor": 0.3,
+            "occupants": 39,
+            "area": 50.0,
+            "popularity_factor": 0.8493198436218908
+        },
+        {
+            "id": "67d935afd6d3ce76bef2c8bd",
+            "name": "218A",
+            "crowd_factor": 0.3,
+            "occupants": 34,
+            "area": 50.0,
+            "popularity_factor": 0.2163590429780522
+        },
+        {
+            "id": "67d935afd6d3ce76bef2c8be",
+            "name": "218B",
+            "crowd_factor": 0.3,
+            "occupants": 29,
+            "area": 50.0,
+            "popularity_factor": 1.1810290976658344
+        },
+        {
+            "id": "67d935afd6d3ce76bef2c8bf",
+            "name": "219",
+            "crowd_factor": 0.3,
+            "occupants": 44,
+            "area": 50.0,
+            "popularity_factor": 1.9459841784392682
+        },
+        {
+            "id": "67d935afd6d3ce76bef2c8c0",
+            "name": "220",
+            "crowd_factor": 0.3,
+            "occupants": 74,
+            "area": 50.0,
+            "popularity_factor": 0.7028937268991718
+        },
+        {
+            "id": "67d935afd6d3ce76bef2c8c1",
+            "name": "P7",
+            "crowd_factor": 0.3,
+            "occupants": 96,
+            "area": 50.0,
+            "popularity_factor": 1.7536169054602855
+        },
+        {
+            "id": "67d935afd6d3ce76bef2c8c2",
+            "name": "222",
+            "crowd_factor": 0.3,
+            "occupants": 4,
+            "area": 50.0,
+            "popularity_factor": 1.8436515087739924
+        },
+        {
+            "id": "67d935afd6d3ce76bef2c8c3",
+            "name": "223",
+            "crowd_factor": 0.3,
+            "occupants": 14,
+            "area": 50.0,
+            "popularity_factor": 1.7777498856814236
+        },
+        {
+            "id": "67d935afd6d3ce76bef2c8c4",
+            "name": "224",
+            "crowd_factor": 0.3,
+            "occupants": 16,
+            "area": 50.0,
+            "popularity_factor": 0.7830881231099346
+        },
+        {
+            "id": "67d935b0d6d3ce76bef2c8c5",
+            "name": "225",
+            "crowd_factor": 0.3,
+            "occupants": 19,
+            "area": 50.0,
+            "popularity_factor": 0.41468312780490313
+        },
+        {
+            "id": "67d935b0d6d3ce76bef2c8c6",
+            "name": "221",
+            "crowd_factor": 0.3,
+            "occupants": 22,
+            "area": 50.0,
+            "popularity_factor": 0.3926684667165514
+        },
+        {
+            "id": "67d935b0d6d3ce76bef2c8c7",
+            "name": "226",
+            "crowd_factor": 0.3,
+            "occupants": 4,
+            "area": 50.0,
+            "popularity_factor": 0.8091808157864752
+        },
+        {
+            "id": "67d935b0d6d3ce76bef2c8c8",
+            "name": "P5",
+            "crowd_factor": 0.3,
+            "occupants": 17,
+            "area": 50.0,
+            "popularity_factor": 1.9891075430530911
+        },
+        {
+            "id": "67d935b0d6d3ce76bef2c8c9",
+            "name": "P8",
+            "crowd_factor": 0.3,
+            "occupants": 29,
+            "area": 50.0,
+            "popularity_factor": 1.1444207792011731
+        },
+        {
+            "id": "67d935b0d6d3ce76bef2c8ca",
+            "name": "T7",
+            "crowd_factor": 0.3,
+            "occupants": 16,
+            "area": 50.0,
+            "popularity_factor": 1.4174536676216345
+        },
+        {
+            "id": "67d935b0d6d3ce76bef2c8cb",
+            "name": "T6",
+            "crowd_factor": 0.3,
+            "occupants": 2,
+            "area": 50.0,
+            "popularity_factor": 0.9472998592950287
+        },
+        {
+            "id": "67d935b0d6d3ce76bef2c8cc",
+            "name": "270B",
+            "crowd_factor": 0.3,
+            "occupants": 3,
+            "area": 50.0,
+            "popularity_factor": 0.404694209197744
+        },
+        {
+            "id": "67d935b0d6d3ce76bef2c8cd",
+            "name": "270A",
+            "crowd_factor": 0.3,
+            "occupants": 4,
+            "area": 50.0,
+            "popularity_factor": 0.23365044445099287
+        },
+        {
+            "id": "67d935b0d6d3ce76bef2c8ce",
+            "name": "262",
+            "crowd_factor": 0.3,
+            "occupants": 0,
+            "area": 50.0,
+            "popularity_factor": 0.8103579602012841
+        },
+        {
+            "id": "67d935b0d6d3ce76bef2c8cf",
+            "name": "261",
+            "crowd_factor": 0.3,
+            "occupants": 1,
+            "area": 50.0,
+            "popularity_factor": 0.7213896705911361
+        },
+        {
+            "id": "67d935b0d6d3ce76bef2c8d0",
+            "name": "272",
+            "crowd_factor": 0.3,
+            "occupants": 2,
+            "area": 50.0,
+            "popularity_factor": 1.8426058019439693
+        },
+        {
+            "id": "67d935b0d6d3ce76bef2c8d1",
+            "name": "260",
+            "crowd_factor": 0.3,
+            "occupants": 3,
+            "area": 50.0,
+            "popularity_factor": 0.909343298178264
+        },
+        {
+            "id": "67d935b0d6d3ce76bef2c8d2",
+            "name": "P9",
+            "crowd_factor": 0.3,
+            "occupants": 4,
+            "area": 50.0,
+            "popularity_factor": 1.7032993998052843
+        },
+        {
+            "id": "67d935b0d6d3ce76bef2c8d3",
+            "name": "269A",
+            "crowd_factor": 0.3,
+            "occupants": 5,
+            "area": 50.0,
+            "popularity_factor": 0.48037897642070315
+        },
+        {
+            "id": "67d935b0d6d3ce76bef2c8d4",
+            "name": "269B",
+            "crowd_factor": 0.3,
+            "occupants": 6,
+            "area": 50.0,
+            "popularity_factor": 1.0662345385826402
+        },
+        {
+            "id": "67d935b0d6d3ce76bef2c8d5",
+            "name": "263B",
+            "crowd_factor": 0.3,
+            "occupants": 7,
+            "area": 50.0,
+            "popularity_factor": 0.3364669995663487
+        },
+        {
+            "id": "67d935b0d6d3ce76bef2c8d6",
+            "name": "263C",
+            "crowd_factor": 0.3,
+            "occupants": 12,
+            "area": 50.0,
+            "popularity_factor": 1.6035172711358718
+        },
+        {
+            "id": "67d935b0d6d3ce76bef2c8d7",
+            "name": "263A",
+            "crowd_factor": 0.3,
+            "occupants": 32,
+            "area": 50.0,
+            "popularity_factor": 0.6336054606196503
+        },
+        {
+            "id": "67d935b0d6d3ce76bef2c8d8",
+            "name": "P6",
+            "crowd_factor": 0.3,
+            "occupants": 27,
+            "area": 50.0,
+            "popularity_factor": 1.3332057108354194
+        },
+        {
+            "id": "67d935b0d6d3ce76bef2c8d9",
+            "name": "P10",
+            "crowd_factor": 0.3,
+            "occupants": 55,
+            "area": 50.0,
+            "popularity_factor": 0.7978530014684501
+        },
+        {
+            "id": "67d935b0d6d3ce76bef2c8da",
+            "name": "T5",
+            "crowd_factor": 0.3,
+            "occupants": 6,
+            "area": 50.0,
+            "popularity_factor": 0.6204260488044429
+        },
+        {
+            "id": "67d935b0d6d3ce76bef2c8db",
+            "name": "T4",
+            "crowd_factor": 0.3,
+            "occupants": 4,
+            "area": 50.0,
+            "popularity_factor": 1.237083590510337
+        },
+        {
+            "id": "67d935b0d6d3ce76bef2c8dc",
+            "name": "268A",
+            "crowd_factor": 0.3,
+            "occupants": 3,
+            "area": 50.0,
+            "popularity_factor": 1.8499110374630354
+        },
+        {
+            "id": "67d935b0d6d3ce76bef2c8dd",
+            "name": "268B",
+            "crowd_factor": 0.3,
+            "occupants": 8,
+            "area": 50.0,
+            "popularity_factor": 0.6668555499971606
+        },
+        {
+            "id": "67d935b0d6d3ce76bef2c8de",
+            "name": "264",
+            "crowd_factor": 0.3,
+            "occupants": 2,
+            "area": 50.0,
+            "popularity_factor": 1.0847261353305202
+        },
+        {
+            "id": "67d935b0d6d3ce76bef2c8df",
+            "name": "264A",
+            "crowd_factor": 0.3,
+            "occupants": 3,
+            "area": 50.0,
+            "popularity_factor": 1.5098611074417212
+        },
+        {
+            "id": "67d935b0d6d3ce76bef2c8e0",
+            "name": "267",
+            "crowd_factor": 0.3,
+            "occupants": 4,
+            "area": 50.0,
+            "popularity_factor": 1.8164238560874941
+        },
+        {
+            "id": "67d935b0d6d3ce76bef2c8e1",
+            "name": "265",
+            "crowd_factor": 0.3,
+            "occupants": 12,
+            "area": 50.0,
+            "popularity_factor": 1.6250150223104591
+        },
+        {
+            "id": "67d935b1d6d3ce76bef2c8e2",
+            "name": "266",
+            "crowd_factor": 0.3,
+            "occupants": 32,
+            "area": 50.0,
+            "popularity_factor": 1.4164421760814658
+        }
+    ],
+    "sensors": [
+        {
+            "id": "67d935b1d6d3ce76bef2c8e3",
+            "rooms": [
+                "67d935add6d3ce76bef2c881",
+                "67d935afd6d3ce76bef2c8a8"
+            ],
+            "latitude": 74.83430594652332,
+            "longitude": 60.23046513026329
+        },
+        {
+            "id": "67d935b1d6d3ce76bef2c8e4",
+            "rooms": [
+                "67d935add6d3ce76bef2c881",
+                "67d935afd6d3ce76bef2c8a9"
+            ],
+            "latitude": 11.44847144918591,
+            "longitude": 11.701247390997105
+        },
+        {
+            "id": "67d935b1d6d3ce76bef2c8e5",
+            "rooms": [
+                "67d935add6d3ce76bef2c882",
+                "67d935add6d3ce76bef2c881"
+            ],
+            "latitude": 63.25643368200438,
+            "longitude": 78.50918711966074
+        },
+        {
+            "id": "67d935b1d6d3ce76bef2c8e6",
+            "rooms": [
+                "67d935add6d3ce76bef2c889",
+                "67d935add6d3ce76bef2c881"
+            ],
+            "latitude": 44.97588613424094,
+            "longitude": 79.72513840786357
+        },
+        {
+            "id": "67d935b1d6d3ce76bef2c8e7",
+            "rooms": [
+                "67d935add6d3ce76bef2c883",
+                "67d935add6d3ce76bef2c881"
+            ],
+            "latitude": 33.14663305414036,
+            "longitude": 40.92276097152485
+        },
+        {
+            "id": "67d935b1d6d3ce76bef2c8e8",
+            "rooms": [
+                "67d935add6d3ce76bef2c88a",
+                "67d935add6d3ce76bef2c882"
+            ],
+            "latitude": 56.49685255055233,
+            "longitude": 77.43733965314345
+        },
+        {
+            "id": "67d935b1d6d3ce76bef2c8e9",
+            "rooms": [
+                "67d935add6d3ce76bef2c884",
+                "67d935add6d3ce76bef2c883"
+            ],
+            "latitude": 23.8621854675587,
+            "longitude": 16.369509547137667
+        },
+        {
+            "id": "67d935b1d6d3ce76bef2c8ea",
+            "rooms": [
+                "67d935add6d3ce76bef2c885",
+                "67d935add6d3ce76bef2c884"
+            ],
+            "latitude": 72.87442522121299,
+            "longitude": 61.74727469899295
+        },
+        {
+            "id": "67d935b1d6d3ce76bef2c8eb",
+            "rooms": [
+                "67d935add6d3ce76bef2c886",
+                "67d935add6d3ce76bef2c885"
+            ],
+            "latitude": 45.93428480026101,
+            "longitude": 53.01855307103911
+        },
+        {
+            "id": "67d935b1d6d3ce76bef2c8ec",
+            "rooms": [
+                "67d935add6d3ce76bef2c887",
+                "67d935add6d3ce76bef2c886"
+            ],
+            "latitude": 67.63095725977767,
+            "longitude": 32.28598236138496
+        },
+        {
+            "id": "67d935b1d6d3ce76bef2c8ed",
+            "rooms": [
+                "67d935add6d3ce76bef2c888",
+                "67d935add6d3ce76bef2c887"
+            ],
+            "latitude": 42.64227589111098,
+            "longitude": 56.8878960592352
+        },
+        {
+            "id": "67d935b1d6d3ce76bef2c8ee",
+            "rooms": [
+                "67d935add6d3ce76bef2c888",
+                "67d935add6d3ce76bef2c88a"
+            ],
+            "latitude": 51.14160578920942,
+            "longitude": 75.21981806330778
+        },
+        {
+            "id": "67d935b1d6d3ce76bef2c8ef",
+            "rooms": [
+                "67d935add6d3ce76bef2c889",
+                "67d935add6d3ce76bef2c88a"
+            ],
+            "latitude": 62.04303161843357,
+            "longitude": 76.22106731517965
+        },
+        {
+            "id": "67d935b1d6d3ce76bef2c8f0",
+            "rooms": [
+                "67d935add6d3ce76bef2c88a",
+                "67d935afd6d3ce76bef2c8b3"
+            ],
+            "latitude": 77.7077695964627,
+            "longitude": 58.43619190715721
+        },
+        {
+            "id": "67d935b1d6d3ce76bef2c8f1",
+            "rooms": [
+                "67d935add6d3ce76bef2c88b",
+                "67d935add6d3ce76bef2c88a"
+            ],
+            "latitude": 20.916074574669835,
+            "longitude": 69.79612468311414
+        },
+        {
+            "id": "67d935b1d6d3ce76bef2c8f2",
+            "rooms": [
+                "67d935add6d3ce76bef2c88b",
+                "67d935aed6d3ce76bef2c88e"
+            ],
+            "latitude": 63.91464853583392,
+            "longitude": 24.87373437208103
+        },
+        {
+            "id": "67d935b1d6d3ce76bef2c8f3",
+            "rooms": [
+                "67d935aed6d3ce76bef2c88c",
+                "67d935add6d3ce76bef2c88a"
+            ],
+            "latitude": 60.40527496590818,
+            "longitude": 44.523523530183915
+        },
+        {
+            "id": "67d935b1d6d3ce76bef2c8f4",
+            "rooms": [
+                "67d935aed6d3ce76bef2c88c",
+                "67d935aed6d3ce76bef2c88e"
+            ],
+            "latitude": 61.44543312568901,
+            "longitude": 64.34541975930827
+        },
+        {
+            "id": "67d935b1d6d3ce76bef2c8f5",
+            "rooms": [
+                "67d935add6d3ce76bef2c88a",
+                "67d935aed6d3ce76bef2c88d"
+            ],
+            "latitude": 62.7873932552509,
+            "longitude": 24.89611817683759
+        },
+        {
+            "id": "67d935b1d6d3ce76bef2c8f6",
+            "rooms": [
+                "67d935aed6d3ce76bef2c88e",
+                "67d935aed6d3ce76bef2c88d"
+            ],
+            "latitude": 30.27553127616549,
+            "longitude": 65.35465079223513
+        },
+        {
+            "id": "67d935b1d6d3ce76bef2c8f7",
+            "rooms": [
+                "67d935aed6d3ce76bef2c88f",
+                "67d935aed6d3ce76bef2c890"
+            ],
+            "latitude": 60.59526742306523,
+            "longitude": 47.321522178974085
+        },
+        {
+            "id": "67d935b1d6d3ce76bef2c8f8",
+            "rooms": [
+                "67d935aed6d3ce76bef2c893",
+                "67d935aed6d3ce76bef2c890"
+            ],
+            "latitude": 64.48969092662297,
+            "longitude": 41.699782898601
+        },
+        {
+            "id": "67d935b1d6d3ce76bef2c8f9",
+            "rooms": [
+                "67d935aed6d3ce76bef2c890",
+                "67d935aed6d3ce76bef2c892"
+            ],
+            "latitude": 30.004569072905664,
+            "longitude": 36.362117686287135
+        },
+        {
+            "id": "67d935b1d6d3ce76bef2c8fa",
+            "rooms": [
+                "67d935aed6d3ce76bef2c891",
+                "67d935aed6d3ce76bef2c892"
+            ],
+            "latitude": 24.642963167826984,
+            "longitude": 71.89770792997385
+        },
+        {
+            "id": "67d935b1d6d3ce76bef2c8fb",
+            "rooms": [
+                "67d935aed6d3ce76bef2c893",
+                "67d935aed6d3ce76bef2c892"
+            ],
+            "latitude": 22.301446727387777,
+            "longitude": 34.892772629881954
+        },
+        {
+            "id": "67d935b1d6d3ce76bef2c8fc",
+            "rooms": [
+                "67d935aed6d3ce76bef2c894",
+                "67d935aed6d3ce76bef2c892"
+            ],
+            "latitude": 12.969724174329361,
+            "longitude": 68.71316848105293
+        },
+        {
+            "id": "67d935b1d6d3ce76bef2c8fd",
+            "rooms": [
+                "67d935aed6d3ce76bef2c893",
+                "67d935add6d3ce76bef2c88a"
+            ],
+            "latitude": 24.169424526472106,
+            "longitude": 20.45941098542403
+        },
+        {
+            "id": "67d935b1d6d3ce76bef2c8fe",
+            "rooms": [
+                "67d935aed6d3ce76bef2c893",
+                "67d935aed6d3ce76bef2c894"
+            ],
+            "latitude": 75.26874224912515,
+            "longitude": 11.302976416019025
+        },
+        {
+            "id": "67d935b2d6d3ce76bef2c8ff",
+            "rooms": [
+                "67d935aed6d3ce76bef2c894",
+                "67d935aed6d3ce76bef2c895"
+            ],
+            "latitude": 38.54111749115275,
+            "longitude": 40.34334766951157
+        },
+        {
+            "id": "67d935b2d6d3ce76bef2c900",
+            "rooms": [
+                "67d935aed6d3ce76bef2c895",
+                "67d935b0d6d3ce76bef2c8db"
+            ],
+            "latitude": 29.166270718387416,
+            "longitude": 41.06272131317476
+        },
+        {
+            "id": "67d935b2d6d3ce76bef2c901",
+            "rooms": [
+                "67d935aed6d3ce76bef2c893",
+                "67d935aed6d3ce76bef2c895"
+            ],
+            "latitude": 61.696762102422724,
+            "longitude": 62.475685750849834
+        },
+        {
+            "id": "67d935b2d6d3ce76bef2c902",
+            "rooms": [
+                "67d935aed6d3ce76bef2c896",
+                "67d935aed6d3ce76bef2c897"
+            ],
+            "latitude": 43.15719503005378,
+            "longitude": 52.98867558657682
+        },
+        {
+            "id": "67d935b2d6d3ce76bef2c903",
+            "rooms": [
+                "67d935aed6d3ce76bef2c896",
+                "67d935aed6d3ce76bef2c89e"
+            ],
+            "latitude": 50.177947784738755,
+            "longitude": 52.412899602614786
+        },
+        {
+            "id": "67d935b2d6d3ce76bef2c904",
+            "rooms": [
+                "67d935aed6d3ce76bef2c896",
+                "67d935aed6d3ce76bef2c89b"
+            ],
+            "latitude": 24.351026009454767,
+            "longitude": 76.4649033037538
+        },
+        {
+            "id": "67d935b2d6d3ce76bef2c905",
+            "rooms": [
+                "67d935aed6d3ce76bef2c896",
+                "67d935afd6d3ce76bef2c8aa"
+            ],
+            "latitude": 49.09263528834444,
+            "longitude": 29.5629336667606
+        },
+        {
+            "id": "67d935b2d6d3ce76bef2c906",
+            "rooms": [
+                "67d935aed6d3ce76bef2c897",
+                "67d935aed6d3ce76bef2c898"
+            ],
+            "latitude": 53.6262556683437,
+            "longitude": 17.11758927007294
+        },
+        {
+            "id": "67d935b2d6d3ce76bef2c907",
+            "rooms": [
+                "67d935aed6d3ce76bef2c898",
+                "67d935aed6d3ce76bef2c899"
+            ],
+            "latitude": 40.10710560432971,
+            "longitude": 43.00591106330368
+        },
+        {
+            "id": "67d935b2d6d3ce76bef2c908",
+            "rooms": [
+                "67d935aed6d3ce76bef2c899",
+                "67d935aed6d3ce76bef2c89a"
+            ],
+            "latitude": 53.47065904208061,
+            "longitude": 35.66727708215254
+        },
+        {
+            "id": "67d935b2d6d3ce76bef2c909",
+            "rooms": [
+                "67d935aed6d3ce76bef2c899",
+                "67d935aed6d3ce76bef2c8a3"
+            ],
+            "latitude": 73.33667062173484,
+            "longitude": 75.25759525989652
+        },
+        {
+            "id": "67d935b2d6d3ce76bef2c90a",
+            "rooms": [
+                "67d935aed6d3ce76bef2c89a",
+                "67d935aed6d3ce76bef2c89d"
+            ],
+            "latitude": 37.35220933958243,
+            "longitude": 56.54257824278641
+        },
+        {
+            "id": "67d935b2d6d3ce76bef2c90b",
+            "rooms": [
+                "67d935aed6d3ce76bef2c89b",
+                "67d935aed6d3ce76bef2c89c"
+            ],
+            "latitude": 65.33776081079802,
+            "longitude": 26.83074495369877
+        },
+        {
+            "id": "67d935b2d6d3ce76bef2c90c",
+            "rooms": [
+                "67d935aed6d3ce76bef2c89b",
+                "67d935afd6d3ce76bef2c8aa"
+            ],
+            "latitude": 75.13220474217677,
+            "longitude": 41.608194502614964
+        },
+        {
+            "id": "67d935b2d6d3ce76bef2c90d",
+            "rooms": [
+                "67d935aed6d3ce76bef2c89c",
+                "67d935aed6d3ce76bef2c89d"
+            ],
+            "latitude": 34.21993803543363,
+            "longitude": 36.30148224757108
+        },
+        {
+            "id": "67d935b2d6d3ce76bef2c90e",
+            "rooms": [
+                "67d935aed6d3ce76bef2c89d",
+                "67d935aed6d3ce76bef2c8a7"
+            ],
+            "latitude": 51.44530871791454,
+            "longitude": 15.068402409263303
+        },
+        {
+            "id": "67d935b2d6d3ce76bef2c90f",
+            "rooms": [
+                "67d935aed6d3ce76bef2c89f",
+                "67d935aed6d3ce76bef2c89e"
+            ],
+            "latitude": 55.043699509540716,
+            "longitude": 71.66192395262479
+        },
+        {
+            "id": "67d935b2d6d3ce76bef2c910",
+            "rooms": [
+                "67d935aed6d3ce76bef2c8a0",
+                "67d935aed6d3ce76bef2c89f"
+            ],
+            "latitude": 70.53087893058625,
+            "longitude": 79.08832442330224
+        },
+        {
+            "id": "67d935b2d6d3ce76bef2c911",
+            "rooms": [
+                "67d935aed6d3ce76bef2c8a1",
+                "67d935aed6d3ce76bef2c8a0"
+            ],
+            "latitude": 58.073085802662696,
+            "longitude": 64.22827139095108
+        },
+        {
+            "id": "67d935b2d6d3ce76bef2c912",
+            "rooms": [
+                "67d935aed6d3ce76bef2c8a3",
+                "67d935aed6d3ce76bef2c8a1"
+            ],
+            "latitude": 55.15563077313062,
+            "longitude": 16.493767375108156
+        },
+        {
+            "id": "67d935b2d6d3ce76bef2c913",
+            "rooms": [
+                "67d935aed6d3ce76bef2c8a2",
+                "67d935aed6d3ce76bef2c8a3"
+            ],
+            "latitude": 77.32917355304438,
+            "longitude": 67.52445183584032
+        },
+        {
+            "id": "67d935b2d6d3ce76bef2c914",
+            "rooms": [
+                "67d935aed6d3ce76bef2c8a4",
+                "67d935aed6d3ce76bef2c8a2"
+            ],
+            "latitude": 49.67168837552093,
+            "longitude": 33.339885208618455
+        },
+        {
+            "id": "67d935b2d6d3ce76bef2c915",
+            "rooms": [
+                "67d935aed6d3ce76bef2c8a7",
+                "67d935aed6d3ce76bef2c8a2"
+            ],
+            "latitude": 73.15260634604306,
+            "longitude": 22.491723668419066
+        },
+        {
+            "id": "67d935b2d6d3ce76bef2c916",
+            "rooms": [
+                "67d935aed6d3ce76bef2c8a5",
+                "67d935aed6d3ce76bef2c8a4"
+            ],
+            "latitude": 40.003305477630335,
+            "longitude": 77.63589082513765
+        },
+        {
+            "id": "67d935b2d6d3ce76bef2c917",
+            "rooms": [
+                "67d935aed6d3ce76bef2c8a6",
+                "67d935aed6d3ce76bef2c8a5"
+            ],
+            "latitude": 34.46239249996164,
+            "longitude": 15.348469648186551
+        },
+        {
+            "id": "67d935b2d6d3ce76bef2c918",
+            "rooms": [
+                "67d935aed6d3ce76bef2c8a5",
+                "67d935afd6d3ce76bef2c8a8"
+            ],
+            "latitude": 60.191338081621794,
+            "longitude": 68.58002180030891
+        },
+        {
+            "id": "67d935b2d6d3ce76bef2c919",
+            "rooms": [
+                "67d935aed6d3ce76bef2c8a5",
+                "67d935afd6d3ce76bef2c8a9"
+            ],
+            "latitude": 36.865255012928245,
+            "longitude": 46.00757618138332
+        },
+        {
+            "id": "67d935b2d6d3ce76bef2c91a",
+            "rooms": [
+                "67d935aed6d3ce76bef2c8a7",
+                "67d935aed6d3ce76bef2c8a6"
+            ],
+            "latitude": 70.77722964544611,
+            "longitude": 31.917530005142268
+        },
+        {
+            "id": "67d935b2d6d3ce76bef2c91b",
+            "rooms": [
+                "67d935aed6d3ce76bef2c8a7",
+                "67d935aed6d3ce76bef2c8a4"
+            ],
+            "latitude": 21.400991090825556,
+            "longitude": 15.239271553378234
+        },
+        {
+            "id": "67d935b3d6d3ce76bef2c91c",
+            "rooms": [
+                "67d935afd6d3ce76bef2c8ae",
+                "67d935afd6d3ce76bef2c8aa"
+            ],
+            "latitude": 66.84010787506472,
+            "longitude": 15.272182907267277
+        },
+        {
+            "id": "67d935b3d6d3ce76bef2c91d",
+            "rooms": [
+                "67d935afd6d3ce76bef2c8aa",
+                "67d935afd6d3ce76bef2c8ab"
+            ],
+            "latitude": 61.25688362207111,
+            "longitude": 38.92304028008549
+        },
+        {
+            "id": "67d935b3d6d3ce76bef2c91e",
+            "rooms": [
+                "67d935afd6d3ce76bef2c8aa",
+                "67d935afd6d3ce76bef2c8ac"
+            ],
+            "latitude": 46.02842523312135,
+            "longitude": 34.06821283904773
+        },
+        {
+            "id": "67d935b3d6d3ce76bef2c91f",
+            "rooms": [
+                "67d935afd6d3ce76bef2c8ab",
+                "67d935afd6d3ce76bef2c8ad"
+            ],
+            "latitude": 25.19129312171873,
+            "longitude": 10.09896902265163
+        },
+        {
+            "id": "67d935b3d6d3ce76bef2c920",
+            "rooms": [
+                "67d935afd6d3ce76bef2c8ac",
+                "67d935afd6d3ce76bef2c8ad"
+            ],
+            "latitude": 24.007655855375226,
+            "longitude": 27.047146159964292
+        },
+        {
+            "id": "67d935b3d6d3ce76bef2c921",
+            "rooms": [
+                "67d935afd6d3ce76bef2c8b5",
+                "67d935afd6d3ce76bef2c8ad"
+            ],
+            "latitude": 37.4991269488913,
+            "longitude": 64.59382731107897
+        },
+        {
+            "id": "67d935b3d6d3ce76bef2c922",
+            "rooms": [
+                "67d935afd6d3ce76bef2c8b4",
+                "67d935afd6d3ce76bef2c8ad"
+            ],
+            "latitude": 34.08092372523849,
+            "longitude": 10.338795000157544
+        },
+        {
+            "id": "67d935b3d6d3ce76bef2c923",
+            "rooms": [
+                "67d935afd6d3ce76bef2c8b2",
+                "67d935afd6d3ce76bef2c8ad"
+            ],
+            "latitude": 78.36432912174301,
+            "longitude": 20.86755688499475
+        },
+        {
+            "id": "67d935b3d6d3ce76bef2c924",
+            "rooms": [
+                "67d935afd6d3ce76bef2c8ae",
+                "67d935afd6d3ce76bef2c8af"
+            ],
+            "latitude": 47.92130450867241,
+            "longitude": 37.629884802078074
+        },
+        {
+            "id": "67d935b3d6d3ce76bef2c925",
+            "rooms": [
+                "67d935afd6d3ce76bef2c8af",
+                "67d935afd6d3ce76bef2c8b0"
+            ],
+            "latitude": 46.887939054744564,
+            "longitude": 64.3037977757563
+        },
+        {
+            "id": "67d935b3d6d3ce76bef2c926",
+            "rooms": [
+                "67d935afd6d3ce76bef2c8b0",
+                "67d935afd6d3ce76bef2c8b1"
+            ],
+            "latitude": 20.721540599838534,
+            "longitude": 64.22219403326125
+        },
+        {
+            "id": "67d935b3d6d3ce76bef2c927",
+            "rooms": [
+                "67d935afd6d3ce76bef2c8b1",
+                "67d935afd6d3ce76bef2c8b2"
+            ],
+            "latitude": 40.21717082731397,
+            "longitude": 65.97865879319669
+        },
+        {
+            "id": "67d935b3d6d3ce76bef2c928",
+            "rooms": [
+                "67d935afd6d3ce76bef2c8aa",
+                "67d935afd6d3ce76bef2c8b3"
+            ],
+            "latitude": 37.68197805946749,
+            "longitude": 11.505815092124244
+        },
+        {
+            "id": "67d935b3d6d3ce76bef2c929",
+            "rooms": [
+                "67d935afd6d3ce76bef2c8b4",
+                "67d935afd6d3ce76bef2c8bd"
+            ],
+            "latitude": 57.313372900409675,
+            "longitude": 40.38307776234856
+        },
+        {
+            "id": "67d935b3d6d3ce76bef2c92a",
+            "rooms": [
+                "67d935afd6d3ce76bef2c8b4",
+                "67d935afd6d3ce76bef2c8b5"
+            ],
+            "latitude": 73.83880403748238,
+            "longitude": 59.779842897828814
+        },
+        {
+            "id": "67d935b3d6d3ce76bef2c92b",
+            "rooms": [
+                "67d935afd6d3ce76bef2c8b4",
+                "67d935afd6d3ce76bef2c8bc"
+            ],
+            "latitude": 12.779219947822249,
+            "longitude": 79.24695523662146
+        },
+        {
+            "id": "67d935b3d6d3ce76bef2c92c",
+            "rooms": [
+                "67d935afd6d3ce76bef2c8b6",
+                "67d935afd6d3ce76bef2c8b5"
+            ],
+            "latitude": 28.32926331571139,
+            "longitude": 27.031349510836154
+        },
+        {
+            "id": "67d935b3d6d3ce76bef2c92d",
+            "rooms": [
+                "67d935afd6d3ce76bef2c8b7",
+                "67d935afd6d3ce76bef2c8b6"
+            ],
+            "latitude": 75.88122379566002,
+            "longitude": 34.780777194789216
+        },
+        {
+            "id": "67d935b3d6d3ce76bef2c92e",
+            "rooms": [
+                "67d935afd6d3ce76bef2c8b8",
+                "67d935afd6d3ce76bef2c8b7"
+            ],
+            "latitude": 14.803581980465154,
+            "longitude": 71.92901907186302
+        },
+        {
+            "id": "67d935b3d6d3ce76bef2c92f",
+            "rooms": [
+                "67d935b0d6d3ce76bef2c8c6",
+                "67d935afd6d3ce76bef2c8b7"
+            ],
+            "latitude": 50.684527047688526,
+            "longitude": 60.84537236667158
+        },
+        {
+            "id": "67d935b3d6d3ce76bef2c930",
+            "rooms": [
+                "67d935afd6d3ce76bef2c8b9",
+                "67d935afd6d3ce76bef2c8b8"
+            ],
+            "latitude": 59.48792647655265,
+            "longitude": 33.910034323958556
+        },
+        {
+            "id": "67d935b3d6d3ce76bef2c931",
+            "rooms": [
+                "67d935afd6d3ce76bef2c8b8",
+                "67d935afd6d3ce76bef2c8c0"
+            ],
+            "latitude": 21.3314631404267,
+            "longitude": 51.45781102877372
+        },
+        {
+            "id": "67d935b3d6d3ce76bef2c932",
+            "rooms": [
+                "67d935afd6d3ce76bef2c8ba",
+                "67d935afd6d3ce76bef2c8b9"
+            ],
+            "latitude": 22.66123824424083,
+            "longitude": 14.20989288235753
+        },
+        {
+            "id": "67d935b3d6d3ce76bef2c933",
+            "rooms": [
+                "67d935afd6d3ce76bef2c8bb",
+                "67d935afd6d3ce76bef2c8ba"
+            ],
+            "latitude": 53.30343564526748,
+            "longitude": 36.06678066029416
+        },
+        {
+            "id": "67d935b3d6d3ce76bef2c934",
+            "rooms": [
+                "67d935afd6d3ce76bef2c8bc",
+                "67d935afd6d3ce76bef2c8bb"
+            ],
+            "latitude": 19.5280264377472,
+            "longitude": 47.186492942717166
+        },
+        {
+            "id": "67d935b3d6d3ce76bef2c935",
+            "rooms": [
+                "67d935afd6d3ce76bef2c8bd",
+                "67d935afd6d3ce76bef2c8be"
+            ],
+            "latitude": 17.10910709427426,
+            "longitude": 29.65980948053593
+        },
+        {
+            "id": "67d935b3d6d3ce76bef2c936",
+            "rooms": [
+                "67d935afd6d3ce76bef2c8be",
+                "67d935afd6d3ce76bef2c8bf"
+            ],
+            "latitude": 50.28439993654972,
+            "longitude": 51.75373729393796
+        },
+        {
+            "id": "67d935b4d6d3ce76bef2c937",
+            "rooms": [
+                "67d935afd6d3ce76bef2c8bf",
+                "67d935afd6d3ce76bef2c8c0"
+            ],
+            "latitude": 51.73171677920948,
+            "longitude": 33.88995789637876
+        },
+        {
+            "id": "67d935b4d6d3ce76bef2c938",
+            "rooms": [
+                "67d935afd6d3ce76bef2c8c0",
+                "67d935afd6d3ce76bef2c8c1"
+            ],
+            "latitude": 27.122740809565183,
+            "longitude": 66.32313757307
+        },
+        {
+            "id": "67d935b4d6d3ce76bef2c939",
+            "rooms": [
+                "67d935b0d6d3ce76bef2c8c6",
+                "67d935afd6d3ce76bef2c8c1"
+            ],
+            "latitude": 16.16035082259174,
+            "longitude": 59.642438100355406
+        },
+        {
+            "id": "67d935b4d6d3ce76bef2c93a",
+            "rooms": [
+                "67d935afd6d3ce76bef2c8c2",
+                "67d935afd6d3ce76bef2c8c1"
+            ],
+            "latitude": 10.529595306379115,
+            "longitude": 19.79185126741677
+        },
+        {
+            "id": "67d935b4d6d3ce76bef2c93b",
+            "rooms": [
+                "67d935afd6d3ce76bef2c8c2",
+                "67d935afd6d3ce76bef2c8c3"
+            ],
+            "latitude": 78.23092288077638,
+            "longitude": 33.91185444414431
+        },
+        {
+            "id": "67d935b4d6d3ce76bef2c93c",
+            "rooms": [
+                "67d935b0d6d3ce76bef2c8c6",
+                "67d935afd6d3ce76bef2c8c3"
+            ],
+            "latitude": 13.381333121143822,
+            "longitude": 19.94413755249763
+        },
+        {
+            "id": "67d935b4d6d3ce76bef2c93d",
+            "rooms": [
+                "67d935afd6d3ce76bef2c8c3",
+                "67d935afd6d3ce76bef2c8c4"
+            ],
+            "latitude": 50.48957939634512,
+            "longitude": 67.04620433100357
+        },
+        {
+            "id": "67d935b4d6d3ce76bef2c93e",
+            "rooms": [
+                "67d935afd6d3ce76bef2c8c4",
+                "67d935b0d6d3ce76bef2c8c5"
+            ],
+            "latitude": 69.95424474808655,
+            "longitude": 61.36672331173249
+        },
+        {
+            "id": "67d935b4d6d3ce76bef2c93f",
+            "rooms": [
+                "67d935b0d6d3ce76bef2c8c5",
+                "67d935b0d6d3ce76bef2c8c7"
+            ],
+            "latitude": 19.55062941573587,
+            "longitude": 23.387740199873804
+        },
+        {
+            "id": "67d935b4d6d3ce76bef2c940",
+            "rooms": [
+                "67d935b0d6d3ce76bef2c8c6",
+                "67d935b0d6d3ce76bef2c8c5"
+            ],
+            "latitude": 35.75953316897927,
+            "longitude": 28.243535398014153
+        },
+        {
+            "id": "67d935b4d6d3ce76bef2c941",
+            "rooms": [
+                "67d935afd6d3ce76bef2c8bd",
+                "67d935b0d6d3ce76bef2c8c8"
+            ],
+            "latitude": 34.448484345732155,
+            "longitude": 64.54359640079967
+        },
+        {
+            "id": "67d935b4d6d3ce76bef2c942",
+            "rooms": [
+                "67d935b0d6d3ce76bef2c8c8",
+                "67d935b0d6d3ce76bef2c8c9"
+            ],
+            "latitude": 30.22670091565439,
+            "longitude": 58.85591625055661
+        },
+        {
+            "id": "67d935b4d6d3ce76bef2c943",
+            "rooms": [
+                "67d935b0d6d3ce76bef2c8c8",
+                "67d935b0d6d3ce76bef2c8d2"
+            ],
+            "latitude": 51.4004327255261,
+            "longitude": 74.8336144944023
+        },
+        {
+            "id": "67d935b4d6d3ce76bef2c944",
+            "rooms": [
+                "67d935b0d6d3ce76bef2c8cc",
+                "67d935b0d6d3ce76bef2c8c9"
+            ],
+            "latitude": 24.019847023896933,
+            "longitude": 20.427178295316537
+        },
+        {
+            "id": "67d935b4d6d3ce76bef2c945",
+            "rooms": [
+                "67d935b0d6d3ce76bef2c8cd",
+                "67d935b0d6d3ce76bef2c8c9"
+            ],
+            "latitude": 18.434572043953438,
+            "longitude": 15.727874647422315
+        },
+        {
+            "id": "67d935b4d6d3ce76bef2c946",
+            "rooms": [
+                "67d935b0d6d3ce76bef2c8ce",
+                "67d935b0d6d3ce76bef2c8c9"
+            ],
+            "latitude": 20.061986509066813,
+            "longitude": 77.23332923828373
+        },
+        {
+            "id": "67d935b4d6d3ce76bef2c947",
+            "rooms": [
+                "67d935b0d6d3ce76bef2c8d0",
+                "67d935b0d6d3ce76bef2c8c9"
+            ],
+            "latitude": 39.40701157376124,
+            "longitude": 56.75352719821575
+        },
+        {
+            "id": "67d935b4d6d3ce76bef2c948",
+            "rooms": [
+                "67d935b0d6d3ce76bef2c8cf",
+                "67d935b0d6d3ce76bef2c8c9"
+            ],
+            "latitude": 30.71314650794406,
+            "longitude": 73.65319878197334
+        },
+        {
+            "id": "67d935b4d6d3ce76bef2c949",
+            "rooms": [
+                "67d935aed6d3ce76bef2c890",
+                "67d935b0d6d3ce76bef2c8ca"
+            ],
+            "latitude": 74.16269242182065,
+            "longitude": 33.23324548553843
+        },
+        {
+            "id": "67d935b4d6d3ce76bef2c94a",
+            "rooms": [
+                "67d935b0d6d3ce76bef2c8c9",
+                "67d935b0d6d3ce76bef2c8ca"
+            ],
+            "latitude": 17.663670337366995,
+            "longitude": 77.04410764968375
+        },
+        {
+            "id": "67d935b4d6d3ce76bef2c94b",
+            "rooms": [
+                "67d935b0d6d3ce76bef2c8c8",
+                "67d935b0d6d3ce76bef2c8cb"
+            ],
+            "latitude": 49.879524798970166,
+            "longitude": 63.111784936644106
+        },
+        {
+            "id": "67d935b4d6d3ce76bef2c94c",
+            "rooms": [
+                "67d935aed6d3ce76bef2c893",
+                "67d935b0d6d3ce76bef2c8cb"
+            ],
+            "latitude": 34.10448338984773,
+            "longitude": 11.82978614953576
+        },
+        {
+            "id": "67d935b4d6d3ce76bef2c94d",
+            "rooms": [
+                "67d935b0d6d3ce76bef2c8cf",
+                "67d935b0d6d3ce76bef2c8ce"
+            ],
+            "latitude": 61.75507411125406,
+            "longitude": 40.987195891798855
+        },
+        {
+            "id": "67d935b4d6d3ce76bef2c94e",
+            "rooms": [
+                "67d935b0d6d3ce76bef2c8d1",
+                "67d935b0d6d3ce76bef2c8d0"
+            ],
+            "latitude": 47.309162475132176,
+            "longitude": 16.056108404089784
+        },
+        {
+            "id": "67d935b4d6d3ce76bef2c94f",
+            "rooms": [
+                "67d935b0d6d3ce76bef2c8d3",
+                "67d935b0d6d3ce76bef2c8d2"
+            ],
+            "latitude": 38.88796950793725,
+            "longitude": 51.71162490758491
+        },
+        {
+            "id": "67d935b4d6d3ce76bef2c950",
+            "rooms": [
+                "67d935b0d6d3ce76bef2c8d4",
+                "67d935b0d6d3ce76bef2c8d2"
+            ],
+            "latitude": 77.37070091972903,
+            "longitude": 20.32227224624212
+        },
+        {
+            "id": "67d935b4d6d3ce76bef2c951",
+            "rooms": [
+                "67d935b0d6d3ce76bef2c8d5",
+                "67d935b0d6d3ce76bef2c8d2"
+            ],
+            "latitude": 59.21064538757568,
+            "longitude": 16.702381115396694
+        },
+        {
+            "id": "67d935b4d6d3ce76bef2c952",
+            "rooms": [
+                "67d935b0d6d3ce76bef2c8d6",
+                "67d935b0d6d3ce76bef2c8d2"
+            ],
+            "latitude": 68.41734369058616,
+            "longitude": 14.528727743700038
+        },
+        {
+            "id": "67d935b4d6d3ce76bef2c953",
+            "rooms": [
+                "67d935b0d6d3ce76bef2c8d8",
+                "67d935b0d6d3ce76bef2c8d2"
+            ],
+            "latitude": 30.402024715309174,
+            "longitude": 34.86330675261998
+        },
+        {
+            "id": "67d935b5d6d3ce76bef2c954",
+            "rooms": [
+                "67d935b0d6d3ce76bef2c8d5",
+                "67d935b0d6d3ce76bef2c8d6"
+            ],
+            "latitude": 49.155581194194156,
+            "longitude": 61.683905508752
+        },
+        {
+            "id": "67d935b5d6d3ce76bef2c955",
+            "rooms": [
+                "67d935b0d6d3ce76bef2c8d7",
+                "67d935b0d6d3ce76bef2c8d6"
+            ],
+            "latitude": 29.71599215765201,
+            "longitude": 13.975038338890222
+        },
+        {
+            "id": "67d935b5d6d3ce76bef2c956",
+            "rooms": [
+                "67d935b0d6d3ce76bef2c8d9",
+                "67d935b0d6d3ce76bef2c8d8"
+            ],
+            "latitude": 59.891952380925424,
+            "longitude": 60.54437602773162
+        },
+        {
+            "id": "67d935b5d6d3ce76bef2c957",
+            "rooms": [
+                "67d935aed6d3ce76bef2c89e",
+                "67d935b0d6d3ce76bef2c8d8"
+            ],
+            "latitude": 52.502048841490996,
+            "longitude": 14.969722305036903
+        },
+        {
+            "id": "67d935b5d6d3ce76bef2c958",
+            "rooms": [
+                "67d935b0d6d3ce76bef2c8dc",
+                "67d935b0d6d3ce76bef2c8d9"
+            ],
+            "latitude": 30.410423387773257,
+            "longitude": 75.55035523555587
+        },
+        {
+            "id": "67d935b5d6d3ce76bef2c959",
+            "rooms": [
+                "67d935b0d6d3ce76bef2c8dd",
+                "67d935b0d6d3ce76bef2c8d9"
+            ],
+            "latitude": 70.221113808005,
+            "longitude": 20.503751915901994
+        },
+        {
+            "id": "67d935b5d6d3ce76bef2c95a",
+            "rooms": [
+                "67d935b0d6d3ce76bef2c8de",
+                "67d935b0d6d3ce76bef2c8d9"
+            ],
+            "latitude": 67.80276018830894,
+            "longitude": 25.297401708592176
+        },
+        {
+            "id": "67d935b5d6d3ce76bef2c95b",
+            "rooms": [
+                "67d935b0d6d3ce76bef2c8e0",
+                "67d935b0d6d3ce76bef2c8d9"
+            ],
+            "latitude": 72.35763687217128,
+            "longitude": 16.473539635356595
+        },
+        {
+            "id": "67d935b5d6d3ce76bef2c95c",
+            "rooms": [
+                "67d935b0d6d3ce76bef2c8e1",
+                "67d935b0d6d3ce76bef2c8d9"
+            ],
+            "latitude": 18.012335953973512,
+            "longitude": 57.827276660203175
+        },
+        {
+            "id": "67d935b5d6d3ce76bef2c95d",
+            "rooms": [
+                "67d935b1d6d3ce76bef2c8e2",
+                "67d935b0d6d3ce76bef2c8d9"
+            ],
+            "latitude": 71.90524108637193,
+            "longitude": 47.32741515453846
+        },
+        {
+            "id": "67d935b5d6d3ce76bef2c95e",
+            "rooms": [
+                "67d935b0d6d3ce76bef2c8d8",
+                "67d935b0d6d3ce76bef2c8da"
+            ],
+            "latitude": 45.93720669792249,
+            "longitude": 55.67537250049806
+        },
+        {
+            "id": "67d935b5d6d3ce76bef2c95f",
+            "rooms": [
+                "67d935aed6d3ce76bef2c893",
+                "67d935b0d6d3ce76bef2c8da"
+            ],
+            "latitude": 53.312703306107444,
+            "longitude": 33.16791854606613
+        },
+        {
+            "id": "67d935b5d6d3ce76bef2c960",
+            "rooms": [
+                "67d935b0d6d3ce76bef2c8d9",
+                "67d935b0d6d3ce76bef2c8db"
+            ],
+            "latitude": 37.538782960601026,
+            "longitude": 18.93777352124124
+        },
+        {
+            "id": "67d935b5d6d3ce76bef2c961",
+            "rooms": [
+                "67d935b0d6d3ce76bef2c8de",
+                "67d935b0d6d3ce76bef2c8df"
+            ],
+            "latitude": 10.404483061758405,
+            "longitude": 62.51497781591165
+        },
+        {
+            "id": "67d935b5d6d3ce76bef2c962",
+            "rooms": [
+                "67d935b0d6d3ce76bef2c8e1",
+                "67d935b1d6d3ce76bef2c8e2"
+            ],
+            "latitude": 27.37386615753772,
+            "longitude": 22.2430414574675
+        }
+    ],
+    "source_room": "67d935add6d3ce76bef2c883",
+    "target_rooms": ["67d935add6d3ce76bef2c885", "67d935add6d3ce76bef2c881", "67d935afd6d3ce76bef2c8c2"]
+}
