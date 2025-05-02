@@ -85,7 +85,7 @@ class SensorGraph:
 			# Extract coordinates, excluding the source and target nodes themselves
 			path_with_coordinates = self._get_path_coordinates(path_nodes, {source, target})
 
-			return path_with_coordinates, distance, path_nodes
+			return path_with_coordinates, distance
 		except (nx.NetworkXNoPath, KeyError) as e:
 				raise e
 
@@ -109,17 +109,7 @@ class SensorGraph:
 			ValueError: If source or any target room is not in the graph, or if no path can be found
 						between consecutive points in the tour.
 		"""
-		if not self.graph.has_node(source_room):
-				raise ValueError(f"Source room '{source_room}' not in graph.")
-
 		unvisited_targets = set(target_rooms) - {source_room}
-
-		if not unvisited_targets:
-				return [source_room], [], 0.0
-
-		for target in unvisited_targets:
-				if not self.graph.has_node(target):
-					raise ValueError(f"Target room '{target}' not in graph.")
 
 		current_room = source_room
 		ordered_rooms_visited = [source_room]
@@ -159,4 +149,4 @@ class SensorGraph:
 		all_tour_rooms = set(ordered_rooms_visited)
 		full_sensor_path_coords = self._get_path_coordinates(full_node_path, all_tour_rooms)
 
-		return ordered_rooms_visited, full_sensor_path_coords, total_distance
+		return full_sensor_path_coords, total_distance

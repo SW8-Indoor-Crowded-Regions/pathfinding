@@ -29,12 +29,12 @@ def create_fastest_path(request_body: FastestPathRequest):
 
 	try:
 		# Use the updated find_fastest_path which might raise exceptions
-		path_coords, distance, _ = sensor_graph.find_fastest_path(source_room, target_room)
+		path_coords, distance = sensor_graph.find_fastest_path(source_room, target_room)
 		# find_fastest_path now raises exceptions directly if no path or key error
 		return {'fastest_path': path_coords, 'distance': distance}
 	except (nx.NetworkXNoPath, KeyError) as e:
 			# Catch exceptions from find_fastest_path
-			raise ValueError(f"No path found between '{source_room}' and '{target_room}': {e}")
+			raise ValueError(f"No path found between the given rooms.")
 
 
 def create_multiple_points_path(request_body: MultiplePointsRequest):
@@ -72,14 +72,13 @@ def create_multiple_points_path(request_body: MultiplePointsRequest):
 
     # Find the path using the nearest neighbor method
     try:
-        ordered_rooms, sensor_coords_path, total_distance = sensor_graph.find_multi_point_path_nearest_neighbor(
+        sensor_coords_path, total_distance = sensor_graph.find_multi_point_path_nearest_neighbor(
             source_room, target_rooms
         )
 
         return {
-            'ordered_rooms_visited': ordered_rooms,
-            'sensor_path': sensor_coords_path,
-            'total_distance': total_distance
+            'fastest_path': sensor_coords_path,
+            'distance': total_distance
         }
     except (ValueError, nx.NetworkXNoPath, KeyError) as e:
          # Catch errors during the nearest neighbor calculation
