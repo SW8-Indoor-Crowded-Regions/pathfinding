@@ -49,13 +49,16 @@ class SensorGraph:
 			for room_id in room_ids:
 				if room_id in sensor.room_ids:
 					self.graph.add_edge(sensor.id, room_id, weight=0, room_id=room_id)
-    
-    
+
 	def _get_path_coordinates(self, node_path: list, rooms_to_exclude: set):
 		"""Helper to convert a node path (including rooms/sensors) to sensor coordinates."""
 		path_with_coordinates = []
 		for node_id in node_path:
-			if node_id not in rooms_to_exclude and self.graph.has_node(node_id) and 'sensor' in self.graph.nodes[node_id]:
+			if (
+				node_id not in rooms_to_exclude
+				and self.graph.has_node(node_id)
+				and 'sensor' in self.graph.nodes[node_id]
+			):
 				sensor_obj = self.graph.nodes[node_id]['sensor']
 				path_with_coordinates.append(
 					{
@@ -65,7 +68,6 @@ class SensorGraph:
 					}
 				)
 		return path_with_coordinates
-
 
 	def find_fastest_path(self, source: str, target: str):
 		"""
@@ -87,8 +89,7 @@ class SensorGraph:
 
 			return path_with_coordinates, distance
 		except (nx.NetworkXNoPath, KeyError) as e:
-				raise e
-
+			raise e
 
 	def find_multi_point_path_nearest_neighbor(self, source_room: str, target_rooms: list[str]):
 		"""
@@ -123,22 +124,34 @@ class SensorGraph:
 
 			for target in unvisited_targets:
 				try:
-					distance = nx.dijkstra_path_length(self.graph, current_room, target, weight='weight')
+					distance = nx.dijkstra_path_length(
+						self.graph, current_room, target, weight='weight'
+					)
 					if distance < shortest_segment_distance:
 						shortest_segment_distance = distance
 						nearest_target = target
 				except nx.NetworkXNoPath:
-						raise ValueError(f"No path found from '{current_room}' to '{target}'. Cannot complete multi-point path.")
+					raise ValueError(
+						f"No path found from '{current_room}' to '{target}'. Cannot complete multi-point path."
+					)
 				except KeyError:
-						raise ValueError(f"Node '{current_room}' or '{target}' not found in graph during NN search.")
+					raise ValueError(
+						f"Node '{current_room}' or '{target}' not found in graph during NN search."
+					)
 
 			if nearest_target is None:
-				raise ValueError(f"Could not find nearest neighbor from '{current_room}' among remaining targets: {unvisited_targets}")
+				raise ValueError(
+					f"Could not find nearest neighbor from '{current_room}' among remaining targets: {unvisited_targets}"
+				)
 
 			try:
-					segment_nodes = nx.dijkstra_path(self.graph, current_room, nearest_target, weight='weight')
+				segment_nodes = nx.dijkstra_path(
+					self.graph, current_room, nearest_target, weight='weight'
+				)
 			except (nx.NetworkXNoPath, KeyError):
-					raise ValueError(f"Path consistency error: No path found from '{current_room}' to '{nearest_target}' after distance check.")
+				raise ValueError(
+					f"Path consistency error: No path found from '{current_room}' to '{nearest_target}' after distance check."
+				)
 
 			full_node_path.extend(segment_nodes[1:])
 			total_distance += shortest_segment_distance

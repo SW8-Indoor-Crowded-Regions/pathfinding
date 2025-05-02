@@ -32,57 +32,58 @@ def create_fastest_path(request_body: FastestPathRequest):
 		path_coords, distance = sensor_graph.find_fastest_path(source_room, target_room)
 		# find_fastest_path now raises exceptions directly if no path or key error
 		return {'fastest_path': path_coords, 'distance': distance}
-	except (nx.NetworkXNoPath, KeyError) as e:
-			# Catch exceptions from find_fastest_path
-			raise ValueError(f"No path found between the given rooms.")
+	except (nx.NetworkXNoPath, KeyError):
+		# Catch exceptions from find_fastest_path
+		raise ValueError('No path found between the given rooms.')
 
 
 def create_multiple_points_path(request_body: MultiplePointsRequest):
-    """
-    Finds a path visiting multiple target rooms starting from a source room
-    using the Nearest Neighbor heuristic on a sensor graph.
+	"""
+	Finds a path visiting multiple target rooms starting from a source room
+	using the Nearest Neighbor heuristic on a sensor graph.
 
-    Raises:
-        ValueError: If source or target rooms are invalid, not found in the graph,
-                    or if a path cannot be completed between required points.
-    """
-    rooms = Room.create_room_mapping_from_schemas(request_body.rooms or [])
-    sensors = Sensor.create_sensors_from_schemas(request_body.sensors or [], rooms)
+	Raises:
+	    ValueError: If source or target rooms are invalid, not found in the graph,
+	                or if a path cannot be completed between required points.
+	"""
+	rooms = Room.create_room_mapping_from_schemas(request_body.rooms or [])
+	sensors = Sensor.create_sensors_from_schemas(request_body.sensors or [], rooms)
 
-    source_room = request_body.source_room
-    # Ensure target_rooms is a list and remove duplicates/source
-    target_rooms = list(set(request_body.target_rooms) - {source_room})
+	source_room = request_body.source_room
+	# Ensure target_rooms is a list and remove duplicates/source
+	target_rooms = list(set(request_body.target_rooms) - {source_room})
 
-    if not target_rooms:
-        raise ValueError("Target rooms list cannot be empty or only contain the source room.")
+	if not target_rooms:
+		raise ValueError('Target rooms list cannot be empty or only contain the source room.')
 
-    sensor_graph = SensorGraph(sensors)
-    sensor_graph.build_graph()
+	sensor_graph = SensorGraph(sensors)
+	sensor_graph.build_graph()
 
-    # Attach source and all unique target rooms to the graph
-    all_rooms_in_tour = [source_room] + target_rooms
-    sensor_graph.attach_rooms(all_rooms_in_tour)
+	# Attach source and all unique target rooms to the graph
+	all_rooms_in_tour = [source_room] + target_rooms
+	sensor_graph.attach_rooms(all_rooms_in_tour)
 
-    # Validation (after attaching nodes)
-    if not sensor_graph.graph.has_node(source_room) or not check_room_is_valid(source_room, rooms):
-         raise ValueError(f"Source room '{source_room}' is not valid or not connected in the graph.")
-    for target_room in target_rooms:
-         if not sensor_graph.graph.has_node(target_room) or not check_room_is_valid(target_room, rooms):
-             raise ValueError(f"Target room '{target_room}' is not valid or not connected in the graph.")
+	# Validation (after attaching nodes)
+	if not sensor_graph.graph.has_node(source_room) or not check_room_is_valid(source_room, rooms):
+		raise ValueError(f"Source room '{source_room}' is not valid or not connected in the graph.")
+	for target_room in target_rooms:
+		if not sensor_graph.graph.has_node(target_room) or not check_room_is_valid(
+			target_room, rooms
+		):
+			raise ValueError(
+				f"Target room '{target_room}' is not valid or not connected in the graph."
+			)
 
-    # Find the path using the nearest neighbor method
-    try:
-        sensor_coords_path, total_distance = sensor_graph.find_multi_point_path_nearest_neighbor(
-            source_room, target_rooms
-        )
+	# Find the path using the nearest neighbor method
+	try:
+		sensor_coords_path, total_distance = sensor_graph.find_multi_point_path_nearest_neighbor(
+			source_room, target_rooms
+		)
 
-        return {
-            'fastest_path': sensor_coords_path,
-            'distance': total_distance
-        }
-    except (ValueError, nx.NetworkXNoPath, KeyError) as e:
-         # Catch errors during the nearest neighbor calculation
-         raise ValueError(f"Failed to compute multi-point path: {e}")
+		return {'fastest_path': sensor_coords_path, 'distance': total_distance}
+	except (ValueError, nx.NetworkXNoPath, KeyError) as e:
+		# Catch errors during the nearest neighbor calculation
+		raise ValueError(f'Failed to compute multi-point path: {e}')
 
 
 def check_room_is_valid(room: str, rooms: list[str]) -> bool:
