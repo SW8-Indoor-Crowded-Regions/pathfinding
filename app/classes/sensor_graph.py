@@ -60,13 +60,7 @@ class SensorGraph:
 				and 'sensor' in self.graph.nodes[node_id]
 			):
 				sensor_obj = self.graph.nodes[node_id]['sensor']
-				path_with_coordinates.append(
-					{
-						'id': sensor_obj.id,
-						'longitude': sensor_obj.longitude,
-						'latitude': sensor_obj.latitude,
-					}
-				)
+				path_with_coordinates.append(sensor_obj)
 		return path_with_coordinates
 
 	def find_fastest_path(self, source: str, target: str):
