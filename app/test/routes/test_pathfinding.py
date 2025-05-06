@@ -85,7 +85,6 @@ def test_multiple_points_returns_correct_path(load_multiple_points_payload):
 	assert response.status_code == 200
 	data = response.json()
 	assert 'fastest_path' in data
-	# Check for the 3 first ids in the fastest_path
 	assert all(isinstance(sensor, dict) for sensor in data['fastest_path'])
 	assert 'distance' in data
 	assert data['distance'] == 0.772
@@ -116,10 +115,7 @@ def test_multiple_points_handles_incorrect_source_room(load_multiple_points_payl
 	payload['source_room'] = 'non_existent_source_room'
 	response = client.post('/pathfinding/multiple-points', json=payload)
 	assert response.status_code == 400
-	assert (
-		response.json()['detail']
-		== "Source room 'non_existent_source_room' is not valid or not connected in the graph."
-	)
+	assert response.json()['detail'] == "Room 'non_existent_source_room' in the tour is not valid."
 
 
 def test_multiple_points_handles_incorrect_target_room(load_multiple_points_payload):
@@ -128,10 +124,7 @@ def test_multiple_points_handles_incorrect_target_room(load_multiple_points_payl
 	response = client.post('/pathfinding/multiple-points', json=payload)
 	data = response.json()
 	assert response.status_code == 400
-	assert (
-		data['detail']
-		== "Target room 'non_existent_target_room_1' is not valid or not connected in the graph."
-	)
+	assert data['detail'] == "Room 'non_existent_target_room_1' in the tour is not valid."
 
 
 def test_multiple_points_handles_empty_target_rooms_list(
@@ -142,7 +135,10 @@ def test_multiple_points_handles_empty_target_rooms_list(
 	response = client.post('/pathfinding/multiple-points', json=payload)
 	data = response.json()
 	assert response.status_code == 400
-	assert data['detail'] == 'Target rooms list cannot be empty or only contain the source room.'
+	assert (
+		data['detail']
+		== 'Target rooms list must contain at least one room different from the source room.'
+	)
 
 
 def test_multiple_points_handles_same_source_and_target(load_multiple_points_payload):
@@ -151,4 +147,7 @@ def test_multiple_points_handles_same_source_and_target(load_multiple_points_pay
 	response = client.post('/pathfinding/multiple-points', json=payload)
 	data = response.json()
 	assert response.status_code == 400
-	assert data['detail'] == 'Target rooms list cannot be empty or only contain the source room.'
+	assert (
+		data['detail']
+		== 'Target rooms list must contain at least one room different from the source room.'
+	)

@@ -7,7 +7,6 @@ import math
 class SensorGraph:
 	def __init__(self, sensors: list):
 		self.sensors = sensors
-		# Use a simple Graph to ensure a single edge per sensor pair.
 		self.graph = nx.Graph()
 		self._sensor_map = {s.id: s for s in sensors}
 
@@ -15,40 +14,37 @@ class SensorGraph:
 		"""
 		Builds a Graph where each sensor is a node.
 		For each room, an edge is added between every pair of sensors in that room.
-		Each edge is assigned a weight equal to the room's crowd_factor.
+		Each edge is assigned a weight equal to the room's calculate_weight().
 		If two sensors share more than one room, only the first added edge is kept.
 		"""
-		# Add each sensor as a node.
 		for sensor in self.sensors:
 			self.graph.add_node(sensor.id, sensor=sensor)
 
-		# Group sensors by room.
 		room_to_sensors = defaultdict(list)
 		room_info = {}
 		for sensor in self.sensors:
 			for room in sensor.rooms:
 				room_to_sensors[room.id].append(sensor)
-				room_info[room.id] = room  # store room info for crowd_factor
+				room_info[room.id] = room
 
-		# For each room, add an edge between every pair of sensors in that room.
 		for room_id, sensor_list in room_to_sensors.items():
 			room = room_info[room_id]
 			for sensor1, sensor2 in itertools.combinations(sensor_list, 2):
-				# If an edge already exists between these sensors, ignore the new one.
 				if not self.graph.has_edge(sensor1.id, sensor2.id):
 					self.graph.add_edge(
 						sensor1.id, sensor2.id, weight=room.calculate_weight(), room_id=room_id
 					)
 		return self.graph
 
-	def attach_rooms(self, room_ids: list[str]):
+	def attach_rooms(self, rooms_to_add: list):
 		"""
-		Attaches a room to all its sensors in the graph with weight 0.
+		Attaches a room node to all its sensors in the graph with weight 0.
+		Expects a list of Room objects.
 		"""
 		for sensor in self.sensors:
-			for room_id in room_ids:
-				if room_id in sensor.room_ids:
-					self.graph.add_edge(sensor.id, room_id, weight=0, room_id=room_id)
+			for room in sensor.rooms:
+				if room.id in rooms_to_add:
+					self.graph.add_edge(sensor.id, room.id, weight=0, room_id=room.id)
 
 	def _get_path_coordinates(self, node_path: list, rooms_to_exclude: set):
 		"""Helper to convert a node path (including rooms/sensors) to sensor coordinates."""
@@ -67,18 +63,17 @@ class SensorGraph:
 		"""
 		Uses Dijkstra's algorithm to find the fastest path between two nodes (rooms or sensors).
 		Returns:
-			- List of intermediate sensor coordinates dicts (excluding source/target rooms/sensors).
-			- Total distance (weight) of the path.
-			- The full list of node IDs in the path (including source/target).
+		    - List of intermediate sensor objects (excluding source/target rooms/sensors).
+		    - Total distance (weight) of the path.
+		    - The full list of node IDs in the path (including source/target).
 		Raises:
-			nx.NetworkXNoPath: If no path exists between source and target.
-			KeyError: If source or target node does not exist in the graph.
+		    nx.NetworkXNoPath: If no path exists between source and target.
+		    KeyError: If source or target node does not exist in the graph.
 		"""
 		try:
 			path_nodes = nx.dijkstra_path(self.graph, source, target, weight='weight')
 			distance = nx.dijkstra_path_length(self.graph, source, target, weight='weight')
 
-			# Extract coordinates, excluding the source and target nodes themselves
 			path_with_coordinates = self._get_path_coordinates(path_nodes, {source, target})
 
 			return path_with_coordinates, distance
@@ -91,18 +86,18 @@ class SensorGraph:
 		Nearest Neighbor heuristic based on Dijkstra path lengths.
 
 		Args:
-			source_room (str): The ID of the starting room.
-			target_rooms (list or set): A collection of target room IDs to visit.
+		    source_room (str): The ID of the starting room.
+		    target_rooms (list or set): A collection of target room IDs to visit.
 
 		Returns:
-			tuple: (ordered_rooms_visited, full_sensor_path_coords, total_distance)
-				- ordered_rooms_visited (list): The sequence of rooms visited, starting with source_room.
-				- full_sensor_path_coords (list): A list of dictionaries with sensor coordinates for the entire path.
-				- total_distance (float): The total accumulated weight/distance of the path.
+		    tuple: (ordered_rooms_visited, full_sensor_path_coords, total_distance)
+		        - ordered_rooms_visited (list): The sequence of rooms visited, starting with source_room.
+		        - full_sensor_path_coords (list): A list of sensor objects for the entire path.
+		        - total_distance (float): The total accumulated weight/distance of the path.
 
 		Raises:
-			ValueError: If source or any target room is not in the graph, or if no path can be found
-						between consecutive points in the tour.
+		    ValueError: If source or any target room is not in the graph, or if no path can be found
+		                between consecutive points in the tour.
 		"""
 		unvisited_targets = set(target_rooms) - {source_room}
 
@@ -111,7 +106,6 @@ class SensorGraph:
 		full_node_path = [source_room]
 		total_distance = 0.0
 
-		# Actual Nearest Neighbor search
 		while unvisited_targets:
 			nearest_target = None
 			shortest_segment_distance = math.inf
@@ -125,9 +119,7 @@ class SensorGraph:
 						shortest_segment_distance = distance
 						nearest_target = target
 				except nx.NetworkXNoPath:
-					raise ValueError(
-						f"No path found from '{current_room}' to '{target}'. Cannot complete multi-point path."
-					)
+					raise ValueError('No path found between the given rooms.')
 				except KeyError:
 					raise ValueError(
 						f"Node '{current_room}' or '{target}' not found in graph during NN search."
@@ -143,9 +135,7 @@ class SensorGraph:
 					self.graph, current_room, nearest_target, weight='weight'
 				)
 			except (nx.NetworkXNoPath, KeyError):
-				raise ValueError(
-					f"Path consistency error: No path found from '{current_room}' to '{nearest_target}' after distance check."
-				)
+				raise ValueError('No path found between the given rooms after distance check.')
 
 			full_node_path.extend(segment_nodes[1:])
 			total_distance += shortest_segment_distance
