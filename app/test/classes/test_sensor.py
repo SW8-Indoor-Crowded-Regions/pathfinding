@@ -15,7 +15,7 @@ class TestSensor:
 		)
 		room_mapping = {'room1': room1}
 
-		schema_data = {'id': 'sensor1', 'longitude': 10.0, 'latitude': 20.0, 'rooms': ['room1']}
+		schema_data = {'id': 'sensor1', 'longitude': 10.0, 'latitude': 20.0, 'is_vertical': False, 'rooms': ['room1']}
 		schema_object = types.SimpleNamespace(**schema_data)
 
 		sensor = Sensor.from_schema(schema=schema_object, room_mapping=room_mapping)
@@ -33,6 +33,6 @@ class TestSensor:
 			crowd_factor=0.1,
 			popularity_factor=1,
 		)
-		sensor = Sensor(id='sensor_init', longitude=0.0, latitude=0.0, rooms=[room1])
+		sensor = Sensor(id='sensor_init', longitude=0.0, latitude=0.0, is_vertical=True, rooms=[room1])
 		assert len(sensor.rooms) == 1
 		assert sensor.rooms[0] == room1
