@@ -1,5 +1,12 @@
 class Sensor:
-	def __init__(self, id: str, longitude: float, latitude: float, is_vertical: bool, rooms: list | None = None):
+	def __init__(
+		self,
+		id: str,
+		longitude: float,
+		latitude: float,
+		is_vertical: bool,
+		rooms: list | None = None,
+	):
 		"""
 		Initializes a Sensor object.
 

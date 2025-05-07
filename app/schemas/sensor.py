@@ -7,4 +7,6 @@ class SensorSchema(BaseModel):
 	rooms: List[str] = Field(..., description='List of room UUIDs associated with the sensor.')
 	longitude: float = Field(..., description="Longitude of the sensor's location.")
 	latitude: float = Field(..., description="Latitude of the sensor's location.")
-	is_vertical: bool = Field(..., description='Indicates if the sensor is vertical (True) or horizontal (False).')
+	is_vertical: bool = Field(
+		..., description='Indicates if the sensor is vertical (True) or horizontal (False).'
+	)
