@@ -1,5 +1,12 @@
 class Sensor:
-	def __init__(self, id: str, longitude: float, latitude: float, rooms: list = None):
+	def __init__(
+		self,
+		id: str,
+		longitude: float,
+		latitude: float,
+		is_vertical: bool,
+		rooms: list | None = None,
+	):
 		"""
 		Initializes a Sensor object.
 
@@ -14,6 +21,7 @@ class Sensor:
 		self.longitude = longitude
 		self.latitude = latitude
 		self.rooms = rooms if rooms is not None else []
+		self.is_vertical = is_vertical
 
 	@classmethod
 	def from_schema(cls, schema, room_mapping: dict):
@@ -37,6 +45,7 @@ class Sensor:
 			longitude=schema.longitude,
 			latitude=schema.latitude,
 			rooms=associated_rooms,
+			is_vertical=schema.is_vertical,
 		)
 		return sensor
 
@@ -56,6 +65,7 @@ class Sensor:
 		for schema in sensor_schemas:
 			sensor = cls.from_schema(schema, room_mapping)
 			sensors.append(sensor)
+
 		return sensors
 
 	def __repr__(self):
