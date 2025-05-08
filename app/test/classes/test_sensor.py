@@ -1,20 +1,48 @@
 from app.classes.sensor import Sensor
 from app.classes.room import Room
+import types
 
 
 class TestSensor:
-	def test_from_dict(self):
-		data = {'id': 'sensor1', 'rooms': ['room1', 'room2'], 'longitude': 10.0, 'latitude': 20.0}
-		sensor = Sensor.from_dict(data)
-		assert sensor.id == 'sensor1'
-		assert sensor.room_ids == ['room1', 'room2']
-		# Initially, rooms list should be empty.
-		assert sensor.rooms == []
-
-	def test_attach_rooms_with_valid_and_invalid_ids(self):
-		sensor = Sensor('sensor1', ['room1', 'roomX'], 10.0, 20.0)
-		room1 = Room('room1', 'Room A', 5, 100, 200, 1.2)
+	def test_sensor_creation_from_schema_object_with_valid_room_id(self):
+		room1 = Room(
+			id='room1',
+			name='Room A',
+			occupants=5,
+			area=100.0,
+			crowd_factor=200.0,
+			popularity_factor=1.2,
+			floor=1,
+		)
 		room_mapping = {'room1': room1}
-		sensor.attach_rooms(room_mapping)
-		# Only the valid room is attached.
-		assert sensor.rooms == [room1]
+
+		schema_data = {
+			'id': 'sensor1',
+			'longitude': 10.0,
+			'latitude': 20.0,
+			'is_vertical': False,
+			'rooms': ['room1'],
+		}
+		schema_object = types.SimpleNamespace(**schema_data)
+
+		sensor = Sensor.from_schema(schema=schema_object, room_mapping=room_mapping)
+
+		assert len(sensor.rooms) == 1
+		assert sensor.rooms[0] == room1
+		assert sensor.rooms[0].id == 'room1'
+
+	def test_sensor_initialization_directly_with_room_objects(self):
+		room1 = Room(
+			id='room_init',
+			name='Init Room',
+			occupants=1,
+			area=10,
+			crowd_factor=0.1,
+			popularity_factor=1,
+			floor=1,
+		)
+		sensor = Sensor(
+			id='sensor_init', longitude=0.0, latitude=0.0, is_vertical=True, rooms=[room1]
+		)
+		assert len(sensor.rooms) == 1
+		assert sensor.rooms[0] == room1

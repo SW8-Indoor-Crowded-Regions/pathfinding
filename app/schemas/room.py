@@ -9,3 +9,4 @@ class RoomSchema(BaseModel):
 	area: float = Field(..., description='Area of the room in square meters.')
 	crowd_factor: float = Field(..., description='Crowd factor of the room.')
 	popularity_factor: float = Field(..., description='Popularity factor of the room')
+	floor: int = Field(..., description='Floor number of the room.')

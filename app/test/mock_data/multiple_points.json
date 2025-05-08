@@ -16,7 +16,7 @@
             "occupants": 6,
             "area": 50.0,
             "popularity_factor": 0.8823063772317682,
-            "floor": 3
+            "floor": 2
         },
         {
             "id": "67d935add6d3ce76bef2c883",
@@ -25,7 +25,7 @@
             "occupants": 12,
             "area": 50.0,
             "popularity_factor": 0.19071676094915843,
-            "floor": 1
+            "floor": 3
         },
         {
             "id": "67d935add6d3ce76bef2c884",
@@ -34,7 +34,7 @@
             "occupants": 15,
             "area": 50.0,
             "popularity_factor": 0.6133044537264026,
-            "floor": 3
+            "floor": 1
         },
         {
             "id": "67d935add6d3ce76bef2c885",
@@ -43,7 +43,7 @@
             "occupants": 3,
             "area": 50.0,
             "popularity_factor": 0.3210981611492981,
-            "floor": 1
+            "floor": 2
         },
         {
             "id": "67d935add6d3ce76bef2c886",
@@ -52,7 +52,7 @@
             "occupants": 0,
             "area": 50.0,
             "popularity_factor": 1.1756049430495064,
-            "floor": 2
+            "floor": 1
         },
         {
             "id": "67d935add6d3ce76bef2c887",
@@ -79,7 +79,7 @@
             "occupants": 75,
             "area": 50.0,
             "popularity_factor": 1.2305301063505738,
-            "floor": 1
+            "floor": 3
         },
         {
             "id": "67d935add6d3ce76bef2c88a",
@@ -97,7 +97,7 @@
             "occupants": 5,
             "area": 50.0,
             "popularity_factor": 1.2238330680772846,
-            "floor": 3
+            "floor": 2
         },
         {
             "id": "67d935aed6d3ce76bef2c88c",
@@ -106,7 +106,7 @@
             "occupants": 12,
             "area": 50.0,
             "popularity_factor": 0.44110327574546593,
-            "floor": 3
+            "floor": 1
         },
         {
             "id": "67d935aed6d3ce76bef2c88d",
@@ -124,7 +124,7 @@
             "occupants": 73,
             "area": 50.0,
             "popularity_factor": 1.7700645762348775,
-            "floor": 3
+            "floor": 2
         },
         {
             "id": "67d935aed6d3ce76bef2c88f",
@@ -133,7 +133,7 @@
             "occupants": 37,
             "area": 50.0,
             "popularity_factor": 1.99337796148828,
-            "floor": 2
+            "floor": 1
         },
         {
             "id": "67d935aed6d3ce76bef2c890",
@@ -151,7 +151,7 @@
             "occupants": 4,
             "area": 50.0,
             "popularity_factor": 1.8783803042916107,
-            "floor": 1
+            "floor": 3
         },
         {
             "id": "67d935aed6d3ce76bef2c892",
@@ -187,7 +187,7 @@
             "occupants": 5,
             "area": 50.0,
             "popularity_factor": 0.6395026351719714,
-            "floor": 3
+            "floor": 1
         },
         {
             "id": "67d935aed6d3ce76bef2c896",
@@ -205,7 +205,7 @@
             "occupants": 12,
             "area": 50.0,
             "popularity_factor": 0.3169794315727935,
-            "floor": 1
+            "floor": 3
         },
         {
             "id": "67d935aed6d3ce76bef2c898",
@@ -214,7 +214,7 @@
             "occupants": 45,
             "area": 50.0,
             "popularity_factor": 1.7594438602982325,
-            "floor": 3
+            "floor": 1
         },
         {
             "id": "67d935aed6d3ce76bef2c899",
@@ -241,7 +241,7 @@
             "occupants": 23,
             "area": 50.0,
             "popularity_factor": 1.4357976330169426,
-            "floor": 2
+            "floor": 1
         },
         {
             "id": "67d935aed6d3ce76bef2c89c",
@@ -259,7 +259,7 @@
             "occupants": 7,
             "area": 50.0,
             "popularity_factor": 0.4875458542604516,
-            "floor": 2
+            "floor": 3
         },
         {
             "id": "67d935aed6d3ce76bef2c89e",
@@ -268,7 +268,7 @@
             "occupants": 0,
             "area": 50.0,
             "popularity_factor": 0.1091963408596982,
-            "floor": 3
+            "floor": 1
         },
         {
             "id": "67d935aed6d3ce76bef2c89f",
@@ -277,7 +277,7 @@
             "occupants": 9,
             "area": 50.0,
             "popularity_factor": 0.5749602705229634,
-            "floor": 1
+            "floor": 3
         },
         {
             "id": "67d935aed6d3ce76bef2c8a0",
@@ -286,7 +286,7 @@
             "occupants": 8,
             "area": 50.0,
             "popularity_factor": 1.579294265538363,
-            "floor": 3
+            "floor": 2
         },
         {
             "id": "67d935aed6d3ce76bef2c8a1",
@@ -313,7 +313,7 @@
             "occupants": 3,
             "area": 50.0,
             "popularity_factor": 1.788874828806222,
-            "floor": 1
+            "floor": 3
         },
         {
             "id": "67d935aed6d3ce76bef2c8a4",
@@ -322,7 +322,7 @@
             "occupants": 5,
             "area": 50.0,
             "popularity_factor": 1.685863293110641,
-            "floor": 2
+            "floor": 3
         },
         {
             "id": "67d935aed6d3ce76bef2c8a5",
@@ -331,7 +331,7 @@
             "occupants": 6,
             "area": 50.0,
             "popularity_factor": 0.2564752567144507,
-            "floor": 2
+            "floor": 3
         },
         {
             "id": "67d935aed6d3ce76bef2c8a6",
@@ -349,7 +349,7 @@
             "occupants": 7,
             "area": 50.0,
             "popularity_factor": 0.8836141262621098,
-            "floor": 2
+            "floor": 3
         },
         {
             "id": "67d935afd6d3ce76bef2c8a8",
@@ -358,7 +358,7 @@
             "occupants": 5,
             "area": 50.0,
             "popularity_factor": 1.7351118960625318,
-            "floor": 3
+            "floor": 1
         },
         {
             "id": "67d935afd6d3ce76bef2c8a9",
@@ -367,7 +367,7 @@
             "occupants": 9,
             "area": 50.0,
             "popularity_factor": 0.6972494641792699,
-            "floor": 1
+            "floor": 3
         },
         {
             "id": "67d935afd6d3ce76bef2c8aa",
@@ -376,7 +376,7 @@
             "occupants": 12,
             "area": 50.0,
             "popularity_factor": 1.2323305599727368,
-            "floor": 1
+            "floor": 2
         },
         {
             "id": "67d935afd6d3ce76bef2c8ab",
@@ -394,7 +394,7 @@
             "occupants": 3,
             "area": 50.0,
             "popularity_factor": 1.3313440399239511,
-            "floor": 3
+            "floor": 2
         },
         {
             "id": "67d935afd6d3ce76bef2c8ad",
@@ -403,7 +403,7 @@
             "occupants": 23,
             "area": 50.0,
             "popularity_factor": 1.8095191626783567,
-            "floor": 2
+            "floor": 1
         },
         {
             "id": "67d935afd6d3ce76bef2c8ae",
@@ -421,7 +421,7 @@
             "occupants": 17,
             "area": 50.0,
             "popularity_factor": 1.5004907354122086,
-            "floor": 2
+            "floor": 1
         },
         {
             "id": "67d935afd6d3ce76bef2c8b0",
@@ -430,7 +430,7 @@
             "occupants": 15,
             "area": 50.0,
             "popularity_factor": 0.23021399788297786,
-            "floor": 2
+            "floor": 3
         },
         {
             "id": "67d935afd6d3ce76bef2c8b1",
@@ -439,7 +439,7 @@
             "occupants": 32,
             "area": 50.0,
             "popularity_factor": 1.4209499943782011,
-            "floor": 3
+            "floor": 1
         },
         {
             "id": "67d935afd6d3ce76bef2c8b2",
@@ -448,7 +448,7 @@
             "occupants": 19,
             "area": 50.0,
             "popularity_factor": 0.5310835098066164,
-            "floor": 1
+            "floor": 2
         },
         {
             "id": "67d935afd6d3ce76bef2c8b3",
@@ -457,7 +457,7 @@
             "occupants": 9,
             "area": 50.0,
             "popularity_factor": 1.5390470749069771,
-            "floor": 3
+            "floor": 1
         },
         {
             "id": "67d935afd6d3ce76bef2c8b4",
@@ -466,7 +466,7 @@
             "occupants": 3,
             "area": 50.0,
             "popularity_factor": 1.1666666137404695,
-            "floor": 2
+            "floor": 3
         },
         {
             "id": "67d935afd6d3ce76bef2c8b5",
@@ -493,7 +493,7 @@
             "occupants": 1,
             "area": 50.0,
             "popularity_factor": 0.62257170768135,
-            "floor": 1
+            "floor": 2
         },
         {
             "id": "67d935afd6d3ce76bef2c8b8",
@@ -502,7 +502,7 @@
             "occupants": 2,
             "area": 50.0,
             "popularity_factor": 1.424577699637273,
-            "floor": 2
+            "floor": 3
         },
         {
             "id": "67d935afd6d3ce76bef2c8b9",
@@ -520,7 +520,7 @@
             "occupants": 28,
             "area": 50.0,
             "popularity_factor": 1.8412222238049492,
-            "floor": 3
+            "floor": 1
         },
         {
             "id": "67d935afd6d3ce76bef2c8bb",
@@ -538,7 +538,7 @@
             "occupants": 39,
             "area": 50.0,
             "popularity_factor": 0.8493198436218908,
-            "floor": 2
+            "floor": 3
         },
         {
             "id": "67d935afd6d3ce76bef2c8bd",
@@ -547,7 +547,7 @@
             "occupants": 34,
             "area": 50.0,
             "popularity_factor": 0.2163590429780522,
-            "floor": 3
+            "floor": 1
         },
         {
             "id": "67d935afd6d3ce76bef2c8be",
@@ -574,7 +574,7 @@
             "occupants": 74,
             "area": 50.0,
             "popularity_factor": 0.7028937268991718,
-            "floor": 1
+            "floor": 2
         },
         {
             "id": "67d935afd6d3ce76bef2c8c1",
@@ -592,7 +592,7 @@
             "occupants": 4,
             "area": 50.0,
             "popularity_factor": 1.8436515087739924,
-            "floor": 1
+            "floor": 3
         },
         {
             "id": "67d935afd6d3ce76bef2c8c3",
@@ -601,7 +601,7 @@
             "occupants": 14,
             "area": 50.0,
             "popularity_factor": 1.7777498856814236,
-            "floor": 3
+            "floor": 1
         },
         {
             "id": "67d935afd6d3ce76bef2c8c4",
@@ -619,7 +619,7 @@
             "occupants": 19,
             "area": 50.0,
             "popularity_factor": 0.41468312780490313,
-            "floor": 2
+            "floor": 1
         },
         {
             "id": "67d935b0d6d3ce76bef2c8c6",
@@ -628,7 +628,7 @@
             "occupants": 22,
             "area": 50.0,
             "popularity_factor": 0.3926684667165514,
-            "floor": 2
+            "floor": 3
         },
         {
             "id": "67d935b0d6d3ce76bef2c8c7",
@@ -646,7 +646,7 @@
             "occupants": 17,
             "area": 50.0,
             "popularity_factor": 1.9891075430530911,
-            "floor": 1
+            "floor": 2
         },
         {
             "id": "67d935b0d6d3ce76bef2c8c9",
@@ -655,7 +655,7 @@
             "occupants": 29,
             "area": 50.0,
             "popularity_factor": 1.1444207792011731,
-            "floor": 3
+            "floor": 1
         },
         {
             "id": "67d935b0d6d3ce76bef2c8ca",
@@ -673,7 +673,7 @@
             "occupants": 2,
             "area": 50.0,
             "popularity_factor": 0.9472998592950287,
-            "floor": 2
+            "floor": 1
         },
         {
             "id": "67d935b0d6d3ce76bef2c8cc",
@@ -700,7 +700,7 @@
             "occupants": 0,
             "area": 50.0,
             "popularity_factor": 0.8103579602012841,
-            "floor": 2
+            "floor": 1
         },
         {
             "id": "67d935b0d6d3ce76bef2c8cf",
@@ -709,7 +709,7 @@
             "occupants": 1,
             "area": 50.0,
             "popularity_factor": 0.7213896705911361,
-            "floor": 2
+            "floor": 3
         },
         {
             "id": "67d935b0d6d3ce76bef2c8d0",
@@ -718,7 +718,7 @@
             "occupants": 2,
             "area": 50.0,
             "popularity_factor": 1.8426058019439693,
-            "floor": 1
+            "floor": 3
         },
         {
             "id": "67d935b0d6d3ce76bef2c8d1",
@@ -727,7 +727,7 @@
             "occupants": 3,
             "area": 50.0,
             "popularity_factor": 0.909343298178264,
-            "floor": 2
+            "floor": 1
         },
         {
             "id": "67d935b0d6d3ce76bef2c8d2",
@@ -736,7 +736,7 @@
             "occupants": 4,
             "area": 50.0,
             "popularity_factor": 1.7032993998052843,
-            "floor": 3
+            "floor": 2
         },
         {
             "id": "67d935b0d6d3ce76bef2c8d3",
@@ -745,7 +745,7 @@
             "occupants": 5,
             "area": 50.0,
             "popularity_factor": 0.48037897642070315,
-            "floor": 1
+            "floor": 3
         },
         {
             "id": "67d935b0d6d3ce76bef2c8d4",
@@ -763,7 +763,7 @@
             "occupants": 7,
             "area": 50.0,
             "popularity_factor": 0.3364669995663487,
-            "floor": 2
+            "floor": 1
         },
         {
             "id": "67d935b0d6d3ce76bef2c8d6",
@@ -781,7 +781,7 @@
             "occupants": 32,
             "area": 50.0,
             "popularity_factor": 0.6336054606196503,
-            "floor": 3
+            "floor": 1
         },
         {
             "id": "67d935b0d6d3ce76bef2c8d8",
@@ -799,7 +799,7 @@
             "occupants": 55,
             "area": 50.0,
             "popularity_factor": 0.7978530014684501,
-            "floor": 1
+            "floor": 2
         },
         {
             "id": "67d935b0d6d3ce76bef2c8da",
@@ -826,7 +826,7 @@
             "occupants": 3,
             "area": 50.0,
             "popularity_factor": 1.8499110374630354,
-            "floor": 2
+            "floor": 3
         },
         {
             "id": "67d935b0d6d3ce76bef2c8dd",
@@ -844,7 +844,7 @@
             "occupants": 2,
             "area": 50.0,
             "popularity_factor": 1.0847261353305202,
-            "floor": 2
+            "floor": 1
         },
         {
             "id": "67d935b0d6d3ce76bef2c8df",
@@ -871,7 +871,7 @@
             "occupants": 12,
             "area": 50.0,
             "popularity_factor": 1.6250150223104591,
-            "floor": 1
+            "floor": 3
         },
         {
             "id": "67d935b1d6d3ce76bef2c8e2",
@@ -892,7 +892,7 @@
             ],
             "latitude": 74.83430594652332,
             "longitude": 60.23046513026329,
-            "is_vertical": false
+            "is_vertical": true
         },
         {
             "id": "67d935b1d6d3ce76bef2c8e4",
@@ -902,7 +902,7 @@
             ],
             "latitude": 11.44847144918591,
             "longitude": 11.701247390997105,
-            "is_vertical": false
+            "is_vertical": true
         },
         {
             "id": "67d935b1d6d3ce76bef2c8e5",
@@ -932,7 +932,7 @@
             ],
             "latitude": 33.14663305414036,
             "longitude": 40.92276097152485,
-            "is_vertical": true
+            "is_vertical": false
         },
         {
             "id": "67d935b1d6d3ce76bef2c8e8",
@@ -992,7 +992,7 @@
             ],
             "latitude": 42.64227589111098,
             "longitude": 56.8878960592352,
-            "is_vertical": false
+            "is_vertical": true
         },
         {
             "id": "67d935b1d6d3ce76bef2c8ee",
@@ -1022,7 +1022,7 @@
             ],
             "latitude": 77.7077695964627,
             "longitude": 58.43619190715721,
-            "is_vertical": true
+            "is_vertical": false
         },
         {
             "id": "67d935b1d6d3ce76bef2c8f1",
@@ -1032,7 +1032,7 @@
             ],
             "latitude": 20.916074574669835,
             "longitude": 69.79612468311414,
-            "is_vertical": true
+            "is_vertical": false
         },
         {
             "id": "67d935b1d6d3ce76bef2c8f2",
@@ -1072,7 +1072,7 @@
             ],
             "latitude": 62.7873932552509,
             "longitude": 24.89611817683759,
-            "is_vertical": true
+            "is_vertical": false
         },
         {
             "id": "67d935b1d6d3ce76bef2c8f6",
@@ -1082,7 +1082,7 @@
             ],
             "latitude": 30.27553127616549,
             "longitude": 65.35465079223513,
-            "is_vertical": false
+            "is_vertical": true
         },
         {
             "id": "67d935b1d6d3ce76bef2c8f7",
@@ -1102,7 +1102,7 @@
             ],
             "latitude": 64.48969092662297,
             "longitude": 41.699782898601,
-            "is_vertical": true
+            "is_vertical": false
         },
         {
             "id": "67d935b1d6d3ce76bef2c8f9",
@@ -1122,7 +1122,7 @@
             ],
             "latitude": 24.642963167826984,
             "longitude": 71.89770792997385,
-            "is_vertical": false
+            "is_vertical": true
         },
         {
             "id": "67d935b1d6d3ce76bef2c8fb",
@@ -1132,7 +1132,7 @@
             ],
             "latitude": 22.301446727387777,
             "longitude": 34.892772629881954,
-            "is_vertical": true
+            "is_vertical": false
         },
         {
             "id": "67d935b1d6d3ce76bef2c8fc",
@@ -1152,7 +1152,7 @@
             ],
             "latitude": 24.169424526472106,
             "longitude": 20.45941098542403,
-            "is_vertical": false
+            "is_vertical": true
         },
         {
             "id": "67d935b1d6d3ce76bef2c8fe",
@@ -1162,7 +1162,7 @@
             ],
             "latitude": 75.26874224912515,
             "longitude": 11.302976416019025,
-            "is_vertical": true
+            "is_vertical": false
         },
         {
             "id": "67d935b2d6d3ce76bef2c8ff",
@@ -1172,7 +1172,7 @@
             ],
             "latitude": 38.54111749115275,
             "longitude": 40.34334766951157,
-            "is_vertical": false
+            "is_vertical": true
         },
         {
             "id": "67d935b2d6d3ce76bef2c900",
@@ -1192,7 +1192,7 @@
             ],
             "latitude": 61.696762102422724,
             "longitude": 62.475685750849834,
-            "is_vertical": true
+            "is_vertical": false
         },
         {
             "id": "67d935b2d6d3ce76bef2c902",
@@ -1242,7 +1242,7 @@
             ],
             "latitude": 53.6262556683437,
             "longitude": 17.11758927007294,
-            "is_vertical": true
+            "is_vertical": false
         },
         {
             "id": "67d935b2d6d3ce76bef2c907",
@@ -1262,7 +1262,7 @@
             ],
             "latitude": 53.47065904208061,
             "longitude": 35.66727708215254,
-            "is_vertical": false
+            "is_vertical": true
         },
         {
             "id": "67d935b2d6d3ce76bef2c909",
@@ -1272,7 +1272,7 @@
             ],
             "latitude": 73.33667062173484,
             "longitude": 75.25759525989652,
-            "is_vertical": false
+            "is_vertical": true
         },
         {
             "id": "67d935b2d6d3ce76bef2c90a",
@@ -1302,7 +1302,7 @@
             ],
             "latitude": 75.13220474217677,
             "longitude": 41.608194502614964,
-            "is_vertical": false
+            "is_vertical": true
         },
         {
             "id": "67d935b2d6d3ce76bef2c90d",
@@ -1312,7 +1312,7 @@
             ],
             "latitude": 34.21993803543363,
             "longitude": 36.30148224757108,
-            "is_vertical": true
+            "is_vertical": false
         },
         {
             "id": "67d935b2d6d3ce76bef2c90e",
@@ -1332,7 +1332,7 @@
             ],
             "latitude": 55.043699509540716,
             "longitude": 71.66192395262479,
-            "is_vertical": true
+            "is_vertical": false
         },
         {
             "id": "67d935b2d6d3ce76bef2c910",
@@ -1342,7 +1342,7 @@
             ],
             "latitude": 70.53087893058625,
             "longitude": 79.08832442330224,
-            "is_vertical": false
+            "is_vertical": true
         },
         {
             "id": "67d935b2d6d3ce76bef2c911",
@@ -1362,7 +1362,7 @@
             ],
             "latitude": 55.15563077313062,
             "longitude": 16.493767375108156,
-            "is_vertical": false
+            "is_vertical": true
         },
         {
             "id": "67d935b2d6d3ce76bef2c913",
@@ -1382,7 +1382,7 @@
             ],
             "latitude": 49.67168837552093,
             "longitude": 33.339885208618455,
-            "is_vertical": true
+            "is_vertical": false
         },
         {
             "id": "67d935b2d6d3ce76bef2c915",
@@ -1392,7 +1392,7 @@
             ],
             "latitude": 73.15260634604306,
             "longitude": 22.491723668419066,
-            "is_vertical": true
+            "is_vertical": false
         },
         {
             "id": "67d935b2d6d3ce76bef2c916",
@@ -1422,7 +1422,7 @@
             ],
             "latitude": 60.191338081621794,
             "longitude": 68.58002180030891,
-            "is_vertical": false
+            "is_vertical": true
         },
         {
             "id": "67d935b2d6d3ce76bef2c919",
@@ -1432,7 +1432,7 @@
             ],
             "latitude": 36.865255012928245,
             "longitude": 46.00757618138332,
-            "is_vertical": false
+            "is_vertical": true
         },
         {
             "id": "67d935b2d6d3ce76bef2c91a",
@@ -1472,7 +1472,7 @@
             ],
             "latitude": 61.25688362207111,
             "longitude": 38.92304028008549,
-            "is_vertical": false
+            "is_vertical": true
         },
         {
             "id": "67d935b3d6d3ce76bef2c91e",
@@ -1482,7 +1482,7 @@
             ],
             "latitude": 46.02842523312135,
             "longitude": 34.06821283904773,
-            "is_vertical": false
+            "is_vertical": true
         },
         {
             "id": "67d935b3d6d3ce76bef2c91f",
@@ -1502,7 +1502,7 @@
             ],
             "latitude": 24.007655855375226,
             "longitude": 27.047146159964292,
-            "is_vertical": true
+            "is_vertical": false
         },
         {
             "id": "67d935b3d6d3ce76bef2c921",
@@ -1532,7 +1532,7 @@
             ],
             "latitude": 78.36432912174301,
             "longitude": 20.86755688499475,
-            "is_vertical": true
+            "is_vertical": false
         },
         {
             "id": "67d935b3d6d3ce76bef2c924",
@@ -1542,7 +1542,7 @@
             ],
             "latitude": 47.92130450867241,
             "longitude": 37.629884802078074,
-            "is_vertical": true
+            "is_vertical": false
         },
         {
             "id": "67d935b3d6d3ce76bef2c925",
@@ -1592,7 +1592,7 @@
             ],
             "latitude": 57.313372900409675,
             "longitude": 40.38307776234856,
-            "is_vertical": true
+            "is_vertical": false
         },
         {
             "id": "67d935b3d6d3ce76bef2c92a",
@@ -1602,7 +1602,7 @@
             ],
             "latitude": 73.83880403748238,
             "longitude": 59.779842897828814,
-            "is_vertical": true
+            "is_vertical": false
         },
         {
             "id": "67d935b3d6d3ce76bef2c92b",
@@ -1612,7 +1612,7 @@
             ],
             "latitude": 12.779219947822249,
             "longitude": 79.24695523662146,
-            "is_vertical": false
+            "is_vertical": true
         },
         {
             "id": "67d935b3d6d3ce76bef2c92c",
@@ -1622,7 +1622,7 @@
             ],
             "latitude": 28.32926331571139,
             "longitude": 27.031349510836154,
-            "is_vertical": true
+            "is_vertical": false
         },
         {
             "id": "67d935b3d6d3ce76bef2c92d",
@@ -1672,7 +1672,7 @@
             ],
             "latitude": 21.3314631404267,
             "longitude": 51.45781102877372,
-            "is_vertical": false
+            "is_vertical": true
         },
         {
             "id": "67d935b3d6d3ce76bef2c932",
@@ -1702,7 +1702,7 @@
             ],
             "latitude": 19.5280264377472,
             "longitude": 47.186492942717166,
-            "is_vertical": true
+            "is_vertical": false
         },
         {
             "id": "67d935b3d6d3ce76bef2c935",
@@ -1732,7 +1732,7 @@
             ],
             "latitude": 51.73171677920948,
             "longitude": 33.88995789637876,
-            "is_vertical": false
+            "is_vertical": true
         },
         {
             "id": "67d935b4d6d3ce76bef2c938",
@@ -1752,7 +1752,7 @@
             ],
             "latitude": 16.16035082259174,
             "longitude": 59.642438100355406,
-            "is_vertical": false
+            "is_vertical": true
         },
         {
             "id": "67d935b4d6d3ce76bef2c93a",
@@ -1762,7 +1762,7 @@
             ],
             "latitude": 10.529595306379115,
             "longitude": 19.79185126741677,
-            "is_vertical": true
+            "is_vertical": false
         },
         {
             "id": "67d935b4d6d3ce76bef2c93b",
@@ -1772,7 +1772,7 @@
             ],
             "latitude": 78.23092288077638,
             "longitude": 33.91185444414431,
-            "is_vertical": true
+            "is_vertical": false
         },
         {
             "id": "67d935b4d6d3ce76bef2c93c",
@@ -1792,7 +1792,7 @@
             ],
             "latitude": 50.48957939634512,
             "longitude": 67.04620433100357,
-            "is_vertical": true
+            "is_vertical": false
         },
         {
             "id": "67d935b4d6d3ce76bef2c93e",
@@ -1812,7 +1812,7 @@
             ],
             "latitude": 19.55062941573587,
             "longitude": 23.387740199873804,
-            "is_vertical": true
+            "is_vertical": false
         },
         {
             "id": "67d935b4d6d3ce76bef2c940",
@@ -1842,7 +1842,7 @@
             ],
             "latitude": 30.22670091565439,
             "longitude": 58.85591625055661,
-            "is_vertical": true
+            "is_vertical": false
         },
         {
             "id": "67d935b4d6d3ce76bef2c943",
@@ -1892,7 +1892,7 @@
             ],
             "latitude": 39.40701157376124,
             "longitude": 56.75352719821575,
-            "is_vertical": true
+            "is_vertical": false
         },
         {
             "id": "67d935b4d6d3ce76bef2c948",
@@ -1912,7 +1912,7 @@
             ],
             "latitude": 74.16269242182065,
             "longitude": 33.23324548553843,
-            "is_vertical": false
+            "is_vertical": true
         },
         {
             "id": "67d935b4d6d3ce76bef2c94a",
@@ -1952,7 +1952,7 @@
             ],
             "latitude": 61.75507411125406,
             "longitude": 40.987195891798855,
-            "is_vertical": true
+            "is_vertical": false
         },
         {
             "id": "67d935b4d6d3ce76bef2c94e",
@@ -2002,7 +2002,7 @@
             ],
             "latitude": 68.41734369058616,
             "longitude": 14.528727743700038,
-            "is_vertical": true
+            "is_vertical": false
         },
         {
             "id": "67d935b4d6d3ce76bef2c953",
@@ -2012,7 +2012,7 @@
             ],
             "latitude": 30.402024715309174,
             "longitude": 34.86330675261998,
-            "is_vertical": true
+            "is_vertical": false
         },
         {
             "id": "67d935b5d6d3ce76bef2c954",
@@ -2032,7 +2032,7 @@
             ],
             "latitude": 29.71599215765201,
             "longitude": 13.975038338890222,
-            "is_vertical": false
+            "is_vertical": true
         },
         {
             "id": "67d935b5d6d3ce76bef2c956",
@@ -2042,7 +2042,7 @@
             ],
             "latitude": 59.891952380925424,
             "longitude": 60.54437602773162,
-            "is_vertical": true
+            "is_vertical": false
         },
         {
             "id": "67d935b5d6d3ce76bef2c957",
@@ -2072,7 +2072,7 @@
             ],
             "latitude": 70.221113808005,
             "longitude": 20.503751915901994,
-            "is_vertical": true
+            "is_vertical": false
         },
         {
             "id": "67d935b5d6d3ce76bef2c95a",
@@ -2122,7 +2122,7 @@
             ],
             "latitude": 45.93720669792249,
             "longitude": 55.67537250049806,
-            "is_vertical": true
+            "is_vertical": false
         },
         {
             "id": "67d935b5d6d3ce76bef2c95f",
@@ -2152,7 +2152,7 @@
             ],
             "latitude": 10.404483061758405,
             "longitude": 62.51497781591165,
-            "is_vertical": false
+            "is_vertical": true
         },
         {
             "id": "67d935b5d6d3ce76bef2c962",
@@ -2162,9 +2162,13 @@
             ],
             "latitude": 27.37386615753772,
             "longitude": 22.2430414574675,
-            "is_vertical": true
+            "is_vertical": false
         }
     ],
     "source_room": "67d935add6d3ce76bef2c883",
-    "target_room": "67d935add6d3ce76bef2c885"
+    "target_rooms": [
+        "67d935add6d3ce76bef2c885",
+        "67d935add6d3ce76bef2c881",
+        "67d935afd6d3ce76bef2c8c2"
+    ]
 }

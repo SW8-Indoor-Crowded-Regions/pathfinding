@@ -10,6 +10,7 @@ class TestRoom:
 			'occupants': 100,
 			'area': 200,
 			'popularity_factor': 1.2,
+			'floor': 1,
 		}
 		room = Room.from_dict(data)
 		assert room.id == 'room1'

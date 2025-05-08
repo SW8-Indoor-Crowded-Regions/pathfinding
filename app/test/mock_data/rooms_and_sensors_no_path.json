@@ -6,7 +6,8 @@
             "crowd_factor": 0.3,
             "occupants": 2,
             "area": 50.0,
-            "popularity_factor": 0.7386186454194014
+            "popularity_factor": 0.7386186454194014,
+            "floor": 1
         },
         {
             "id": "67d935afd6d3ce76bef2c8a8",
@@ -14,7 +15,8 @@
             "crowd_factor": 0.5,
             "occupants": 3,
             "area": 70.0,
-            "popularity_factor": 0.4008323927379538
+            "popularity_factor": 0.4008323927379538,
+            "floor": 2
         },
         {
             "id": "room1",
@@ -22,7 +24,8 @@
             "crowd_factor": 0.5,
             "occupants": 2,
             "area": 50.0,
-            "popularity_factor": 0.3268039620436598
+            "popularity_factor": 0.3268039620436598,
+            "floor": 2
         }
     ],
     "sensors": [
@@ -33,7 +36,8 @@
                 "67d935afd6d3ce76bef2c8a8"
             ],
             "latitude": 49.312392999049514,
-            "longitude": 53.68807434882344
+            "longitude": 53.68807434882344,
+            "is_vertical": false
         },
         {
             "id": "67d935b5d6d3ce76bef2c960",
@@ -41,7 +45,8 @@
                 "67d935add6d3ce76bef2c881"
             ],
             "latitude": 60.30540443182037,
-            "longitude": 26.612303468186102
+            "longitude": 26.612303468186102,
+            "is_vertical": false
         },
         {
             "id": "67d935b5d6d3ce76bef2c961",
@@ -49,7 +54,8 @@
                 "67d935add6d3ce76bef2c881"
             ],
             "latitude": 77.95709819790915,
-            "longitude": 30.55809870535711
+            "longitude": 30.55809870535711,
+            "is_vertical": true
         },
         {
             "id": "no_path_sensor",
@@ -57,7 +63,8 @@
                 "room1"
             ],
             "latitude": 44.515457430535754,
-            "longitude": 14.639179911121865
+            "longitude": 14.639179911121865,
+            "is_vertical": false
         }
     ],
     "source_room": "room1",

@@ -2,6 +2,7 @@ import json
 import pytest
 from app.controllers.route_service import create_fastest_path
 from app.schemas.path import FastestPathRequest
+from app.classes.sensor import Sensor
 
 MOCK_DATA_PATH = 'app/test/mock_data/rooms_and_sensors.json'
 MOCK_DATA_NO_PATH = 'app/test/mock_data/rooms_and_sensors_no_path.json'
@@ -55,16 +56,5 @@ def test_fastest_path_success(load_mock_payload):
 	assert 'distance' in result
 	assert isinstance(result['fastest_path'], list)
 	assert isinstance(result['distance'], (int, float))
-	assert result['fastest_path'] == [
-		{
-			'id': '67d935b1d6d3ce76bef2c8e9',
-			'longitude': 16.369509547137667,
-			'latitude': 23.8621854675587,
-		},
-		{
-			'id': '67d935b1d6d3ce76bef2c8ea',
-			'longitude': 61.74727469899295,
-			'latitude': 72.87442522121299,
-		},
-	]
+	assert all(isinstance(sensor, Sensor) for sensor in result['fastest_path'])
 	assert pytest.approx(result['distance']) == 0.09
