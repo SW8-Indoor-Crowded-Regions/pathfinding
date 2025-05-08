@@ -6,7 +6,8 @@
             "crowd_factor": 0.3,
             "occupants": 2,
             "area": 50.0,
-            "popularity_factor": 0.7386186454194014
+            "popularity_factor": 0.7386186454194014,
+            "floor": 1
         },
         {
             "id": "67d935afd6d3ce76bef2c8a8",
@@ -14,7 +15,8 @@
             "crowd_factor": 0.5,
             "occupants": 3,
             "area": 70.0,
-            "popularity_factor": 0.4008323927379538
+            "popularity_factor": 0.4008323927379538,
+            "floor": 2
         },
         {
             "id": "room1",
@@ -22,7 +24,8 @@
             "crowd_factor": 0.5,
             "occupants": 2,
             "area": 50.0,
-            "popularity_factor": 0.3268039620436598
+            "popularity_factor": 0.3268039620436598,
+            "floor": 2
         }
     ],
     "sensors": [
