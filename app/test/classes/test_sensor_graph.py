@@ -8,23 +8,23 @@ from app.classes.sensor_graph import SensorGraph
 class TestSensorGraph:
 	@pytest.fixture
 	def sensors_and_rooms(self):
-		room1 = Room('room1', 'Room A', 5, 100, 200, 1.2)
-		room2 = Room('room2', 'Room B', 3, 50, 150, 1.3)
-		room3 = Room('room3', 'Room C', 4, 75, 175, 1.1)
-		room4 = Room('room4', 'Room D', 6, 125, 225, 1.8)
-		room5 = Room('room5', 'Room E', 7, 150, 250, 1.4)
+		room1 = Room('room1', 'Room A', 5, 100, 200, 1.2, 1)
+		room2 = Room('room2', 'Room B', 3, 50, 150, 1.3, 1)
+		room3 = Room('room3', 'Room C', 4, 75, 175, 1.1, 2)
+		room4 = Room('room4', 'Room D', 6, 125, 225, 1.8, 3)
+		room5 = Room('room5', 'Room E', 7, 150, 250, 1.4, 4)
 
-		sensor1 = Sensor('sensor1', [], 12.34, 56.78)
+		sensor1 = Sensor(id='sensor1', rooms=[], latitude=12.34, longitude=56.78, is_vertical=True)
 		sensor1.rooms = [room1, room2]
-		sensor2 = Sensor('sensor2', [], 12.34, 56.78)
+		sensor2 = Sensor(id='sensor2', rooms=[], latitude=12.34, longitude=56.78, is_vertical=True)
 		sensor2.rooms = [room1, room3]
-		sensor3 = Sensor('sensor3', [], 12.34, 56.78)
+		sensor3 = Sensor(id='sensor3', rooms=[], latitude=12.34, longitude=56.78, is_vertical=True)
 		sensor3.rooms = [
 			room2,
 			room3,
 		]
 
-		sensor4 = Sensor('sensor4', [], 12.34, 56.78)
+		sensor4 = Sensor('sensor4', 12.34, 56.78, True, [])
 		sensor4.rooms = [room4, room5]
 
 		return [sensor1, sensor2, sensor3, sensor4], (room1, room2, room3, room4, room5)
@@ -50,11 +50,11 @@ class TestSensorGraph:
 		assert list(graph.adj['sensor4']) == []
 
 	def test_edge_with_multiple_shared_rooms(self):
-		room1 = Room('room1', 'Room A', 5, 100, 200, 1.9)
-		room2 = Room('room2', 'Room B', 3, 50, 150, 0.9)
-		sensor1 = Sensor('sensor1', [], 12.34, 56.78)
+		room1 = Room('room1', 'Room A', 5, 100, 200, 1.9, 1)
+		room2 = Room('room2', 'Room B', 3, 50, 150, 0.9, 1)
+		sensor1 = Sensor('sensor1', 12.34, 56.78, True, [])
 		sensor1.rooms = [room1, room2]
-		sensor2 = Sensor('sensor2', [], 12.34, 56.78)
+		sensor2 = Sensor('sensor2', 12.34, 56.78, True, [])
 		sensor2.rooms = [room1, room2]
 		sensors = [sensor1, sensor2]
 		graph_obj = SensorGraph(sensors)
@@ -65,13 +65,13 @@ class TestSensorGraph:
 		assert edge_data['weight'] == room1.calculate_weight()
 
 	def test_find_fastest_path_valid(self):
-		room1 = Room('room1', 'Room A', 2, 50, 100, 1.2)
-		room2 = Room('room2', 'Room B', 3, 75, 125, 1.2)
-		sensor1 = Sensor('sensor1', [], 12.34, 56.78)
+		room1 = Room('room1', 'Room A', 2, 50, 100, 1.2, 1)
+		room2 = Room('room2', 'Room B', 3, 75, 125, 1.2, 2)
+		sensor1 = Sensor('sensor1', 12.34, 56.78, True, [])
 		sensor1.rooms = [room1, room2]
-		sensor2 = Sensor('sensor2', [], 12.34, 56.78)
+		sensor2 = Sensor('sensor2', 12.34, 56.78, True, [])
 		sensor2.rooms = [room1, room2]
-		sensor3 = Sensor('sensor3', [], 12.34, 56.78)
+		sensor3 = Sensor('sensor3', 12.34, 56.78, True, [])
 		sensor3.rooms = [room1, room2]
 		sensors = [sensor1, sensor2, sensor3]
 		graph_obj = SensorGraph(sensors)
@@ -81,13 +81,13 @@ class TestSensorGraph:
 		assert distance == 1.0
 
 	def test_find_fastest_path_no_path(self):
-		room1 = Room('room1', 'Room A', 2, 50, 100, 1.2)
-		room2 = Room('room2', 'Room B', 3, 75, 125, 1.2)
-		room3 = Room('room3', 'Room C', 4, 100, 150, 1.2)
-		room4 = Room('room4', 'Room D', 5, 125, 175, 1.2)
-		sensor1 = Sensor('sensor1', [], 12.34, 56.78)
+		room1 = Room('room1', 'Room A', 2, 50, 100, 1.2, 1)
+		room2 = Room('room2', 'Room B', 3, 75, 125, 1.2, 2)
+		room3 = Room('room3', 'Room C', 4, 100, 150, 1.2, 3)
+		room4 = Room('room4', 'Room D', 5, 125, 175, 1.2, 4)
+		sensor1 = Sensor('sensor1', 12.34, 56.78, True, [])
 		sensor1.rooms = [room1, room2]
-		sensor2 = Sensor('sensor2', [], 12.34, 56.78)
+		sensor2 = Sensor('sensor2', 12.34, 56.78, True, [])
 		sensor2.rooms = [room3, room4]
 		sensors = [sensor1, sensor2]
 		graph_obj = SensorGraph(sensors)

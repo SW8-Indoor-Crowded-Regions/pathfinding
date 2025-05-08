@@ -7,6 +7,7 @@ class Room:
 		occupants: int,
 		area: float,
 		popularity_factor: float,
+		floor: int,
 	):
 		self.id = id
 		self.name = name
@@ -14,6 +15,7 @@ class Room:
 		self.occupants = occupants
 		self.area = area
 		self.popularity_factor = popularity_factor
+		self.floor = floor
 
 	def calculate_weight(self):
 		"""
@@ -33,6 +35,7 @@ class Room:
 			occupants=data.get('occupants'),
 			area=data.get('area'),
 			popularity_factor=data.get('popularity_factor'),
+			floor=data.get('floor'),
 		)
 
 	@classmethod
@@ -48,6 +51,7 @@ class Room:
 			occupants=schema.occupants,
 			area=schema.area,
 			popularity_factor=schema.popularity_factor,
+			floor=schema.floor,
 		)
 
 	@classmethod

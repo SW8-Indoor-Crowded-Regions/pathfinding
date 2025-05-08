@@ -12,6 +12,7 @@ class TestSensor:
 			area=100.0,
 			crowd_factor=200.0,
 			popularity_factor=1.2,
+			floor=1,
 		)
 		room_mapping = {'room1': room1}
 
@@ -38,6 +39,7 @@ class TestSensor:
 			area=10,
 			crowd_factor=0.1,
 			popularity_factor=1,
+			floor=1,
 		)
 		sensor = Sensor(
 			id='sensor_init', longitude=0.0, latitude=0.0, is_vertical=True, rooms=[room1]
