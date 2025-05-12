@@ -31,7 +31,7 @@ class SensorGraph:
 			room = room_info[room_id]
 			for sensor1, sensor2 in itertools.combinations(sensor_list, 2):
 				if not self.graph.has_edge(sensor1.id, sensor2.id):
-					sensor_distance = sensor1.calculate_weight_haversine(sensor2)
+					sensor_distance = sensor1.calculate_distance(sensor2)
 					room_weight = room.calculate_weight()
 					self.graph.add_edge(
 						sensor1.id,
