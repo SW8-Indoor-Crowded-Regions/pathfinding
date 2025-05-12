@@ -24,7 +24,7 @@ class Room:
 		if self.occupants == 0:
 			return 0.01
 
-		return self.occupants / self.area * self.crowd_factor
+		return 1 + (self.occupants / self.area * self.crowd_factor)
 
 	@classmethod
 	def from_dict(cls, data: dict):
