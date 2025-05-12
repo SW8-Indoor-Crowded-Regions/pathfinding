@@ -1,3 +1,5 @@
+import math
+
 class Sensor:
 	def __init__(
 		self,
@@ -22,6 +24,35 @@ class Sensor:
 		self.latitude = latitude
 		self.rooms = rooms if rooms is not None else []
 		self.is_vertical = is_vertical
+	
+	def calculate_weight_haversine(self, other_sensor: 'Sensor') -> float:
+		"""
+		Calculates the distance between this sensor and another sensor
+		using the Haversine formula.
+
+		Args:
+		    other_sensor (Sensor): The other sensor object to calculate the distance to.
+
+		Returns:
+		    float: The distance between the two sensors in kilometers.
+		"""
+		# Earth radius in kilometers
+		R = 6371.0
+
+		lat1 = math.radians(self.latitude)
+		lon1 = math.radians(self.longitude)
+		lat2 = math.radians(other_sensor.latitude)
+		lon2 = math.radians(other_sensor.longitude)
+
+		dlon = lon2 - lon1
+		dlat = lat2 - lat1
+
+		a = math.sin(dlat / 2)**2 + math.cos(lat1) * math.cos(lat2) * math.sin(dlon / 2)**2
+		c = 2 * math.atan2(math.sqrt(a), math.sqrt(1 - a))
+
+		distance = R * c
+
+		return distance
 
 	@classmethod
 	def from_schema(cls, schema, room_mapping: dict):
