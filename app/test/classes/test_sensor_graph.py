@@ -62,10 +62,7 @@ class TestSensorGraph:
 		assert graph.has_edge('sensor1', 'sensor2')
 		edge_data = graph.get_edge_data('sensor1', 'sensor2')
 		assert 'weight' in edge_data
-		assert (
-			edge_data['weight']
-			== sensor1.calculate_weight_haversine(sensor2) * room1.calculate_weight()
-		)
+		assert edge_data['weight'] == sensor1.calculate_distance(sensor2) * room1.calculate_weight()
 
 	def test_find_fastest_path_valid(self):
 		room1 = Room('room1', 'Room A', 2, 50, 100, 1.2, 1)
