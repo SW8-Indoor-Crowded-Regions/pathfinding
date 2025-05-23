@@ -22,23 +22,36 @@ class SensorGraph:
 
 		room_to_sensors = defaultdict(list)
 		room_info = {}
-		for sensor in self.sensors:
-			for room in sensor.rooms:
-				room_to_sensors[room.id].append(sensor)
-				room_info[room.id] = room
+		for sensor_obj in self.sensors:
+			for room_obj in sensor_obj.rooms:
+				room_to_sensors[room_obj.id].append(sensor_obj)
+				room_info[room_obj.id] = room_obj
+
+		previous_room_floor_value = None
 
 		for room_id, sensor_list in room_to_sensors.items():
-			room = room_info[room_id]
+			current_room = room_info[room_id]
+
+			floor_penalty_multiplier = 1.0
+			if current_room.floor != previous_room_floor_value:
+				floor_penalty_multiplier = 2.0
+
 			for sensor1, sensor2 in itertools.combinations(sensor_list, 2):
 				if not self.graph.has_edge(sensor1.id, sensor2.id):
 					sensor_distance = sensor1.calculate_distance(sensor2)
-					room_weight = room.calculate_weight()
+					base_room_weight = current_room.calculate_weight()
+
+					final_weight = (sensor_distance * base_room_weight) * floor_penalty_multiplier
+
 					self.graph.add_edge(
 						sensor1.id,
 						sensor2.id,
-						weight=(sensor_distance * room_weight),
+						weight=final_weight,
 						room_id=room_id,
 					)
+
+			previous_room_floor_value = current_room.floor
+
 		return self.graph
 
 	def attach_rooms(self, rooms_to_add: list):
