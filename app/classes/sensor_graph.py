@@ -25,8 +25,7 @@ class SensorGraph:
 		for sensor_obj in self.sensors:
 			for room_obj in sensor_obj.rooms:
 				room_to_sensors[room_obj.id].append(sensor_obj)
-				if room_obj.id not in room_info:
-					room_info[room_obj.id] = room_obj
+				room_info[room_obj.id] = room_obj
 
 		previous_room_floor_value = None
 
