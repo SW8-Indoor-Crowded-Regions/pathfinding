@@ -33,9 +33,8 @@ class SensorGraph:
 			current_room = room_info[room_id]
 
 			floor_penalty_multiplier = 1.0
-			if previous_room_floor_value is not None:
-				if current_room.floor != previous_room_floor_value:
-					floor_penalty_multiplier = 2.0
+			if current_room.floor != previous_room_floor_value:
+				floor_penalty_multiplier = 2.0
 
 			for sensor1, sensor2 in itertools.combinations(sensor_list, 2):
 				if not self.graph.has_edge(sensor1.id, sensor2.id):
